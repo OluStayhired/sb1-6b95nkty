@@ -272,7 +272,7 @@ function LandingPage() {
              hover:shadow-xl hover:shadow-blue-500/80 
              sm:px-8 sm:py-4 sm:text-lg"
 >
-           <Send className="w-3.5 h-3.5"/>
+           <Send className="w-5 h-5"/>
            <span>Join Waitlist</span>
 </button>
 
