@@ -29,7 +29,7 @@ function LandingPage() {
 
   //const handleLogin = async () => {
     //console.log('handleLogin called');
-    //await signIn();
+    //await signIn() ;
   //};
 
    const openWaitlistModal = () => {
