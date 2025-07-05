@@ -31,7 +31,7 @@ function LandingPage() {
     //console.log('handleLogin called');
     //await signIn() ; 
   //};
-  // more tests
+  // more tests added more
 
    const openWaitlistModal = () => {
     setIsWaitlistModalOpen(true);
