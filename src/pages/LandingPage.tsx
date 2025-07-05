@@ -42,7 +42,7 @@ function LandingPage() {
   
   const handleGoogleLogin = async () => {
   try {
-    await signInWithGoogle(); // This would be the new function from AuthContext MORE INFO
+    await signInWithGoogle(); // This would be the new function from AuthContext Made changes
   } catch (error) {
     console.error('Error signing in with Google:', error);
   }
