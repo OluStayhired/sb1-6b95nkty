@@ -29,8 +29,9 @@ function LandingPage() {
 
   //const handleLogin = async () => {
     //console.log('handleLogin called');
-    //await signIn() ;
+    //await signIn() ; 
   //};
+  // more tests
 
    const openWaitlistModal = () => {
     setIsWaitlistModalOpen(true);
