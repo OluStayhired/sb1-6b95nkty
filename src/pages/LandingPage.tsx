@@ -207,7 +207,7 @@ function LandingPage() {
             <img src={googleLogo} alt="Google" className="w-5 h-5" />
             <span>Join with Google</span>
           </button>
-
+// it's now live!! 
           */}
           
           {/* Close button within the overlay */}
