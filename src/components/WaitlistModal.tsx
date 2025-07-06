@@ -166,10 +166,10 @@ const handleJoinWaitlist = async (e: React.FormEvent) => {
 
           <div>
             <label className="items-center flex space-x-2 text-left px-1 block text-sm font-medium text-gray-700 mb-2">
-              Select Your Discount
-              <TooltipExtended text="⚡30% off for 1yr
-                ⚡20% off for 6mnths
-                ⚡10% off for 2mnths"  className="whitespace-pre-line">
+              Pick Your Discount
+              <TooltipExtended text="⚡30% off 1yr Plan
+                ⚡20% off 6mth Plan
+                ⚡10% off 2mth Plan"  className="whitespace-pre-line">
              <Info className="w-3.5 h-3.5 text-gray-400 ml-2"/> 
               </TooltipExtended>
             </label>
