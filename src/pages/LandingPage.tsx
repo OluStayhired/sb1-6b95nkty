@@ -1698,9 +1698,9 @@ function LandingPage() {
       <div>
         <h3 className="font-semibold mb-4">Product</h3>
         <ul className="space-y-2 text-sm text-gray-600">
-          <li> <a href="#key_features" className="no-underline">Features</a></li>
-          <li> <a href="#pricing" className="no-underline">Pricing</a></li>
-          <li> <a href="#testimonial" className="no-underline">Testimonials</a></li>
+          <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
+          <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
+          <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
           <li className="text-gray-400">Roadmap <em>(soon)</em></li>
         </ul>
       </div>
@@ -1712,7 +1712,7 @@ function LandingPage() {
           <li className="text-gray-400">Blog <em>(soon)</em></li>
           <li className="text-gray-400">Docs <em>(soon)</em></li>
           <li className="text-gray-400">Support <em>(soon)</em></li>
-          <li> <a href="#FAQ" className="no-underline">FAQ</a></li>
+          <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
         </ul>
       </div>
 
