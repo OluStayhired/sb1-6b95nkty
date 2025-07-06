@@ -29,9 +29,8 @@ function LandingPage() {
 
   //const handleLogin = async () => {
     //console.log('handleLogin called');
-    //await signIn() ; 
+    //await signIn();
   //};
-  // more tests added more
 
    const openWaitlistModal = () => {
     setIsWaitlistModalOpen(true);
@@ -43,7 +42,7 @@ function LandingPage() {
   
   const handleGoogleLogin = async () => {
   try {
-    await signInWithGoogle(); // This would be the new function from AuthContext Made changes
+    await signInWithGoogle(); // This would be the new function from AuthContext
   } catch (error) {
     console.error('Error signing in with Google:', error);
   }
@@ -207,7 +206,7 @@ function LandingPage() {
             <img src={googleLogo} alt="Google" className="w-5 h-5" />
             <span>Join with Google</span>
           </button>
-// it's now live! ! 
+
           */}
           
           {/* Close button within the overlay */}
@@ -1402,7 +1401,7 @@ function LandingPage() {
 
   {/*------------------------------start of the FAQ Section -------------------------------------*/}    
 
-<section className="mt-24 text-center">
+<section id="FAQ" className="mt-24 text-center">
   <div className="inline-flex items-center border-8 border-blue-200 space-x-2 px-3 py-2 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-300 text-white rounded-full text-lg mb-6 cursor-pointer"
          
             onClick={() => {
@@ -1679,10 +1678,10 @@ function LandingPage() {
       <div>
         <h3 className="font-semibold mb-4">Product</h3>
         <ul className="space-y-2 text-sm text-gray-600">
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Beta Access</li>
-          <li>Roadmap</li>
+          <li> <a href="#key_features" className="no-underline">Features</a></li>
+          <li> <a href="#pricing" className="no-underline">Pricing</a></li>
+          <li> <a href="#testimonial" className="no-underline">Testimonials</a></li>
+          <li className="text-gray-400">Roadmap <em>(soon)</em></li>
         </ul>
       </div>
 
@@ -1690,10 +1689,10 @@ function LandingPage() {
       <div>
         <h3 className="font-semibold mb-4">Resources</h3>
         <ul className="space-y-2 text-sm text-gray-600">
-          <li>Blog</li>
-          <li>Documentation</li>
-          <li>Support</li>
-          <li>FAQ</li>
+          <li className="text-gray-400">Blog <em>(soon)</em></li>
+          <li className="text-gray-400">Docs <em>(soon)</em></li>
+          <li className="text-gray-400">Support <em>(soon)</em></li>
+          <li> <a href="#FAQ" className="no-underline">FAQ</a></li>
         </ul>
       </div>
 
