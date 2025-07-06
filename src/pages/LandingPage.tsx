@@ -104,6 +104,15 @@ function LandingPage() {
             Testimonials
           </button> 
 
+          <button
+            onClick={() => {
+              window.location.href = '#FAQ';
+              }}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+>
+            FAQ
+          </button> 
+
            <button
             onClick={() => {
               window.location.href = '#pricing';
@@ -188,6 +197,17 @@ function LandingPage() {
             >
             Testimonials
           </button>
+
+          <button
+            onClick={() => {
+              window.location.href = '#FAQ';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            FAQ
+          </button>
+          
           <button
             onClick={() => {
               window.location.href = '#pricing';
@@ -1432,7 +1452,7 @@ function LandingPage() {
     {/* FAQ Item 1 */}
    <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    My social media content often feels generic. How does SoSavvy ensure it truly connects with my specific audience?
+    💡 My social media content often feels generic. How does SoSavvy ensure it truly connects with my specific audience?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1451,7 +1471,7 @@ function LandingPage() {
     {/* FAQ Item 2 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-     I spend too much time creating social media content. How does SoSavvy save me time?
+    💡 I spend too much time creating social media content. How does SoSavvy save me time?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1469,7 +1489,7 @@ function LandingPage() {
     {/* FAQ Item 3 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    How will SoSavvy help me generate actual leads, not just likes?
+   💡 How will SoSavvy help me generate actual leads, not just likes?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1487,7 +1507,7 @@ function LandingPage() {
      {/* FAQ Item 4 */}
     <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    I struggle with consistent posting. How does SoSavvy ensure my social media presence remains active?
+   💡 I struggle with consistent posting. How does SoSavvy ensure my social media presence remains active?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1505,7 +1525,7 @@ function LandingPage() {
      {/* FAQ Item 5 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"> 
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    Is this solution only for large companies, or does it work for startups and smaller teams too?
+    💡 Is this solution only for large companies, or does it work for startups and smaller teams too?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1523,7 +1543,7 @@ function LandingPage() {
      {/* FAQ Item 6 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    How does SoSavvy understand my specific business and customer pain points to create effective content?
+    💡 How does SoSavvy understand my specific business and customer pain points to create effective content?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1541,7 +1561,7 @@ function LandingPage() {
      {/* FAQ Item 7 */}
     <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    What kind of results can I expect from using SoSavvy?
+    💡 What kind of results can I expect from using SoSavvy?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1559,7 +1579,7 @@ function LandingPage() {
      {/* FAQ Item 8 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
   <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    How quickly can I get started and see my content live?
+    💡 How quickly can I get started and see my content live?
     <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
       <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
@@ -1701,11 +1721,12 @@ function LandingPage() {
         <h3 className="font-semibold mb-4">Legal</h3>
         <ul className="space-y-2 text-sm text-gray-600">
           <li>
-            <a href="/privacy.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Privacy Policy</a>
-          
+            <a href="/privacy.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Privacy Policy</a>      
           </li>
-          <li>Terms of Service</li>
-          <li>Cookie Policy</li>
+          <li>
+              <a href="/terms.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Terms of Service</a>
+          </li>
+              <a href="/cookie.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Cookie Policy</a>
         </ul>
       </div>
     </div>
