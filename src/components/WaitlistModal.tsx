@@ -58,9 +58,25 @@ const handleJoinWaitlist = async (e: React.FormEvent) => {
         discount: discount,
       });
 
+      //if (supabaseError) {
+      //  throw new Error(supabaseError.message); // Throw Supabase error to be caught below
+      //}
+
+       // --- CRITICAL ERROR HANDLING SECTION ---
       if (supabaseError) {
-        throw new Error(supabaseError.message); // Throw Supabase error to be caught below
+        // Check for the specific PostgreSQL unique constraint violation error code
+        if (supabaseError.code === '23505') {
+          setError("You're already on our waitlist!"); // User-friendly message
+        } else {
+          // For other Supabase errors, log the technical error for debugging
+          console.error("Supabase Error:", supabaseError);
+          // And provide a more general user-friendly error message
+          setError(`Failed to join waitlist: ${supabaseError.message || 'An unexpected database error occurred.'}`);
+        }
+        // IMPORTANT: Exit the function here after handling a Supabase error
+        return;
       }
+      // --- END CRITICAL ERROR HANDLING SECTION ---
 
       // On successful insertion, show the success screen
       setShowSuccessScreen(true);
