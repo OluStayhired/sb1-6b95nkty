@@ -601,9 +601,10 @@ function LandingPage() {
 
 {/* Start How it Works Section */}
 <section className="mt-8 text-center">
-  <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-    Turn your invisible efforts into  <br/>regular inquiries in 3 easy steps 🔥
-  </h2>
+<h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
+  Turn your invisible efforts <br className="sm:hidden"/> into <br className="hidden sm:block"/>regular inquiries in <br className="sm:hidden"/> 3 easy steps 🔥
+</h2>
+  
   <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
     Audience Analysis . Content Strategy . Scheduled Posts
   </p>
