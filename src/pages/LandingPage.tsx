@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CalendarCheck, Calendar, PenSquare, Clock, Users, PenTool, Briefcase, Plus, Minus,Menu,
-  Bot, CheckCircle,X, Send,
-  Timer, 
-  Zap, 
+  Bot, CheckCircle,X, Send,Timer, Zap, ArrowRight, 
   Lightbulb, Sparkles, CircleDollarSign, Star } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { AuthModal } from '../components/AuthModal';
@@ -142,8 +140,9 @@ const handleLoginClick = () => {
             shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 "
           >
-            <Send className="w-3.5 h-3.5"/>
+            {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Start for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
           
 
@@ -243,8 +242,9 @@ const handleLoginClick = () => {
            //onClick={openWaitlistModal}
             className="flex items-center justify-center space-x-2 w-11/12 max-w-sm px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:text-lg"
           >
-           <Send className="w-4 h-4"/>
+           {/*<Send className="w-4 h-4"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
         
         </div>
@@ -252,7 +252,7 @@ const handleLoginClick = () => {
         
       </nav>
 
-      <main className="max-w-7xl mx-auto px-6 pt-20 pb-32">
+      <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
           <span className="text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Creators</span>
@@ -286,8 +286,9 @@ const handleLoginClick = () => {
              hover:shadow-xl hover:shadow-blue-500/80 
              sm:px-8 sm:py-4 sm:text-lg"
 >
-           <Send className="w-5 h-5"/>
+           {/*<Send className="w-5 h-5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
 </button>
 
   </div>
@@ -713,8 +714,9 @@ const handleLoginClick = () => {
              hover:shadow-xl hover:shadow-blue-500/80 
               "
             >
-               <Send className="w-3.5 h-3.5"/>
+               {/*<Send className="w-3.5 h-3.5"/>*/}
                <span>Get Started for Free</span>
+               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
 
           </div>
@@ -768,8 +770,9 @@ const handleLoginClick = () => {
                        shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 "
         >
-          <Send className="w-3.5 h-3.5"/>
+          {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
 
       </div>
@@ -858,8 +861,9 @@ const handleLoginClick = () => {
                        shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 "
         >
-            <Send className="w-3.5 h-3.5"/>
+            {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
 
       </div>
@@ -903,8 +907,9 @@ const handleLoginClick = () => {
                            shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 "
             >
-             <Send className="w-3.5 h-3.5"/>
+             {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </button>
 
           </div>
@@ -958,8 +963,9 @@ const handleLoginClick = () => {
                        shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 "
         >
-          <Send className="w-3.5 h-3.5"/>
+          {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
 
       </div>
@@ -1049,8 +1055,9 @@ const handleLoginClick = () => {
              hover:shadow-xl hover:shadow-blue-500/80 
           "
         >
-          <Send className="w-3.5 h-3.5"/>
+          {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
         </button>
 
       </div>
@@ -1102,8 +1109,9 @@ const handleLoginClick = () => {
             shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 " // Adjusted mobile button size/text for consistency
           >
-            <Send className="w-3.5 h-3.5"/>
+            {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
 
 
@@ -1347,8 +1355,9 @@ const handleLoginClick = () => {
                          shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 "
           >
-            <Send className="w-3.5 h-3.5"/>
+            {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
 
 
@@ -1625,8 +1634,9 @@ const handleLoginClick = () => {
                          shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 " // Adjusted mobile button size/text for consistency
           >
-            <Send className="w-3.5 h-3.5"/>
+            {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
+           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
 
 
