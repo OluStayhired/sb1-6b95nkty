@@ -314,9 +314,13 @@ const handleLoginClick = () => {
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2">
           Content Planning on Steroids 👇
         </h2>
-        <p className="text-sm sm:text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+        {/*<p className="text-sm sm:text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             Unlock weeks of website-powered, customer-focused content in minutes
           </p>
+        */}
+          <p className="text-2xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+            Unlock weeks of customer-engaging content with zero effort. <br/> Generate months of posts from websites you love.   
+          </p>  
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
           {/* Outer div for responsive aspect ratio (16:9 - 56.25%) */}
           <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
@@ -1173,7 +1177,7 @@ const handleLoginClick = () => {
   <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
     Hear From Founders & Creators Like You
   </h2>
-  <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+  <p className="text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
     SoSavvy is helping entrepreneurs transform their social media presence into a pipeline building machine.
   </p>
 
@@ -1333,7 +1337,7 @@ const handleLoginClick = () => {
     <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
       Simple Pricing, Powerful Results 🚀
     </h2>
-    <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+    <p className="text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
       Unlock all of SoSavvy's features and start converting your audience into paying customers.
     </p>
 
