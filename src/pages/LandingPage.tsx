@@ -221,7 +221,7 @@ const handleLoginClick = () => {
           {/*
             <button
             onClick={handleGoogleLogin}
-            className="w-11/12 max-w-sm flex px-4 py-3 bg-white border border-blue-600 items-center justify-center font-semibold text-blue-600 rounded-lg hover:bg-blue-50 transition-colors space-x-2 text-base sm:text-lg" 
+            className="w-11/12 max-w-sm flex px-4 py-3 bg-white border border-blue-600 items-center justify-center  font-semibold text-blue-600 rounded-lg hover:bg-blue-50 transition-colors space-x-2 text-base sm:text-lg" 
           >
             <img src={googleLogo} alt="Google" className="w-5 h-5" />
             <span>Join with Google</span>
