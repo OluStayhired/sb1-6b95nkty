@@ -256,7 +256,7 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
-          <span className="text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Creators</span>
+          <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Creators</span>
           
           {/*start alternative header */}
             <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-2 sm:mb-3"> 
@@ -318,7 +318,7 @@ const handleLoginClick = () => {
             Unlock weeks of website-powered, customer-focused content in minutes
           </p>
         */}
-          <p className="text-2xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
             Unlock weeks of customer-focused content with zero effort. <br/> Generate months of posts from websites you love.   
           </p>  
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
@@ -590,7 +590,7 @@ const handleLoginClick = () => {
         </button>
 
         {/* Paragraph (P) - Centered by parent text-center */}
-        <p className="text-3xl font-light opacity-90 max-w-2xl mx-auto">
+        <p className="text-xl sm:text-3xl font-light opacity-90 max-w-2xl mx-auto">
             SoSavvy crafts compelling social media content that <br/> resonates with your customers and generates inquiries on AutoPilot
         </p>
 
@@ -1177,7 +1177,7 @@ const handleLoginClick = () => {
   <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
     Hear From Founders & Creators Like You
   </h2>
-  <p className="text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
+  <p className="text-xl sm:text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
     SoSavvy is helping entrepreneurs transform their social media presence into a pipeline building machine.
   </p>
 
@@ -1337,7 +1337,7 @@ const handleLoginClick = () => {
     <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
       Simple Pricing, Powerful Results 🚀
     </h2>
-    <p className="text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
+    <p className="text-xl sm:text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
       Unlock all of SoSavvy's features and start converting your audience into paying customers.
     </p>
 
@@ -1384,15 +1384,18 @@ const handleLoginClick = () => {
         </div>
 
             {/* Right Column: Features List */}
-            <div className="text-left md:pl-8">
-
+        <div className="text-left md:pl-8">
           <h4 className="text-2xl font-semibold mb-7">What's Included 👇</h4>
           <ul className="space-y-4">
            
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
                <TooltipExtended text="⚡ Get a full, 14-day calendar of strategic posts, planned around your insights and goals. Never wonder what to post next – it's already done and optimized for impact.">
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">14-Day High-Value Content Calendars</span>
+
+                 <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">14-Day High-Value Content Calendars</span>
+                 
+              <span className="hidden sm:block text-xs sm:text-sm p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">14-Day High-Value Content Calendars</span>
+                 
               </TooltipExtended>  
             </li>
                             
@@ -1400,9 +1403,9 @@ const handleLoginClick = () => {
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
               <TooltipExtended text="⚡ SoSavvy analyzes your website's content, services, and offerings to pinpoint your ideal customer's pains, desires, and the exact language they use. No more guesswork about what matters.">
               
-                {/*<span className="underline decoration-white decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>*/}
+                <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>
 
-                <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>
+                <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>
                 
               </TooltipExtended>
             </li>
@@ -1410,7 +1413,9 @@ const handleLoginClick = () => {
               
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
               <TooltipExtended text="⚡ Go beyond generic. Our intelligent AI crafts non-salesy, compelling posts that truly sound like you, directly addressing your audience's needs and building genuine connection.">
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Human-Like Content Creation</span>
+
+                <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Human-Like Content Creation</span>
+              <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Human-Like Content Creation</span>
               </TooltipExtended>
               
             </li>
@@ -1419,7 +1424,10 @@ const handleLoginClick = () => {
             
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
             <TooltipExtended text="⚡ Schedule content seamlessly across Twitter(X), LinkedIn and Bluesky. Add Images, enhance with AI Writers">
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Seamless Cross-Platform Scheduling</span>
+
+              <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Seamless Cross-Platform Scheduling</span>
+              <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Seamless Cross-Platform Scheduling</span>
+              
             </TooltipExtended>
               
             </li>
@@ -1429,27 +1437,36 @@ const handleLoginClick = () => {
          
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
                <TooltipExtended text="⚡Bulk Schedule content for 14 r 28 days depending on the number of calendars you created"> 
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Automated Post Publishing</span>
+
+                  <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Automated Post Publishing</span>
+              <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Automated Post Publishing</span>
           </TooltipExtended>
               
             </li>
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
               <TooltipExtended text="⚡Maintain full control. Review, refine, and edit any generated post before it goes live, ensuring every message aligns perfectly with your brand voice.">
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Flexible Content Editor & Drafts</span>
+              
+
+                <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Flexible Content Editor & Drafts</span>
+              <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Flexible Content Editor & Drafts</span>
               </TooltipExtended>
             </li>
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
                <TooltipExtended text="⚡Ensure your content reaches your audience when they're most active, wherever they are in the world. SoSavvy intelligently schedules posts for maximum visibility across different timezones.">
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Timezone-Aware Scheduling</span>
+
+                 <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Timezone-Aware Scheduling</span>
+              <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Timezone-Aware Scheduling</span>
+               
                </TooltipExtended>
             </li>
             <li className="flex items-center">
               
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
-              <TooltipExtended text="⚡ Dedicated customer support Monday through to Friday, Occassional Support available on Saturdays and Sundays">
-              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Dedicated Customer Support</span>
+              <TooltipExtended text="⚡ Dedicated customer support Monday through to Friday, Occassional Support available on Saturdays and Sundays"> 
+                 <span className="sm:hidden block decoration-white decoration-2 cursor-pointer">Dedicated Customer Support</span>
+              <span className="hidden sm:block p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Dedicated Customer Support</span>
                 
               </TooltipExtended>
             </li>
