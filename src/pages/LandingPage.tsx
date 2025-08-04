@@ -1385,7 +1385,8 @@ const handleLoginClick = () => {
 
             {/* Right Column: Features List */}
             <div className="text-left md:pl-8">
-          <h4 className="text-2xl font-semibold mb-4">What's Included:</h4>
+
+          <h4 className="text-2xl font-semibold mb-7">What's Included 👇</h4>
           <ul className="space-y-4">
            
             <li className="flex items-center">
