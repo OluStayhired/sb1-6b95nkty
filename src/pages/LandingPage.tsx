@@ -240,8 +240,9 @@ const handleLoginClick = () => {
           <button
             onClick={handleLoginClick}
            //onClick={openWaitlistModal}
-            className="flex items-center justify-center space-x-2 w-11/12 max-w-sm px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:text-lg"
-          >
+            //className="flex items-center justify-center space-x-2 w-11/12 max-w-sm px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:text-lg"
+            className="group flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white text-base font-semibold rounded-lg hover:bg-blue-700 transition-colors
+             shadow-lg shadow-blue-500/60 hover:shadow-xl hover:shadow-blue-500/80 sm:px-8 sm:py-4 sm:text-lg">
            {/*<Send className="w-4 h-4"/>*/}
            <span>Get Started for Free</span>
            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -282,9 +283,7 @@ const handleLoginClick = () => {
   onClick={handleLoginClick}
   //onClick={openWaitlistModal}
   className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white text-base font-semibold rounded-lg hover:bg-blue-700 transition-colors
-             shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 
-             sm:px-8 sm:py-4 sm:text-lg"
+  shadow-lg shadow-blue-500/60 hover:shadow-xl hover:shadow-blue-500/80 sm:px-8 sm:py-4 sm:text-lg group-hover"
 >
            {/*<Send className="w-5 h-5"/>*/}
            <span>Get Started for Free</span>
