@@ -271,7 +271,7 @@ const handleLoginClick = () => {
           </h1>
           {/*end alternative header*/}
           
-        <p className="text-base sm:text-lg md:text-xl text-gray-700 sm:font-semibold font-normal mb-8 sm:mb-10">
+        <p className="text-base sm:text-lg md:text-xl text-gray-700 sm:font-normal font-normal mt-10 mb-8 sm:mb-10">
             SoSavvy writes & schedules months of customer-engaging posts <br className="hidden sm:inline" />
            to <span className="underline underline-offset-4" style={{ textDecorationColor: '#2563eb' }}>grow inquiries</span> on LinkedIn, Twitter(X) and Bluesky🔥
       </p>
@@ -319,7 +319,7 @@ const handleLoginClick = () => {
           </p>
         */}
           <p className="text-2xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-            Unlock weeks of customer-engaging content with zero effort. <br/> Generate months of posts from websites you love.   
+            Unlock weeks of customer-focused content with zero effort. <br/> Generate months of posts from websites you love.   
           </p>  
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
           {/* Outer div for responsive aspect ratio (16:9 - 56.25%) */}
@@ -482,7 +482,7 @@ const handleLoginClick = () => {
                 Attracting customers <br/> on social media is tough 😏
             </h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-            Many founders have tried to crack the code, unfortunately many have hit the same issues:
+            {/*Many founders have tried to crack the code, unfortunately many have hit the same issues:*/}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
