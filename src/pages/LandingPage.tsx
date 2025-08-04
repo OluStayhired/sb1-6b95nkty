@@ -1751,9 +1751,9 @@ const handleLoginClick = () => {
       <div>
         <h3 className="font-semibold mb-4">Resources</h3>
         <ul className="space-y-2 text-sm text-gray-600">
-          <li className="text-gray-400">Blog <em>(soon)</em></li>
+          {/*<li className="text-gray-400">Blog <em>(soon)</em></li>
           <li className="text-gray-400">Docs <em>(soon)</em></li>
-          <li className="text-gray-400">Support <em>(soon)</em></li>
+      <li className="text-gray-400">Support <em>(soon)</em></li>*/}
           <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
         </ul>
       </div>
@@ -1776,11 +1776,11 @@ const handleLoginClick = () => {
     {/* Bottom bar */}
     <div className="mt-12 pt-8 border-t border-gray-200">
       <div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600"> {/* Responsive flex */}
-        <p className="order-2 sm:order-1">&copy; 2024 soSavvy.app All rights reserved.</p> {/* Order for mobile */}
+      <p className="order-2 sm:order-1">&copy; 2025 SoSavvy.so All rights reserved.</p> {/* Order for mobile */}
         <div className="flex space-x-6 order-1 sm:order-2"> 
           {/* Order for mobile */}
           <span>Made with ❤️ for founders and creators building their personal brand with purpose</span>
-            <a href="https://bsky.app/profile/oluadedeji.bsky.social" className="text-blue-500 hover:text-blue-600">@oluadedeji.bsky.social
+            <a href="https://www.linkedin.com/in/oluadedeji" className="text-blue-500 hover:text-blue-600">Olu on LinkedIn (8.9k followers)
           </a>
         </div>
       </div>
