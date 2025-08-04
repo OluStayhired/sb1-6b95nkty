@@ -1342,7 +1342,7 @@ const handleLoginClick = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"> {/* Grid for horizontal spread */}
         {/* Left Column: Pricing and CTA */}
         <div className="text-center md:text-right md:pr-8 md:border-r md:border-blue-400"> {/* Added border-r for visual separation */}
-          <h3 className="text-2xl sm:text-3xl font-semibold mb-4">All-in-One Content Writer</h3>
+          <span> <h3 className="text-2xl sm:text-3xl font-semibold mb-4">All-in-One Content Writer</h3> </span>
           <div className="flex items-baseline justify-center md:justify-end mb-6">
             <span className="text-6xl sm:text-9xl text-center font-extrabold">$25</span> {/* Larger font for price */}
             <span className="text-2xl font-medium">/month</span>
@@ -1379,54 +1379,74 @@ const handleLoginClick = () => {
       
         </div>
 
-        {/* Right Column: Features List */}
-        <div className="text-left md:pl-8">
+            {/* Right Column: Features List */}
+            <div className="text-left md:pl-8">
           <h4 className="text-2xl font-semibold mb-4">What's Included:</h4>
-          <ul className="space-y-3">
+          <ul className="space-y-4">
            
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
                <TooltipExtended text="⚡ Get a full, 14-day calendar of strategic posts, planned around your insights and goals. Never wonder what to post next – it's already done and optimized for impact.">
-              <span className="underline decoration-white decoration-2 cursor-pointer">14-Day High-Value Content Calendars</span>
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">14-Day High-Value Content Calendars</span>
               </TooltipExtended>  
             </li>
                             
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
               <TooltipExtended text="⚡ SoSavvy analyzes your website's content, services, and offerings to pinpoint your ideal customer's pains, desires, and the exact language they use. No more guesswork about what matters.">
-              <span className="underline decoration-white decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>
+              
+                {/*<span className="underline decoration-white decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>*/}
+
+                <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Deep Customer & Niche Insights</span>
+                
               </TooltipExtended>
             </li>
             <li className="flex items-center">
+              
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
               <TooltipExtended text="⚡ Go beyond generic. Our intelligent AI crafts non-salesy, compelling posts that truly sound like you, directly addressing your audience's needs and building genuine connection.">
-              <span className="underline decoration-white decoration-2 cursor-pointer">Human-Like Content Creation</span>
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Human-Like Content Creation</span>
               </TooltipExtended>
+              
             </li>
+              
+            <li className="flex items-center">
+            
+              <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
+            <TooltipExtended text="⚡ Schedule content seamlessly across Twitter(X), LinkedIn and Bluesky. Add Images, enhance with AI Writers">
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Seamless Cross-Platform Scheduling</span>
+            </TooltipExtended>
+              
+            </li>
+            
+            <li className="flex items-center">
 
-            <li className="flex items-center">
+         
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
-              <span>Seamless Cross-Platform Scheduling</span>
-            </li>
-            <li className="flex items-center">
-              <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
-              <span>Automated Post Publishing</span>
+               <TooltipExtended text="⚡Bulk Schedule content for 14 r 28 days depending on the number of calendars you created"> 
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Automated Post Publishing</span>
+          </TooltipExtended>
+              
             </li>
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
               <TooltipExtended text="⚡Maintain full control. Review, refine, and edit any generated post before it goes live, ensuring every message aligns perfectly with your brand voice.">
-              <span className="underline decoration-white decoration-2 cursor-pointer">Flexible Content Editor & Drafts</span>
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Flexible Content Editor & Drafts</span>
               </TooltipExtended>
             </li>
             <li className="flex items-center">
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
                <TooltipExtended text="⚡Ensure your content reaches your audience when they're most active, wherever they are in the world. SoSavvy intelligently schedules posts for maximum visibility across different timezones.">
-              <span className="underline decoration-white decoration-2 cursor-pointer">Timezone-Aware Scheduling</span>
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Timezone-Aware Scheduling</span>
                </TooltipExtended>
             </li>
             <li className="flex items-center">
+              
               <CheckCircle className="w-6 h-6 text-white mr-3 flex-shrink-0" />
-              <span>Dedicated Customer Support</span>
+              <TooltipExtended text="⚡ Dedicated customer support Monday through to Friday, Occassional Support available on Saturdays and Sundays">
+              <span className="p-2 rounded-full bg-blue-400 decoration-2 cursor-pointer">Dedicated Customer Support</span>
+                
+              </TooltipExtended>
             </li>
           </ul>
         </div>
@@ -1434,8 +1454,7 @@ const handleLoginClick = () => {
     </div>
   </div>
 </section>
-
-  {/*----------------------------- End of the Pricing Section ----------------------------------*/}
+{/*----------------------------- End of the Pricing Section ----------------------------------*/}
 
   {/*------------------------------start of the FAQ Section -------------------------------------*/}    
 
