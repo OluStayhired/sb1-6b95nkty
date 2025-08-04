@@ -570,6 +570,21 @@ const handleLoginClick = () => {
             Create <span className="text-blue-400 justify-center items-center">problem-focused</span> content that <br/>connects with your customers' pain 😊  
         </h2>
 
+        {/* Button Call to Action for Customers */}
+        <button
+            onClick={handleLoginClick}
+            className="mt-4 mb-6 flex-grow items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:px-4 sm:py-3 sm:text-base
+                         shadow-lg shadow-blue-500/60       
+             hover:shadow-xl hover:shadow-blue-500/80 group" // Adjusted mobile button size/text for consistency
+          >
+                {/*<Send className="w-3.5 h-3.5"/>*/}
+                <span className="flex items-center justify-center space-x-2">
+                  <span>Get Started for Free</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+                
+        </button>
+
         {/* Paragraph (P) - Centered by parent text-center */}
         <p className="text-3xl font-light opacity-90 max-w-2xl mx-auto">
             SoSavvy crafts compelling social media content that <br/> resonates with your customers and generates inquiries on AutoPilot
