@@ -138,7 +138,7 @@ const handleLoginClick = () => {
             //onClick={openWaitlistModal}
             className="flex items-center justify-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors              
             shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 "
+             hover:shadow-xl hover:shadow-blue-500/80 group"
           >
             {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Start for Free</span>
@@ -708,7 +708,7 @@ const handleLoginClick = () => {
             <button
               onClick={handleLoginClick}
               //onClick={openWaitlistModal}
-              className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
+              className="group flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
                            shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 
               "
@@ -767,7 +767,7 @@ const handleLoginClick = () => {
           //onClick={openWaitlistModal}
           className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
                        shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 "
+             hover:shadow-xl hover:shadow-blue-500/80 group "
         >
           {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
@@ -858,7 +858,7 @@ const handleLoginClick = () => {
           //onClick={openWaitlistModal}
           className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
                        shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 "
+             hover:shadow-xl hover:shadow-blue-500/80 group "
         >
             {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
@@ -904,7 +904,7 @@ const handleLoginClick = () => {
               //onClick={openWaitlistModal}
               className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
                            shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 "
+             hover:shadow-xl hover:shadow-blue-500/80 group "
             >
              {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
@@ -960,7 +960,7 @@ const handleLoginClick = () => {
           //onClick={openWaitlistModal}
           className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
                        shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 "
+             hover:shadow-xl hover:shadow-blue-500/80 group "
         >
           {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
@@ -1051,7 +1051,7 @@ const handleLoginClick = () => {
           //onClick={openWaitlistModal}
           className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold
                        shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 
+             hover:shadow-xl hover:shadow-blue-500/80 group
           "
         >
           {/*<Send className="w-3.5 h-3.5"/>*/}
@@ -1106,7 +1106,7 @@ const handleLoginClick = () => {
             //onClick={openWaitlistModal}
             className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:px-4 sm:py-3 sm:text-base
             shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 " // Adjusted mobile button size/text for consistency
+             hover:shadow-xl hover:shadow-blue-500/80 group " // Adjusted mobile button size/text for consistency
           >
             {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
@@ -1352,7 +1352,7 @@ const handleLoginClick = () => {
             //onClick={openWaitlistModal}
             className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:px-4 sm:py-3 sm:text-base
                          shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 "
+             hover:shadow-xl hover:shadow-blue-500/80 group"
           >
             {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
@@ -1631,7 +1631,7 @@ const handleLoginClick = () => {
             //onClick={openWaitlistModal}
             className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:px-4 sm:py-3 sm:text-base
                          shadow-lg shadow-blue-500/60       
-             hover:shadow-xl hover:shadow-blue-500/80 " // Adjusted mobile button size/text for consistency
+             hover:shadow-xl hover:shadow-blue-500/80 group" // Adjusted mobile button size/text for consistency
           >
             {/*<Send className="w-3.5 h-3.5"/>*/}
            <span>Get Started for Free</span>
