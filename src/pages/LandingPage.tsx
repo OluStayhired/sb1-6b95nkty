@@ -32,6 +32,11 @@ function LandingPage() {
     //await signIn();
   //};
 
+  const handleLoginClick = () => {
+    // This navigates to an external URL, not an internal route
+    window.location.href = 'https://app.sosavvy.so/login';
+  };
+
    const openWaitlistModal = () => {
     setIsWaitlistModalOpen(true);
   };
@@ -1625,14 +1630,14 @@ function LandingPage() {
           </button>
         */}
           <button
-            //onClick={handleEmailLogin}
-            onClick={openWaitlistModal}
+            onClick={handleLoginClick}
+            //onClick={openWaitlistModal}
             className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:px-4 sm:py-3 sm:text-base
                          shadow-lg shadow-blue-500/60       
              hover:shadow-xl hover:shadow-blue-500/80 " // Adjusted mobile button size/text for consistency
           >
             <Send className="w-3.5 h-3.5"/>
-           <span>Join Waitlist</span>
+           <span>Get Started for Free</span>
           </button>
 
 
