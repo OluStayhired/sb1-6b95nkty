@@ -1380,7 +1380,8 @@ const handleLoginClick = () => {
              hover:shadow-xl hover:shadow-blue-500/80 group"
           >
             {/*<Send className="w-3.5 h-3.5"/>*/}
-           <span>Get Started for Free</span>
+           <span className="hidden">Get Started for Free</span>
+           <span className="sm:hidden">Start for Free</span>
            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
 
@@ -1391,7 +1392,9 @@ const handleLoginClick = () => {
 
             {/* Right Column: Features List */}
         <div className="text-left md:pl-8">
-          <h4 className="text-2xl font-semibold mb-7">What's Included 👇</h4>
+      
+          <h4 className="text-xl sm:text-2xl font-semibold mb-7">What's Included 👇</h4>
+          
           <ul className="space-y-4">
            
             <li className="flex items-center">
