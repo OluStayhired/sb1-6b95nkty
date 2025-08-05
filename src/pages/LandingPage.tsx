@@ -258,11 +258,11 @@ const handleLoginClick = () => {
           
           <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Creators</span>
           
-          {/*start alternative header */}
-            <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-2 sm:mb-3"> 
+           {/*start alternative header */}
+           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-                Get Leads on Social Media  <br className="sm:hidden" /> {/* This is the key change! */}
+                Get Leads <br className="sm:hidden" /> on Social Media  <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold sm:font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 leading-tight mt-1 sm:mt-1">
          without chasing likes
          </p>
@@ -270,10 +270,16 @@ const handleLoginClick = () => {
             </p>
           </h1>
           {/*end alternative header*/}
-          
-        <p className="text-base sm:text-lg md:text-xl text-gray-700 sm:font-normal font-normal mt-10 mb-8 sm:mb-10">
+
+          {/*
+        <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
             SoSavvy writes & schedules months of customer-engaging posts <br className="hidden sm:inline" />
            to <span className="underline underline-offset-4" style={{ textDecorationColor: '#2563eb' }}>grow inquiries</span> on LinkedIn, Twitter(X) and Bluesky🔥
+      </p>*/}
+
+          <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
+            SoSavvy writes & schedules months of customer-engaging posts <br className="hidden sm:inline" />
+           to grow inquiries on LinkedIn, Twitter(X) and Bluesky🔥
       </p>
 
   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center mx-auto w-fit"> 
