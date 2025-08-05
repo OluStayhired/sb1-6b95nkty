@@ -1380,7 +1380,7 @@ const handleLoginClick = () => {
              hover:shadow-xl hover:shadow-blue-500/80 group"
           >
             {/*<Send className="w-3.5 h-3.5"/>*/}
-           <span className="hidden">Get Started for Free</span>
+           <span className="hidden sm:block">Get Started for Free</span>
            <span className="sm:hidden">Start for Free</span>
            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
           </button>
