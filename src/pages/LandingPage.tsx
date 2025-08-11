@@ -624,12 +624,17 @@ const handleLoginClick = () => {
 {/* Start How it Works Section */}
 <section className="mt-8 text-center">
 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-  Turn your invisible efforts <br className="sm:hidden"/> into <br className="hidden sm:block"/>regular inquiries in <br className="sm:hidden"/> 3 easy steps 🔥
+  {/*Turn your invisible efforts <br className="sm:hidden"/> into <br className="hidden sm:block"/>regular inquiries in <br className="sm:hidden"/> 3 easy steps 🔥*/}
+  Turn your hard work <br className="sm:hidden"/> into <br className="hidden sm:block"/>regular inquiries <br className="sm:hidden"/> from ideal clients 🔥
 </h2>
   
-  <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-    Audience Analysis . Content Strategy . Scheduled Posts
+  {/*<p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">*/}
+  <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+    {/*Audience Analysis . Content Strategy . Scheduled Posts*/}
+    SoSavvy will analyze your website, develop your content strategy and schedule your posts
   </p>
+
+  
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
     {/* Step 1: Analyze Company Website */}
