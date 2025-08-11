@@ -638,7 +638,7 @@ const handleLoginClick = () => {
 
   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
     {/* Step 1: Analyze Company Website */}
-    <div> {/* This div now acts as the individual grid column item */}
+    <div> {/* This div now acts as the individual grid column  item */}
       {/* Image - fully separated from the text card below */}
       <div className="w-full h-48 mb-6"> {/* Added mb-6 for spacing between image and text card */}
         <img
