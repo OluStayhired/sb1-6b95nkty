@@ -687,7 +687,8 @@ const handleLoginClick = () => {
       <div className="w-full h-48 mb-6">
         <img
           //src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          src="https://i.imghippo.com/files/cidD9233HWc.png"
+          //src="https://i.imghippo.com/files/cidD9233HWc.png"
+          src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/calendar_view.png"
           alt="Post Generation Screenshot"
           className="w-full h-full object-cover rounded-lg"
         />
