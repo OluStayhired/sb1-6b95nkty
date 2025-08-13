@@ -970,7 +970,8 @@ const handleLoginClick = () => {
       {/* Image (Desktop Version: Absolute, visible from md breakpoint up) */}
       {/* Object-contain ensures it won't crop, but might have letterboxing if aspect ratio doesn't match container */}
       <img
-        src="https://i.imghippo.com/files/FN9394Xsg.png"
+        //src="https://i.imghippo.com/files/FN9394Xsg.png"
+        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/writing_posts_desktop.png"
         alt="SoSavvy Product Screenshot"
         //className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-contain rounded-xl z-0" 
           className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
@@ -980,7 +981,8 @@ const handleLoginClick = () => {
       {/* This image appears after text on mobile, is larger, and uses object-contain to prevent cropping */}
       <div className="md:hidden mt-8 flex justify-center"> {/* mt-8 for spacing after text content */}
   <img
-    src="https://i.imghippo.com/files/Wfta6982BA.png"
+    //src="https://i.imghippo.com/files/Wfta6982BA.png"
+    src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/writing_posts_mobile.png"
     alt="SoSavvy Product Screenshot"
     className="w-full h-auto shadow-md max-w-full sm:max-w-2xl md:max-w-3xl rounded-xl z-0 object-cover" // Changed max-w, and strongly recommend object-contain
   />
