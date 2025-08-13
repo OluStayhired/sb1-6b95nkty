@@ -772,7 +772,8 @@ const handleLoginClick = () => {
       {/* Object-contain ensures it won't crop, but might have letterboxing if aspect ratio doesn't match container */}
       <img
         //src="https://i.imghippo.com/files/aSkU4676wcg.png"
-        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/content_calendar_mockup_bg.png"
+        //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/content_calendar_mockup_bg.png"
+        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/content_calendar_mockup.png"
         alt="SoSavvy Product Screenshot"
         //className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-contain rounded-xl z-0" 
           className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
