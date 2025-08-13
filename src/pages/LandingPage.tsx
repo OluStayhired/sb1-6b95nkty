@@ -647,10 +647,9 @@ const handleLoginClick = () => {
       {/* Image - fully separated from the text card below */}
       <div className="w-full h-48 mb-6"> {/* Added mb-6 for spacing between image and text card */}
         <img
-          //src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          //src="https://i.imghippo.com/files/sWbH6697Do.png"
-          //src="https://i.imghippo.com/files/Ong5596H.png"
-          src="https://i.imghippo.com/files/dL4344ps.png"
+          
+          //src="https://i.imghippo.com/files/dL4344ps.png"
+          src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/know_your_audience_bigger.png"
           alt="Website Analysis Screenshot"
           className="w-full h-full object-cover rounded-lg" 
         />
