@@ -1201,7 +1201,8 @@ const handleLoginClick = () => {
       <div className="flex items-center mb-4">
         <div className="relative mr-4">
           <img
-            src="https://i.imghippo.com/files/beBY1349jQo.jpg"
+            //src="https://i.imghippo.com/files/beBY1349jQo.jpg"
+            src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/eric_rafat_linkedin.jpg"
             alt="Eric Rafat Avatar"
             className="w-16 h-16 rounded-full object-cover"
           />
@@ -1301,7 +1302,8 @@ const handleLoginClick = () => {
       <div className="flex items-center mb-4">
         <div className="relative mr-4">
           <img
-            src="https://i.imghippo.com/files/wQ7409qJU.jpg"
+            //src="https://i.imghippo.com/files/wQ7409qJU.jpg"
+            src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/eric_rafat_linkedin.jpg"
             alt="Eric Rafat Avatar"
             className="w-16 h-16 rounded-full object-cover"
           />
