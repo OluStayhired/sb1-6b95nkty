@@ -1184,7 +1184,8 @@ const handleLoginClick = () => {
             //src="https://placehold.co/1200x500/E0E7FF/000000?text=SoSavvy+Dashboard+Screenshot"
             //src="https://i.imghippo.com/files/Lp8140co.png"
             //src="https://i.imghippo.com/files/hjBw8272m.png"
-            src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/desktop_big_writing_view.png"
+            //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/desktop_big_writing_view.png"
+            src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/v2_sosavvy_dashboard.png"
             alt="SoSavvy Dashboard Screenshot"
             className="hidden sm:block w-full max-w-5xl h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg mx-auto mt-8 block"
         />
