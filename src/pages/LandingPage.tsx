@@ -353,17 +353,20 @@ const handleLoginClick = () => {
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
           {/* Outer div for responsive aspect ratio (16:9 - 56.25%) */}
           <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
-            <iframe
+          <video
               //src="https://player.vimeo.com/video/1096029698?badge=0&autopause=0&player_id=0&app_id=58479"
-              // Above video works fine. 
-
-              src="https://player.vimeo.com/video/1108122437?badge=0&autopause=0&player_id=0&app_id=58479"
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-share" // Ensure `encrypted-media` is included for broader compatibility
-              allowFullScreen
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-              //title="Latest_SoSavvy_Video_Design"
-            ></iframe>
+              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-videos/sosavvy_video_no_intro.mp4"
+              poster="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-videos/sosavvy_video_cover_image.png"
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              controls           // Shows playback controls (play/pause, volume, fullscreen)
+              //autoPlay           // Starts playing automatically (often requires 'muted')
+              loop               // Loops the video automatically
+              muted              // Essential for autoplay to work in most browsers
+              playsInline        // Recommended for mobile browsers to play video inline
+      >
+    
+                {/*</iframe>*/}
+             </video>   
           </div>
         </div>
       </section>
