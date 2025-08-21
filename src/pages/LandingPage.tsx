@@ -293,9 +293,16 @@ const handleLoginClick = () => {
            to <span className="underline underline-offset-4" style={{ textDecorationColor: '#2563eb' }}>grow inquiries</span> on LinkedIn, Twitter(X) and Bluesky🔥
       </p>*/}
 
+      {/*
+
           <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
             SoSavvy writes & schedules months of customer-engaging posts <br className="hidden sm:inline" />
            to grow inquiries on LinkedIn, Twitter(X) and Bluesky🔥
+      </p>
+    */}
+
+      <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
+            Turn your website into months of <br className="sm:hidden" /> engaging content for X & LinkedIn, <br className="sm:hidden" /> in minutes 🔥
       </p>
 
   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center mx-auto w-fit"> 
