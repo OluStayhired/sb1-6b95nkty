@@ -259,16 +259,32 @@ const handleLoginClick = () => {
           <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Creators</span>
           
            {/*start alternative header */}
+           {/*
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-                Get Leads <br className="sm:hidden" /> on Social Media  <br className="sm:hidden" /> {/* This is the key change! */}
+                Get Leads <br className="sm:hidden" /> on Social Media  <br className="sm:hidden" /> 
        <p className="block font-semibold sm:font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 leading-tight mt-1 sm:mt-1">
          without chasing likes
          </p>
               </span>
             </p>
           </h1>
+        */}
+
+           {/*start alternative header */}
+           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
+            <p>
+              <span className="inline-block bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
+                Replace your <br className="sm:hidden" /> social media manager <br className="sm:hidden" /> {/* This is the key change! */}
+       <p className="block font-semibold text-xl sm:font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-gray-700 leading-tight mt-1 sm:mt-1">
+         {/* with unstoppable <br className="sm:hidden" /> online presence */}
+         No contracts . No hires .<br className="sm:hidden block" /> No sick days
+         </p>
+              </span>
+            </p>
+          </h1>
+          {/*end alternative header*/}
           {/*end alternative header*/}
 
           {/*
