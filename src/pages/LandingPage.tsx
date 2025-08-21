@@ -279,7 +279,7 @@ const handleLoginClick = () => {
                 Fire your <br className="sm:hidden" /> social media manager <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold text-xl sm:font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-gray-700 leading-tight mt-1 sm:mt-1">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
-         Let SoSavvy write and schedule <br className="sm:hidden block" /> posts for you!
+         Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!
          </p>
               </span>
             </p>
@@ -344,7 +344,8 @@ const handleLoginClick = () => {
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2">
           Struggling to Grow on LinkedIn 😥
         </h2>
-        <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+        <p className="text-base sm:text-3xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+    
             Unlock weeks of high-converting content to build your pipeline. <br/> Generate endless post ideas with zero effort.   
         </p>
 
