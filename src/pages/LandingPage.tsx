@@ -322,7 +322,7 @@ const handleLoginClick = () => {
   </div>
 </div>
 
-        {/*Start Social Media Icons*/}
+         {/*Start Social Media Icons
           <div className="flex justify-center items-center space-x-8 mt-8">
             <div className="flex items-center border-8 border-gray-100 p-3 bg-gray-900 hover:bg-blue-100 space-x-2 text-blue-700 rounded-full">
               <img src={BlueskyLogoWhite} alt="Bluesky" className="w-9 h-9 rounded-lg" />
@@ -335,21 +335,19 @@ const handleLoginClick = () => {
               <img src={XLogo} alt="Twitter" className="w-9 h-9 rounded-lg" />
             </div>
           </div>
+          */}
 
         {/*End Social Media Icons*/}
 
 {/*----------------- Start Video Section for SoSavvy ----------------------- */}
-        <section className="mt-24 text-center">
+<section className="mt-16 text-center">
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2">
-          Content Planning on Steroids 👇
+          Struggling to Grow on LinkedIn 😥
         </h2>
-        {/*<p className="text-sm sm:text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-            Unlock weeks of website-powered, customer-focused content in minutes
-          </p>
-        */}
-          <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-            Unlock weeks of customer-focused content with zero effort. <br/> Generate months of posts from websites you love.   
-          </p>  
+        <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
+            Unlock weeks of high-converting content to build your pipeline. <br/> Generate endless post ideas with zero effort.   
+        </p>
+
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
           {/* Outer div for responsive aspect ratio (16:9 - 56.25%) */}
           <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
