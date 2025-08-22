@@ -661,7 +661,8 @@ const handleLoginClick = () => {
             <br className="sm:hidden"/> for your goals 🔥
         </h2>
         <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-            Watch how weeks of linkedin and twitter posts are created in seconds!
+            
+            Watch how to create weeks of linkedin & twitter posts in seconds!
           
           </p>
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
