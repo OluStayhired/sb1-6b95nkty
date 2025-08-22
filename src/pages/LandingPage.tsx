@@ -520,7 +520,7 @@ const handleLoginClick = () => {
                 <span>Here's the Problem</span>
           </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
-                Attracting customers <br/> on social media is tough 😏
+            Your social media manager <br/> is costing you 😏
             </h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             {/*Many founders have tried to crack the code, unfortunately many have hit the same issues:*/}
