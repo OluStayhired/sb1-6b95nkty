@@ -256,7 +256,7 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
-          <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Creators</span>
+          <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Consultants</span>
           
            {/*start alternative header */}
            {/*
@@ -379,7 +379,7 @@ const handleLoginClick = () => {
 
 <section className="mt-24 text-center">
   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-    Why Founders & Creators Love SoSavvy❤️
+    Why Founders & Consultants Love SoSavvy❤️
   </h2>
   <div className="flex items-center justify-center flex-wrap gap-4 mb-6">
     {/* Mini Testimonial 1 */}
@@ -1257,7 +1257,7 @@ const handleLoginClick = () => {
     <span>What Our Customers Say</span>
   </div>
   <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-    Hear From Founders & Creators Like You
+    Hear From Founders & Consultants Like You
   </h2>
   <p className="text-xl sm:text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
     SoSavvy is helping entrepreneurs transform their social media presence into a pipeline building machine.
@@ -1886,7 +1886,7 @@ const handleLoginClick = () => {
       <p className="order-2 sm:order-1">&copy; 2025 SoSavvy.so All rights reserved.</p> {/* Order for mobile */}
         <div className="flex space-x-6 order-1 sm:order-2"> 
           {/* Order for mobile */}
-          <span>Made with ❤️ for founders and creators building their personal brand with purpose</span>
+          <span>Made with ❤️ for founders and business owners building their personal brand with purpose</span>
             <a href="https://www.linkedin.com/in/oluadedeji" className="text-blue-500 hover:text-blue-600">Olu on LinkedIn (8.9k followers)
           </a>
         </div>
