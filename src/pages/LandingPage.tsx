@@ -346,7 +346,9 @@ const handleLoginClick = () => {
         </h2>
         <p className="text-base sm:text-3xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
     
-            Unlock weeks of high-converting content to build your pipeline. <br/> Generate endless post ideas with zero effort.   
+            Unlock weeks of high-converting content without a content creator. 
+            
+            {/*<br/> Generate posts that build your brand with zero effort.   */}
         </p>
 
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
