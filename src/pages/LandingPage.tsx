@@ -686,7 +686,7 @@ const handleLoginClick = () => {
 
 
 {/* Start How it Works Section */}
-<section className="mt-8 text-center">
+<section className="mt-20 text-center">
 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
   Write posts to build your <br className="sm:hidden"/> brand <br className="hidden sm:block"/> without hiring a ghostwriter  
 </h2>
