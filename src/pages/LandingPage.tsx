@@ -342,7 +342,7 @@ const handleLoginClick = () => {
 {/*----------------- Start Video Section for SoSavvy ----------------------- */}
 <section className="mt-16 text-center">
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2">
-          Struggling to Grow on LinkedIn 😥
+          Struggling to Grow on LinkedIn? 😥
         </h2>
         <p className="text-base sm:text-3xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
     
@@ -536,7 +536,7 @@ const handleLoginClick = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Manual Content Creation Steals Time.</h3>
               <p className="text-gray-600 text-lg">
-                As a content creator you're stuck looking for inspiration instead of building your business.
+              As a business owner you're stuck looking for inspiration instead of building your business.
               </p>
             </div>
 
@@ -656,36 +656,30 @@ const handleLoginClick = () => {
 {/* Start How it Works Section */}
 <section className="mt-8 text-center">
 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-  {/*Turn your invisible efforts <br className="sm:hidden"/> into <br className="hidden sm:block"/>regular inquiries in <br className="sm:hidden"/> 3 easy steps 🔥*/}
-  Turn your hard work <br className="sm:hidden"/> into <br className="hidden sm:block"/>regular inquiries <br className="sm:hidden"/> from ideal clients 🔥
+  Write posts to build your <br className="sm:hidden"/> brand <br className="hidden sm:block"/> without hiring a ghostwriter  
 </h2>
   
-  {/*<p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">*/}
-  <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-    {/*Audience Analysis . Content Strategy . Scheduled Posts*/}
-    SoSavvy will analyze your website, develop your content strategy and schedule your posts
+  <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
+    Know Your Audience . Build a Strategy . Scale Your Content
   </p>
 
   
-
   <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
     {/* Step 1: Analyze Company Website */}
     <div> {/* This div now acts as the individual grid column  item */}
       {/* Image - fully separated from the text card below */}
       <div className="w-full h-48 mb-6"> {/* Added mb-6 for spacing between image and text card */}
         <img
-          
-          //src="https://i.imghippo.com/files/dL4344ps.png"
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/know_your_audience_bigger.png"
           alt="Website Analysis Screenshot"
           className="w-full h-full object-cover rounded-lg" 
         />
       </div>
-      {/* Text Content - now in its own dedicated card */}
-      <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3"><span className="text-gray-300">Step 1</span> <br/> We Analyze your Website</h3>
-        <p className="text-gray-600 text-sm">
-          We undertake a deep analysis of your business to understand your ideal customer and the problem you solve to establish the type of content you need.
+       {/* Text Content - now in its own dedicated card */}
+       <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3"> Website Analysis</h3>
+        <p className="text-gray-600 text-xl">
+          SoSavvy performs a deep analysis of your business to understand your ideal customer and the content you need to meet your goals. 
         </p>
       </div>
     </div>
@@ -694,17 +688,15 @@ const handleLoginClick = () => {
     <div>
       <div className="w-full h-48 mb-6">
         <img
-          //src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          //src="https://i.imghippo.com/files/dE6647lM.png"
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/content_calendar_bigger.png"
           alt="Content Calendar Screenshot"
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
       <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3"><span className="text-gray-300">Step 2</span> <br/>We Create Content Calendars</h3>
-        <p className="text-gray-600 text-sm">
-          We create your social media content strategy based specifically on your goals, then we develop a 2-week campaign and content calendar around it.
+         <h3 className="text-2xl font-bold text-gray-900 mb-3">Content Creation</h3>
+        <p className="text-gray-600 text-xl">
+          The content creation process uses copywriting frameworks and nuanced industry insights to generate hyper targeted posts that resonate.
         </p>
       </div>
     </div>
@@ -713,17 +705,15 @@ const handleLoginClick = () => {
     <div>
       <div className="w-full h-48 mb-6">
         <img
-          //src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          //src="https://i.imghippo.com/files/cidD9233HWc.png"
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/calendar_view.png"
           alt="Post Generation Screenshot"
           className="w-full h-full object-cover rounded-lg"
         />
       </div>
       <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
-        <h3 className="text-xl font-semibold text-gray-900 mb-3"><span className="text-gray-300">Step 3</span> <br/>We Generate Content at Scale</h3>
-        <p className="text-gray-600 text-sm">
-          With just a couple of clicks every month, you will consistently put out content that speaks directly to your target audience's challenges.
+         <h3 className="text-2xl font-bold text-gray-900 mb-3">Content Scheduling</h3>
+        <p className="text-gray-600 text-xl">
+          With just a couple of clicks every month, you will consistently put out posts that speak to your target audience's challenges.
         </p>
       </div>
     </div>
