@@ -534,9 +534,9 @@ const handleLoginClick = () => {
                   <Timer className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Manual Content Creation Steals Time.</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Inconsistent Posting Hurts Growth</h3>
               <p className="text-gray-600 text-lg">
-              As a business owner you're stuck looking for inspiration instead of building your business.
+                Random acts of content creation hurts your credibility and destroys your personal brand
               </p>
             </div>
 
@@ -547,9 +547,9 @@ const handleLoginClick = () => {
                   <Bot className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Generic AI Tools Lack Human Empathy.</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Generic Posts Lack Human Empathy</h3>
               <p className="text-gray-600 text-lg">
-                Automated AI post generators churn out content but rarely connect with your customers' pain.
+                You waste hours giving feedback on low quality content, only to get more of the same
               </p>
             </div>
 
@@ -560,9 +560,10 @@ const handleLoginClick = () => {
                   <Zap className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Simple Schedulers Don't Generate Leads.</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Simple Schedulers Don't Deliver Results</h3>
               <p className="text-gray-600 text-lg">
-                Scheduling platforms help you post, but they don't create strategic content to generate leads.
+                
+                You are paying for content creators to deliver strategic content. Not just to schedule posts
               </p>
             </div>
             
@@ -573,9 +574,9 @@ const handleLoginClick = () => {
                   <CircleDollarSign className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Hiring More Staff <br/>is Expensive.</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Expensive Creators <br/>Offer No Guarantees</h3>
               <p className="text-gray-600 text-lg">
-                Hiring a social media manager requires a significant investment, often with zero guarantees.
+                 An expensive content creator requires a significant investment, often with zero guarantees.
               </p>
             </div>
    
