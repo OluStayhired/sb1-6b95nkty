@@ -259,18 +259,7 @@ const handleLoginClick = () => {
           <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Consultants</span>
           
            {/*start alternative header */}
-           {/*
-           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight font-bold mb-2 sm:mb-3"> 
-            <p>
-              <span className="inline-block bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-                Get Leads <br className="sm:hidden" /> on Social Media  <br className="sm:hidden" /> 
-       <p className="block font-semibold sm:font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-700 leading-tight mt-1 sm:mt-1">
-         without chasing likes
-         </p>
-              </span>
-            </p>
-          </h1>
-        */}
+    
 
            {/*start alternative header */}
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
@@ -285,21 +274,6 @@ const handleLoginClick = () => {
             </p>
           </h1>
           {/*end alternative header*/}
-          {/*end alternative header*/}
-
-          {/*
-        <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
-            SoSavvy writes & schedules months of customer-engaging posts <br className="hidden sm:inline" />
-           to <span className="underline underline-offset-4" style={{ textDecorationColor: '#2563eb' }}>grow inquiries</span> on LinkedIn, Twitter(X) and Bluesky🔥
-      </p>*/}
-
-      {/*
-
-          <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
-            SoSavvy writes & schedules months of customer-engaging posts <br className="hidden sm:inline" />
-           to grow inquiries on LinkedIn, Twitter(X) and Bluesky🔥
-      </p>
-    */}
 
       <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
             Turn your website into months of <br className="sm:hidden" /> engaging content for X & LinkedIn, <br className="sm:hidden" /> in minutes 🔥
@@ -388,7 +362,7 @@ const handleLoginClick = () => {
       hover:border-blue-300 transition-all group">
       <div className="relative">
         <img
-          //src="https://i.imghippo.com/files/beBY1349jQo.jpg"
+          
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/eric_rafat_linkedin.jpg"
           alt="Eric Rafat"
           className="w-10 h-10 rounded-full object-cover"
@@ -411,7 +385,7 @@ const handleLoginClick = () => {
     <div className="hidden sm:inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-blue-50 to-white border border-blue-100 rounded-full shadow-sm hover:border-blue-300 transition-all group rounded-full shadow-sm ">
       <div className="relative">
         <img
-          //src="https://i.imghippo.com/files/mcUX9191eo.jpg"
+          
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/julia_yuvchenko_linkedin.jpg"
           alt="Julia Yuvchenko"
           className="w-10 h-10 rounded-full object-cover"
@@ -433,7 +407,6 @@ const handleLoginClick = () => {
       hover:border-blue-300 transition-all group rounded-full shadow-sm ">
       <div className="relative">
         <img
-          //src="https://i.imghippo.com/files/qLzj4161JaA.jpg"
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/ericka_bates_linkedin.jpg"
           alt="Ericka Bates"
           className="w-10 h-10 rounded-full object-cover"
@@ -454,7 +427,6 @@ const handleLoginClick = () => {
     <div className="hidden sm:inline-flex items-center space-x-3 px-6 py-3 rounded-full shadow-sm bg-gradient-to-r from-blue-50 to-white border border-blue-100 rounded-full shadow-sm hover:border-blue-300 transition-all group">
       <div className="relative">
         <img
-          //src="https://i.imghippo.com/files/cGvb7319MV.jpg"
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/jon_hillis_linkedin.jpg"
           alt="Jonathan Hillis"
           className="w-10 h-10 rounded-full object-cover"
@@ -475,7 +447,6 @@ const handleLoginClick = () => {
       hover:border-blue-300 transition-all group rounded-full shadow-sm">
       <div className="relative">
         <img
-          //src="https://i.imghippo.com/files/wQ7409qJU.jpg"
           src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/travis_street_bluesky.jpg"
           alt="Travis Street"
           className="w-10 h-10 rounded-full object-cover"
@@ -582,7 +553,7 @@ const handleLoginClick = () => {
    
           </div>
         <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto mt-6">
-          {/*These all lead to the same frustration: more effort, less impact, and no reliable path to customers*/}
+          
           </p>
         </section>
         {/* End New Interactive Section */}
