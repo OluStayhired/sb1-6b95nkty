@@ -334,7 +334,7 @@ const handleLoginClick = () => {
               poster="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-videos/sosavvy_video_cover_image.png"
               className="absolute top-0 left-0 w-full h-full object-cover"
               controls           // Shows playback controls (play/pause, volume, fullscreen)
-              //autoPlay           // Starts playing automatically (often requires 'muted')
+              autoPlay           // Starts playing automatically (often requires 'muted')
               loop               // Loops the video automatically
               muted              // Essential for autoplay to work in most browsers
               playsInline        // Recommended for mobile browsers to play video inline
