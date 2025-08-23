@@ -256,7 +256,7 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
-          <span className="text-sm sm:text-lg p-3 font-semibold bg-gray-100 rounded-full text-gray-700 border-8 border-gray-50">For Entrepreneurs and Consultants</span>
+        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">For Entrepreneurs and Professionals</span>
           
            {/*start alternative header */}
     
