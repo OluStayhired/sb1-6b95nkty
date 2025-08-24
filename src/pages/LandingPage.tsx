@@ -498,6 +498,18 @@ const handleLoginClick = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Card 1: Hiring Staff */}
+            <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
+              <div className="mb-4 flex items-center justify-center">
+                <div className="p-3 bg-blue-100 rounded-full">
+                  <CircleDollarSign className="h-8 w-8 text-blue-600" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Expensive Creators <br/>Offer No Guarantees</h3>
+              <p className="text-gray-600 text-lg">
+                 An expensive content creator requires a significant investment, often with zero guarantees.
+              </p>
+            </div>
             {/* Card 3: Manual Content Creation */}
             <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
               <div className="mb-4 flex items-center justify-center">
@@ -538,18 +550,7 @@ const handleLoginClick = () => {
               </p>
             </div>
             
-            {/* Card 1: Hiring Staff */}
-            <div className="p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100">
-              <div className="mb-4 flex items-center justify-center">
-                <div className="p-3 bg-blue-100 rounded-full">
-                  <CircleDollarSign className="h-8 w-8 text-blue-600" />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Expensive Creators <br/>Offer No Guarantees</h3>
-              <p className="text-gray-600 text-lg">
-                 An expensive content creator requires a significant investment, often with zero guarantees.
-              </p>
-            </div>
+
    
           </div>
         <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto mt-6">
