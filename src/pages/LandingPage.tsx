@@ -300,7 +300,7 @@ const handleLoginClick = () => {
 
  {/* Background Images - Absolutely positioned for "scattered" effect with animations */}
       {/* IMPORTANT: These images now have a higher z-index (z-30) to appear on top of the content div (z-20) */}
-      {/* Replace placeholder URLs with your actual image URLs (e.g., from Supabase) */}
+      {/* Replace placeholder URLs with your actual image URLs (e.g., from Supabase)  */}
 
       {/* Image 1: Top-left, floating circle */}
       <img
