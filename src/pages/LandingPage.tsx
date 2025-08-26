@@ -327,15 +327,14 @@ const handleLoginClick = () => {
         style={{ animationDelay: '4s', animationDuration: '5s' }}
         onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/marketing_exec.png"; }}
       />
-      {/* Image 4: Bottom-left, larger floating rectangle 
-      <img
-        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/accountant_image.png"
+        {/* Image 4: Bottom-left, larger floating rectangle */}
+        <img
+        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/the_startup_founder.png"
         alt="Abstract orange shape"
-        className="hidden sm:block absolute bottom-12 left-8 animate-float opacity-50 w-40 h-40 sm:w-40 sm:h-40 rounded-xl transform -rotate-6 z-30"
+        className="hidden sm:block absolute bottom-12 left-1/4 animate-float opacity-80 w-40 h-40 sm:w-40 sm:h-40 rounded-xl transform -rotate-6 z-30"
         style={{ animationDelay: '1s', animationDuration: '8s' }}
-        onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/accountant_image.png"; }}
+        onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/the_startup_founder.png"; }}
       />
-      */}
       {/* Image 5: Mid-left, medium floating circle */}
       <img
         src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/accountant_image.png"
