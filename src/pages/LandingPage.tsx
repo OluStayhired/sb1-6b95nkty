@@ -268,7 +268,8 @@ const handleLoginClick = () => {
                 Fire your <br className="sm:hidden" /> social media manager <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold text-xl sm:font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-gray-700 leading-tight mt-1 sm:mt-1">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
-         Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!
+         {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
+         Let SoSavvy write and<br className="sm:hidden block" /> schedule all your posts! 
          </p>
               </span>
             </p>
