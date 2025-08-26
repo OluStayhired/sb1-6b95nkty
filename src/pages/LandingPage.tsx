@@ -748,7 +748,8 @@ const handleLoginClick = () => {
 </h2>
   
   <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
-    Know Your Audience . Build a Strategy . Scale Your Content
+    {/*Know Your Audience . Build a Strategy . Scale Your Content*/}
+    SoSavvy knows your audience, <br className="sm:hidden"/> builds a strategy and <br className="sm:hidden"/> scales your content
   </p>
 
   
