@@ -947,7 +947,8 @@ const handleLoginClick = () => {
         {/* mx-auto for mobile centering, md:mx-0 removes it for desktop, md:w-2/5 for desktop width */}
         <div className="md:w-2/5 text-center md:text-left mx-auto md:mx-0">
           <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
-            Create effective content strategies in seconds
+            {/*Create effective content strategies in seconds*/}
+            Create <span className="text-blue-500">content calendars</span> based on strategic goals
           </h2>
           <p className="text-base sm:text-lg font-light opacity-90 max-w-lg mx-auto md:mx-0">
             Stop random acts of content. Build strategic campaigns that ensure every post addresses customer pain and guides them to your solution.
@@ -980,11 +981,13 @@ const handleLoginClick = () => {
 
       {/* Image (Desktop Version: Absolute to left, visible from md breakpoint up) */}
       <img
-        //src="https://i.imghippo.com/files/ZsdT4458qo.png"
-        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/calendar_list_campaign.png"
+        
+        //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/calendar_list_campaign.png"
+        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-videos/content_focused_on_goals.gif"
         alt="SoSavvy Product Screenshot"
-        //className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-contain rounded-xl z-0"
-          className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
+        
+        //className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
+        className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[250px] md:h-[350px] object-cover rounded-xl z-0"
       />
 
       {/* Image (Mobile Version: In-flow, visible below md breakpoint) */}
