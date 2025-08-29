@@ -1041,7 +1041,7 @@ const handleLoginClick = () => {
         {/* Text Content (Left Side on Desktop, Top on Mobile) */}
         <div className="md:w-2/5 text-center md:text-left">
           <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 leading-tight"> 
-            Publish relatable posts that actually convert
+              Publish <span className="text-blue-500">relatable posts</span> that actually convert
           </h2>
           <p className="text-base sm:text-lg font-light opacity-90 max-w-lg mx-auto md:mx-0"> 
            Forget generic AI. Create non-salesy, human-sounding social content that builds authority and sparks curiosity, driving direct inquiries.
@@ -1085,11 +1085,13 @@ const handleLoginClick = () => {
       {/* Image (Desktop Version: Absolute, visible from md breakpoint up) */}
       {/* Object-contain ensures it won't crop, but might have letterboxing if aspect ratio doesn't match container */}
       <img
-        //src="https://i.imghippo.com/files/FN9394Xsg.png"
-        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/writing_posts_desktop.png"
+        
+        //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/writing_posts_desktop.png"
+        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-videos/quick_post_view_latest.gif"
         alt="SoSavvy Product Screenshot"
-        //className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-contain rounded-xl z-0" 
-          className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
+        
+        //className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
+        className="hidden sm:block absolute right-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[250px] md:h-[350px] object-cover rounded-xl z-0"
       />
 
       {/* Image (Mobile Version: In-flow, visible below md breakpoint) */}
