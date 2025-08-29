@@ -1149,7 +1149,7 @@ const handleLoginClick = () => {
         {/* mx-auto for mobile centering, md:mx-0 removes it for desktop, md:w-2/5 for desktop width */}
         <div className="md:w-2/5 text-center md:text-left mx-auto md:mx-0">
           <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 leading-tight">
-            Schedule content across platforms with no effort
+              Schedule content across platforms <span className="text-blue-500">with no effort</span>
           </h2>
           <p className="text-base sm:text-lg font-light opacity-90 max-w-lg mx-auto md:mx-0">
             Publish effortlessly. Automatically schedule strategic posts across LinkedIn, X, and Bluesky, freeing you to focus on your business as inquiries roll in.
@@ -1182,11 +1182,13 @@ const handleLoginClick = () => {
 
       {/* Image (Desktop Version: Absolute to left, visible from md breakpoint up) */}
       <img
-        //src="https://i.imghippo.com/files/aabl7885uD.png"
-        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/desktop_publish_content.png"
+        
+        //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/desktop_publish_content.png"
+        src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-videos/schedule_across_platforms.gif"
         alt="SoSavvy Product Screenshot"
-        //className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-contain rounded-xl z-0"
-          className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
+        
+        //className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[450px] md:h-[550px] object-cover rounded-xl z-0"
+        className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 md:w-3/5 lg:w-1/2 h-[250px] md:h-[350px] object-cover rounded-xl z-0"
       />
 
       {/* Image (Mobile Version: In-flow, visible below md breakpoint) */}
