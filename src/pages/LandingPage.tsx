@@ -838,7 +838,7 @@ const handleLoginClick = () => {
         <div className="md:w-2/5 text-center md:text-left"> {/* Added text-center for mobile */}
           <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 leading-tight"> {/* Responsive text size */}
             {/*Target your customer's deepest desires & fears*/}
-            Get <span className="text-blue-500">engaging posts</span> from any website in seconds
+            Turn <span className="text-blue-500">any website</span> into posts for LinkedIn or X
           </h2>
           <p className="text-base sm:text-lg font-light opacity-90 max-w-lg mx-auto md:mx-0"> {/* Responsive text size, mx-auto for mobile center */}
             Analyze your website to uncover what truly drives your ideal customers, surface their pains and aspirations for laser-focused content.
