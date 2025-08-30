@@ -831,7 +831,7 @@ const handleLoginClick = () => {
 {/* Start New Gradient Section with picture on the right */}
         
   <section className="relative rounded-3xl mt-8 py-8 sm:mt-24 sm:py-24 bg-gradient-to-r from-blue-100 via-white to-white text-gray-900 overflow-hidden px-4 sm:px-6">
-      {/* Main Content Wrapper - Holds text and desktop buttons, also acts as reference for absolute image */}
+      {/* Main Content Wrapper - Holds text and desktop buttons also acts as reference for absolute image */}
       <div className="max-w-6xl mx-auto relative z-10 md:flex md:items-center md:justify-between md:space-x-8">
 
         {/* Text Content (Left Side on Desktop, Top on Mobile) */}
