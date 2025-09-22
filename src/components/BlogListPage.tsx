@@ -442,12 +442,12 @@ export function BlogListPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Modern Title for the Blog List Page */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
-            Learn How to Build Your Personal
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Brand</span> 👇
+        <h1 className="mt-24 text-5xl font-bold text-gray-900 mb-4">
+            Learn How to Build Your
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Brand</span> 
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Grow faster on <b>LinkedIn</b> and <b>Twitter(X)</b> with the lastest tools, tips and insights. 
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Grow faster on <b>LinkedIn</b> and <b>Twitter(X)</b> with the latest tools, tips & insights.👇
           </p>
         </div>
 
