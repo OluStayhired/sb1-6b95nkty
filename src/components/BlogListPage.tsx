@@ -446,8 +446,8 @@ export function BlogListPage() {
             Explore Our
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Blog</span> 👇
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Stay updated with the latest insights, tips, and news from the world of social media scheduling.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Grow faster on <b>LinkedIn</b> and <b>Twitter(X)</b> <br/> Get the lastest insights, tools, tips and insights here
           </p>
         </div>
 
