@@ -7,6 +7,7 @@ import { Loader2 } from 'lucide-react';
 import LinkedInAuthRedirect from './components/LinkedInAuthRedirect'; 
 import { ThemeProvider } from './context/ThemeContext';
 import { HooksProvider } from './context/HooksContext';
+import { BlogListPage } from './components/BlogListPage'; 
 
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -41,6 +42,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
+      <Route path="/blog" element={<BlogListPage />} />
       <Route
         path="/dashboard/*"
         element={

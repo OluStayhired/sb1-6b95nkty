@@ -126,12 +126,21 @@ const handleLoginClick = () => {
             Pricing
           </button> 
 
+        {/*
           <button
             onClick={handleBlogClick}
               className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
             Blog
          </button>
+            */}
+
+        <Link
+          to="/blog"
+          className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors">    
           
+          Blog
+
+        </Link>  
       </div> 
           {/*
           <button
