@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '../lib/supabase';
 import { format } from 'date-fns';
-import { Loader2, Tag, Calendar, User, AlertCircle } from 'lucide-react';
+import { Loader2, Tag, Calendar, User, AlertCircle, PenTool, Send, Menu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 // Interfaces for data structures
 interface BlogPost {
@@ -127,11 +128,17 @@ export function BlogListPage() {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
   const [categories, setCategories] = useState<BlogCategory[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [page, setPage] = useState(0); // For pagination, 0-indexed
   const [hasMore, setHasMore] = useState(true);
   const POSTS_PER_PAGE = 9;
+
+  const handleLoginClick = () => {
+    // This navigates to an external URL, not an internal route
+    window.location.href = 'https://app.sosavvy.so/login';
+  };
 
   // Function to fetch blog posts with pagination and optional category filtering
   const fetchBlogPosts = useCallback(async (
@@ -241,13 +248,203 @@ export function BlogListPage() {
   };
 
   return (
-    <div className="pt-24 pb-16 bg-gray-50 min-h-screen">
+  <div className="pb-16 bg-gray-50 min-h-screen">
+    
+    <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
+        <div className="flex items-center space-x-2">
+
+         <div className="bg-blue-600 rounded-full p-1.5 rotate-180 sm:p-2">
+            <PenTool className="h-7 w-7 fill-white stroke-blue-600 sm:h-9 sm:w-9" />
+          </div>
+          <span className="text-2xl  font-bold text-black sm:text-2xl">SoSavvy</span>
+        </div>
+        
+        {/*Desktop Navigation Buttons */}
+        {/*  <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
+          
+        <div className="hidden sm:flex items-center space-x-4">
+          <div className="items-center justify-center space-x-2">
+              <button
+            onClick={() => {
+              window.location.href = 'https://www.sosavvy.so/#how_it_works';
+              }}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+>
+            How it works
+          </button> 
+
+             <button
+            onClick={() => {
+              window.location.href = 'https://www.sosavvy.so/#key_features';
+              }}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+>
+            Features
+          </button> 
+
+          <button
+            onClick={() => {
+              window.location.href = 'https://www.sosavvy.so/#testimonial';
+              }}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+>
+            Testimonials
+          </button> 
+
+          <button
+            onClick={() => {
+              window.location.href = 'https://www.sosavvy.so/#FAQ';
+              }}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+>
+            FAQ
+          </button> 
+
+           <button
+            onClick={() => {
+              window.location.href = 'https://www.sosavvy.so/#pricing';
+              }}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+>
+            Pricing
+          </button> 
+
+        <Link
+          to="/blog"
+          className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors">    
+          
+          Blog
+
+        </Link>   
+            
+      </div> 
+          
+          <button
+          
+            //onClick={openWaitlistModal}
+            onClick={handleLoginClick}
+            className="flex items-center justify-center space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors              
+            shadow-lg shadow-blue-500/60       
+             hover:shadow-xl hover:shadow-blue-500/80 "
+          >
+            <Send className="w-3.5 h-3.5"/>
+           <span>Start for Free</span>
+          </button>
+          
+          
+        </div>
+        
+     {/* Mobile Menu Button (Hamburger) (Visible on mobile, hidden on sm and up) */}
+      <div className="sm:hidden">
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="p-2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
+          aria-label="Toggle navigation"
+        >
+          {isMobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+
+ {/* Mobile Menu Overlay */}
+      {/* This part of the code is generally correct for the overlay. */}
+      {isMobileMenuOpen && (
+        <div className="sm:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-4 py-6"> 
+
+          <button
+            onClick={() => {
+              window.location.href = '#how_it_works';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            How it works
+          </button>
+          <button
+            onClick={() => {
+              window.location.href = '#key_features';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            Features
+          </button>
+          <button
+            onClick={() => {
+              window.location.href = '#testimonial';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            Testimonials
+          </button>
+
+          <button
+            onClick={() => {
+              window.location.href = '#FAQ';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            FAQ
+          </button>
+          
+          <button
+            onClick={() => {
+              window.location.href = '#pricing';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            Pricing
+          </button>
+
+           <button
+            onClick={() => {
+              window.location.href = '#pricing';
+              setIsMobileMenuOpen(false);           
+              }}
+              className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
+            >
+            Pricing
+          </button>
+
+          
+          {/* Close button within the overlay */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
+            aria-label="Close navigation"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          
+          <button
+           
+            //onClick={openWaitlistModal}
+            onClick={handleLoginClick}
+            className="flex items-center justify-center space-x-2 w-11/12 max-w-sm px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-base font-semibold sm:text-lg"
+          >
+           <Send className="w-4 h-4"/>
+           <span>Start for Free</span>
+          </button>
+        
+        </div>
+      )}
+        
+      </nav>
+
+        
+    
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Modern Title for the Blog List Page */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold text-gray-900 mb-4">
             Explore Our
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Blog</span>
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Blog</span> 👇
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Stay updated with the latest insights, tips, and news from the world of social media scheduling.
