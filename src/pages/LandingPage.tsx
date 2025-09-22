@@ -14,6 +14,7 @@ import XLogo from '../images/x-logo.svg';
 import googleLogo from '../images/google-logo-48.svg';
 import { TooltipExtended } from '/src/utils/TooltipExtended';
 import { WaitlistModal } from '../components/WaitlistModal.tsx';
+import { Link } from 'react-router-dom';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -28,6 +29,11 @@ function LandingPage() {
 const handleLoginClick = () => {
     // This navigates to an external URL, not an internal route
     window.location.href = 'https://app.sosavvy.so/login';
+  };
+
+  const handleBlogClick = () => {
+    // This navigates to an external URL, not an internal route
+    window.location.href = 'https://www.sosavvy.so/blog';
   };
 
    const openWaitlistModal = () => {
@@ -119,6 +125,13 @@ const handleLoginClick = () => {
 >
             Pricing
           </button> 
+
+          <button
+            onClick={handleBlogClick}
+              className="px-4 py-2 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors">
+            Blog
+         </button>
+          
       </div> 
           {/*
           <button
