@@ -35,7 +35,7 @@ interface BlogCardProps {
   post: BlogPost;
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
+export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
   const formattedDate = format(new Date(post.created_at), 'dd MMM, yyyy');
   const truncatedDescription = truncateText(post.description || '', 150);
 
