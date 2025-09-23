@@ -41,6 +41,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+      <a href={`/blog/${post.slug}`}>
       {post.featured_image_url && (
         <img
           src={post.featured_image_url}
@@ -78,6 +79,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           Read More &rarr;
         </a>
       </div>
+      </a>
     </div>
   );
 };
