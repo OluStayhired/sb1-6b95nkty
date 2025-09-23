@@ -8,6 +8,7 @@ import LinkedInAuthRedirect from './components/LinkedInAuthRedirect';
 import { ThemeProvider } from './context/ThemeContext';
 import { HooksProvider } from './context/HooksContext';
 import { BlogListPage } from './components/BlogListPage'; 
+import { BlogPostPage } from './components/BlogPostPage';
 
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -43,6 +44,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/blog" element={<BlogListPage />} />
+      <Route path="blog/:slug" element={<BlogPostPage />} /> 
       <Route
         path="/dashboard/*"
         element={
