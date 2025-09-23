@@ -404,12 +404,20 @@ export function BlogPostPage() {
               <p className="text-gray-600 mb-4">
                 Discover how SchedulePro can streamline your content strategy.
               </p>
+              {/*
               <Link
                 to="/signup"
                 className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
               >
                 Get Started Free
               </Link>
+          */}
+
+              <button
+                onClick={handleLoginClick}
+                className="inline-block space-x-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors                                        shadow-lg shadow-blue-500/60 hover:shadow-xl hover:shadow-blue-500/80 ">
+                      <span>Start for Free</span>         
+              </button>
             </div>
 
             {/* Recent Posts */}
