@@ -164,9 +164,11 @@ export function BlogListPage() {
           featured_image_url,
           author_name,
           created_at,
+          published,
           blog_post_categories!left(categories_id, blog_categories(id, name, slug))
           `
         )
+        .eq('published', true)
         .order('created_at', { ascending: false })
         .range(pageNum * POSTS_PER_PAGE, (pageNum + 1) * POSTS_PER_PAGE - 1);
 
