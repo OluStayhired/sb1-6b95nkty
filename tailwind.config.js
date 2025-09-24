@@ -4,6 +4,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
  theme: {
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            p: {
+              marginTop: '0',
+              marginBottom: '0',
+            },
+          },
+        },
+      },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
       },
@@ -15,4 +25,6 @@ export default {
       },
     },
   },
+  plugins: [require('@tailwindcss/typography'),
+           ],
 };
