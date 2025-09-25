@@ -32,6 +32,8 @@ export default {
 safelist: [
   'aspect-w-4',
   'aspect-h-3',
+  'aspect-w-16',
+  'aspect-h-9',
   'prose-lg', // Add this too, just to be safe
   'my-4',
   'rounded-md',
