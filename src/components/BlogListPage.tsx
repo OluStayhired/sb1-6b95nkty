@@ -3,6 +3,12 @@ import { supabase } from '../lib/supabase';
 import { format } from 'date-fns';
 import { Loader2, Tag, Calendar, User, AlertCircle, PenTool, Send, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import BlueskyLogo from '../images/bluesky-logo.svg';
+import BlueskyLogoWhite from '../images/bluesky-logo-white.svg';
+import LinkedInLogo from '../images/linkedin-logo.svg';
+import LinkedInSolidLogo from '../images/linkedin-solid-logo.svg';
+import LinkedInSolidLogoWhite from '../images/linkedin-solid-logo-white.svg';
+import XLogo from '../images/x-logo.svg';
 
 // Interfaces for data structures
 interface BlogPost {
@@ -505,6 +511,81 @@ export function BlogListPage() {
             </button>
           </div>
         )}
+                {/* Start Footer - Full Foot Breakdown */}
+
+<footer className="mt-24 border-t border-gray-300 text-left">
+  <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8"> {/* Responsive grid */}
+      {/* Company Info */}
+      <div className="space-y-4">
+
+              <div className="inline-flex bg-blue-600 rounded-full p-2 rotate-180">
+                <PenTool className="h-9 w-9 fill-white stroke-blue-600" />
+              </div>
+        {/*
+        <div className="flex  items-center space-x-2">
+          <img src={klaowtIcon} alt="Klaowt Icon in-App" className="w-9 h-9 bg-blue-200 p-1.5 rounded-full" />
+          <span className="font-bold text-xl">Klaowt</span>
+        </div>
+        */}
+        
+        <p className="text-sm text-gray-600">
+          The smart solution for audience builders on Bluesky <img src={BlueskyLogo} alt="Bluesky" className="inline-block w-3 h-3 align-middle" /> LinkedIn <img src={LinkedInSolidLogo} alt="LinkedIn" className="inline-block w-3 h-3 align-middle" /> and Twitter <img src={XLogo} alt="Twitter" className="inline-block w-3 h-3 align-middle" />
+        </p>
+        {/* Social links */}
+      </div>
+
+      {/* Product Links */}
+      <div>
+        <h3 className="font-semibold mb-4">Product</h3>
+        <ul className="space-y-2 text-sm text-gray-600">
+          <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
+          <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
+          <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
+          <li className="text-gray-400">Roadmap <em>(soon)</em></li>
+        </ul>
+      </div>
+
+      {/* Resources */}
+      <div>
+        <h3 className="font-semibold mb-4">Resources</h3>
+        <ul className="space-y-2 text-sm text-gray-600">
+          {/*<li className="text-gray-400">Blog <em>(soon)</em></li>
+          <li className="text-gray-400">Docs <em>(soon)</em></li>
+      <li className="text-gray-400">Support <em>(soon)</em></li>*/}
+          <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+
+      {/* Legal */}
+      <div>
+        <h3 className="font-semibold mb-4">Legal</h3>
+        <ul className="space-y-2 text-sm text-gray-600">
+          <li>
+            <a href="/privacy.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Privacy Policy</a>      
+          </li>
+          <li>
+              <a href="/terms.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Terms of Service</a>
+          </li>
+              <a href="/cookie.html" className="flex items-center gap-3 hover:text-blue-400 transition-colors">Cookie Policy</a>
+        </ul>
+      </div>
+    </div>
+
+    {/* Bottom bar */}
+    <div className="mt-12 pt-8 border-t border-gray-200">
+      <div className="flex flex-col sm:flex-row items-center justify-between text-sm text-gray-600"> {/* Responsive flex */}
+      <p className="order-2 sm:order-1">&copy; 2025 SoSavvy.so All rights reserved.</p> {/* Order for mobile */}
+        <div className="flex space-x-6 order-1 sm:order-2"> 
+          {/* Order for mobile */}
+          <span>Made with ❤️ for founders and business owners building their personal brand with purpose</span>
+            <a href="https://www.linkedin.com/in/oluadedeji" className="text-blue-500 hover:text-blue-600">Olu on LinkedIn (8.9k followers)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
       </div>
     </div>
   );
