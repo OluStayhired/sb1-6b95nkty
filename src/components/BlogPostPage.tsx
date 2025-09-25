@@ -394,7 +394,7 @@ export function BlogPostPage() {
               before rendering. For Markdown content, consider using a library like 'react-markdown'.
             */}
             <div
-              className="prose prose-lg max-w-none text-gray-700 leading-relaxed"
+              className="prose prose-lg max-w-none h-full text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: post.content || '' }}
             />
           </div>
