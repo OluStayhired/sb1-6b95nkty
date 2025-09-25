@@ -287,11 +287,11 @@ const handleLoginClick = () => {
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-l from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-                Fire your <br className="sm:hidden" /> social media manager <br className="sm:hidden" /> {/* This is the key change! */}
-       <p className="block font-semibold text-xl sm:font-semibold text-2xl sm:text-3xl md:text-3xl lg:text-4xl text-gray-700 leading-tight mt-1 sm:mt-1">
+                Meet your <br className="sm:hidden" /> social media manager <br className="sm:hidden" /> {/* This is the key change! */}
+       <p className="block font-semibold text-xl sm:font-semibold text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-tight mt-1 sm:mt-3">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
-         Let SoSavvy write and<br className="sm:hidden block" /> schedule all your posts! 
+         Let SoSavvy write <br className="sm:hidden block" /> & schedule posts <br className="sm:hidden block" /> to help you Grow!
          </p>
               </span>
             </p>
