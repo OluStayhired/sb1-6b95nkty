@@ -579,7 +579,7 @@ export function BlogListPage() {
         <div className="flex space-x-6 order-1 sm:order-2"> 
           {/* Order for mobile */}
           <span>Made with ❤️ for founders and business owners building their personal brand with purpose</span>
-            <a href="https://www.linkedin.com/in/oluadedeji" className="text-blue-500 hover:text-blue-600">Olu on LinkedIn (8.9k followers)
+            <a href="https://www.linkedin.com/in/oluadedeji" className="text-blue-500 hover:text-blue-600">Olu on LinkedIn (9k followers)
           </a>
         </div>
       </div>
