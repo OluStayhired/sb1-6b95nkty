@@ -391,7 +391,7 @@ export function BlogPostPage() {
             {/*
               WARNING: Using dangerouslySetInnerHTML can expose your application to XSS attacks
               if the content is not sanitized. Ensure 'post.content' is trusted or properly sanitized
-              before rendering. For Markdown content, consider using a library like 'react-markdown'.
+              before rendering. For Markdown content, consider using a library like 'react-markdown'..
             */}
             <div
               className="prose prose-lg max-w-none h-full text-gray-700 leading-relaxed"
