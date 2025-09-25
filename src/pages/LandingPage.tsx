@@ -303,7 +303,7 @@ const handleLoginClick = () => {
       </p>
         */}
 
-      <p className="mt-10 text-base sm:text-3xl md:text-2xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
+      <p className="mt-10 text-base sm:text-xl md:text-xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
             Turn your website into months of <br className="sm:hidden" /> engaging content <br className="sm:block" /> for X and LinkedIn, <br className="sm:hidden" /> in minutes 🔥
       </p>
 
