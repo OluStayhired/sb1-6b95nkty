@@ -174,7 +174,7 @@ export function BlogPostPage() {
 
   const formattedDate = post.created_at ? format(new Date(post.created_at), 'dd MMM, yyyy') : 'N/A';
 
-  {console.log('Raw content from database:', post.content)};
+  //{console.log('Raw content from database:', post.content)};
 
   return (
     
