@@ -28,4 +28,15 @@ export default {
   plugins: [require('@tailwindcss/typography'),
             require('@tailwindcss/aspect-ratio'),
            ],
+// Add this 'safelist' array
+safelist: [
+  'aspect-w-4',
+  'aspect-h-3',
+  'prose-lg', // Add this too, just to be safe
+  'my-4',
+  'rounded-md',
+  'overflow-hidden',
+  'w-full',
+  'h-full'
+],           
 };
