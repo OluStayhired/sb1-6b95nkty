@@ -174,6 +174,8 @@ export function BlogPostPage() {
 
   const formattedDate = post.created_at ? format(new Date(post.created_at), 'dd MMM, yyyy') : 'N/A';
 
+  {console.log('Raw content from database:', post.content)};
+
   return (
     
      <div className="pb-16 bg-gray-50 min-h-screen">
@@ -393,6 +395,9 @@ export function BlogPostPage() {
               if the content is not sanitized. Ensure 'post.content' is trusted or properly sanitized
               before rendering. For Markdown content, consider using a library like 'react-markdown'..
             */}
+            
+            
+            
             <div
               className="prose max-w-none h-full text-gray-700 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: post.content || '' }}
