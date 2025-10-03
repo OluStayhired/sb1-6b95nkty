@@ -410,7 +410,7 @@ export function BlogPostPage() {
           </div>
 
           {/* Right Column: Sidebar */}
-          <div className="lg:col-span-1 space-y-10">
+          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start">
             {/* Advertising Section */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Boost Your Social Presence!</h3>
