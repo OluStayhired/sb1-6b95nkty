@@ -383,6 +383,9 @@ export function BlogPostPage() {
                 <Calendar className="w-4 h-4 mr-1" /> {formattedDate}
               </span>
             </div>
+            
+            {/*
+            //Remove Featured Image in URL
             {post.featured_image_url && (
               <img
                 src={post.featured_image_url}
@@ -390,6 +393,8 @@ export function BlogPostPage() {
                 className="w-full h-96 object-cover rounded-lg mb-8"
               />
             )}
+            */}
+
             {/*
               WARNING: Using dangerouslySetInnerHTML can expose your application to XSS attacks
               if the content is not sanitized. Ensure 'post.content' is trusted or properly sanitized
