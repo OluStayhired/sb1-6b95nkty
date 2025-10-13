@@ -202,14 +202,15 @@ useEffect(() => {
         {/* Base Tags */}
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" />
         
         {/* Open Graph Tags (for LinkedIn/Facebook) */}
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={metaImageUrl} />
         {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
-        {/*<meta property="og:url" content={canonicalUrl} /> */}
-        <meta property="og:url" content="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />
+        <meta property="og:url" content={canonicalUrl} /> 
+        {/*<meta property="og:url" content="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />*/}
         <meta property="og:type" content="article" />
         
         {/* Twitter Card Tags */}
