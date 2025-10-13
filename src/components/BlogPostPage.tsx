@@ -72,7 +72,7 @@ export function BlogPostPage() {
   // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
   const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
-  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  //const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
   const metaDescription = post?.description || 'Discover the latest insights from SoSavvy.'; // Default description
   const metaImageUrl = post?.featured_image_url || DEFAULT_META_IMAGE;
 
@@ -178,6 +178,9 @@ useEffect(() => {
   // Destructuring moved up for post data usage (already handled by metaTitle/metaDescription above)
   const formattedDate = post.created_at ? format(new Date(post.created_at), 'dd MMM, yyyy') : 'N/A';
 
+  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  console.log('Blog Post metaTitle', metaTitle)
+
   return (
 
     <>
@@ -185,6 +188,15 @@ useEffect(() => {
         It executes on every render, ensuring the 'og:url' (using canonicalUrl) 
         is available even during the first render before data loads. 
     */}
+
+    {/*
+    <meta property="og:url" content="https://sosavvy.so/" id="og-url" />
+    <meta property="og:title" content="Meet your social media manager" id="og-title" />
+    <meta property="og:description" content="Grow inquiries and book appointments with High Converting social media posts done for you" id="og-description" />
+    <meta property="og:image" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" id="og-image" />
+    <meta property="og:type" content="website" id="og-type" />
+  */}
+
       <Helmet>
         {/* Base Tags */}
         <title>{metaTitle}</title>
