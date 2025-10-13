@@ -72,7 +72,7 @@ export function BlogPostPage() {
   // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
   const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
-  //const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
   const metaDescription = post?.description || 'Discover the latest insights from SoSavvy.'; // Default description
   const metaImageUrl = post?.featured_image_url || DEFAULT_META_IMAGE;
 
@@ -178,9 +178,9 @@ useEffect(() => {
   // Destructuring moved up for post data usage (already handled by metaTitle/metaDescription above)
   const formattedDate = post.created_at ? format(new Date(post.created_at), 'dd MMM, yyyy') : 'N/A';
 
-  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
-  console.log('Blog Post metaTitle', metaTitle)
-  console.log('Slug Url from canonical',canonicalUrl)
+  //const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  //console.log('Blog Post metaTitle', metaTitle)
+  //console.log('Slug Url from canonical',canonicalUrl)
 
   return (
 
@@ -208,7 +208,8 @@ useEffect(() => {
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={metaImageUrl} />
         {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
-        <meta property="og:url" content={canonicalUrl} /> 
+        {/*<meta property="og:url" content={canonicalUrl} /> */}
+        <meta property="og:url" content="https://www.sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />
         <meta property="og:type" content="article" />
         
         {/* Twitter Card Tags */}
