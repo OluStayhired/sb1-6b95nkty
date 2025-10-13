@@ -69,18 +69,17 @@ export function BlogPostPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // CRITICAL FIX: Define safe meta variables here, at the top of the component,
-  // so they are available immediately for the initial Helmet render.
-  const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
-  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
-  const metaDescription = post?.description || 'Discover the latest insights from SoSavvy.'; // Default description
-  const metaImageUrl = post?.featured_image_url || DEFAULT_META_IMAGE;
-
-
    const handleLoginClick = () => {
     // This navigates to an external URL, not an internal route
     window.location.href = 'https://app.sosavvy.so/login';
   };
+
+   // FIX CONFIRMED: This calculation ensures the URL is absolute and slug-based.
+  // This is what the LinkedIn bot will see.
+  const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
+  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  const metaDescription = post?.description || 'Discover the latest insights from SoSavvy.'; // Default description
+  const metaImageUrl = post?.featured_image_url || DEFAULT_META_IMAGE;
 
 
 // Fetch recent and related posts
@@ -161,26 +160,53 @@ useEffect(() => {
   }, [slug]);
 
   if (loading) {
-    return (
-        <div className="flex items-center justify-center min-h-screen">
-          <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
-          <p className="ml-2 text-gray-600">Loading post details...</p>
-        </div>
-      );
+    return <div className="text-center p-8">Loading post details...</div>;
   }
-
-  // The original redundant loading checks are removed from here.
 
   if (!post) {
     return <div className="text-center p-8 text-red-500">Blog post not found.</div>;
   }
-  
-  // Destructuring moved up for post data usage (already handled by metaTitle/metaDescription above)
+
+  const { title, description, featured_image_url } = post;
+  const currentUrl = window.location.href;
+  const imageUrl = featured_image_url || DEFAULT_META_IMAGE;
+
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center text-red-600 py-20">
+        <AlertCircle className="w-6 h-6 inline-block mr-2" />
+        {error}
+      </div>
+    );
+  }
+
+  if (!post) {
+    return (
+      <div className="text-center text-gray-600 py-20">
+        <AlertCircle className="w-6 h-6 inline-block mr-2" />
+        Blog post not found.
+      </div>
+    );
+  }
+
   const formattedDate = post.created_at ? format(new Date(post.created_at), 'dd MMM, yyyy') : 'N/A';
+
+  //{console.log('Raw content from database:', post.content)};
 
   return (
 
     <>
+    
+
     {/* CRITICAL FIX: HELMET IS MOVED HERE! 
         It executes on every render, ensuring the 'og:url' (using canonicalUrl) 
         is available even during the first render before data loads. 
@@ -203,7 +229,6 @@ useEffect(() => {
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
-    
      <div className="pb-16 bg-gray-50 min-h-screen">
     
     <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
@@ -218,7 +243,7 @@ useEffect(() => {
         </a>
         
         {/*Desktop Navigation Buttons */}
-        {/* <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
+        {/*  <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
           
         <div className="hidden sm:flex items-center space-x-4">
           <div className="items-center justify-center space-x-2">
@@ -394,7 +419,7 @@ useEffect(() => {
       )}
         
       </nav>
-      
+
       <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column: Blog Post Content */}
@@ -485,8 +510,7 @@ useEffect(() => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">You May Also Like</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {relatedPosts.length > 0 ? (
-              // Note: You originally passed an empty categories array which I've maintained for type safety
-              relatedPosts.map((rp) => <BlogCard key={rp.id} post={{ ...rp, categories: [] }} />) 
+              relatedPosts.map((rp) => <BlogCard key={rp.id} post={{ ...rp, categories: [] }} />) // Pass empty categories array or fetch them if needed
             ) : (
               <p className="text-center text-gray-600 col-span-full">No related posts found.</p>
             )}
