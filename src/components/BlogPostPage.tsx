@@ -77,6 +77,10 @@ export function BlogPostPage() {
    // FIX CONFIRMED: This calculation ensures the URL is absolute and slug-based.
   // This is what the LinkedIn bot will see.
   const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
+  const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  const metaDescription = post?.description || 'Discover the latest insights from SoSavvy.'; // Default description
+  const metaImageUrl = post?.featured_image_url || DEFAULT_META_IMAGE;
+
 
 // Fetch recent and related posts
 useEffect(() => {
