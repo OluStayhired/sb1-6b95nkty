@@ -38,8 +38,8 @@ export async function handler(event, context) {
     try {
         // 3. Data Fetching (Actual Supabase Query)
         const { data, error } = await supabase
-            .from('blog_posts')
-            .select('title, excerpt, meta_image_url')
+            .from('blog_post')
+            .select('title, description, featured_image_url, slug')
             .eq('slug', slug)
             .single();
 
@@ -64,8 +64,8 @@ export async function handler(event, context) {
     
     // 4. Construct the HTML Response
     const title = postData.title;
-    const description = postData.excerpt;
-    const imageUrl = postData.meta_image_url;
+    const description = postData.description;
+    const imageUrl = postData.featured_image_url;
     // Note: It's best practice to use the host from the request headers if available, 
     // but we use the hardcoded URL for reliability in this simple function.
     const currentUrl = `https://sosavvy.so${requestedPath}`; 
