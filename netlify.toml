@@ -25,3 +25,5 @@ conditions = { UserAgent = ["linkedinbot", "twitterbot", "slackbot", "facebookex
 
 [functions]
   node_bundler = "esbuild"
+  # CRITICAL FIX: This line forces Netlify to find and bundle the dependency.
+  external_node_modules = ["@supabase/supabase-js"] 
