@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://sosavvy.so/images/sosavvy-logo-48.svg"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoSavvy - Create & Schedule content that gets you customers on LinkedIn and Twitter</title>
-    <meta name="description" content="SoSavvy replaces your social media manager. It turns blogs and landing page content into weeks of post for LinkedIn and X in minutes." />
-    <meta name="keywords" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes" />  
-    <meta property="og:title" content="Meet your social media manager" />
-    <meta property="og:description" content="Grow inquiries and book appointments with High Converting social media posts done for you" />
-    <meta property="og:image" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" />
-    <meta name="twitter:card" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" /> 
-    <meta name="twitter:title" content="Fire your social media manager" />
-    <meta name="twitter:description" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes." />
+
+    <!-- BASE META TAGS (IDs added for dynamic update by the script below) -->
+    <title id="base-title">SoSavvy - Create & Schedule content that gets you customers on LinkedIn and X</title>
+    <meta name="description" content="SoSavvy replaces your social media manager. It turns blogs and landing page content into weeks of post for LinkedIn and X in minutes." id="base-description" />
+    <meta name="keywords" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes" id="base-keywords" />  
+    
+    <!-- Open Graph Tags (crucial for Facebook/LinkedIn) -->
+    <meta property="og:url" content="https://sosavvy.so/" id="og-url" />
+    <meta property="og:title" content="Meet your social media manager" id="og-title" />
+    <meta property="og:description" content="Grow inquiries and book appointments with High Converting social media posts done for you" id="og-description" />
+    <meta property="og:image" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" id="og-image" />
+    <meta property="og:type" content="website" id="og-type" />
+
+    <!-- Twitter Card Tags (crucial for X/Twitter) -->
+    <meta name="twitter:card" content="summary_large_image" id="twitter-card" /> 
+    <meta name="twitter:title" content="Fire your social media manager" id="twitter-title" />
+    <meta name="twitter:description" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes." id="twitter-description" />
+    <meta name="twitter:image" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" id="twitter-image" />
+    
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -21,13 +31,101 @@
         "description": "SoSavvy replaces your social media manager. It turns blogs and landing page content into weeks of post for LinkedIn and X in minutes.",
         "url": "https://sosavvy.so/",
         "image": [
-          "https://sosavvy.so/images/sosavvy_meta_img_v4.png",  // Rectangular (Primary)
-          "https://sosavvy.so/images/sosavvy_meta_img_square.png" // Square
+          "https://sosavvy.so/images/sosavvy_meta_img_v4.png",
+          "https://sosavvy.so/images/sosavvy_meta_img_square.png"
         ]
       }
       </script>
 
+      <!-- Load Supabase client from CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
       
+      <!-- 
+        *** STEP 1: VITE ENVIRONMENT VARIABLE INJECTION ***
+        Vite substitutes the %VITE_...% strings during the build, 
+        making the keys globally available on the window object...
+      -->
+      <script>
+          window.VITE_SUPABASE_URL = "%VITE_SUPABASE_URL%";
+          window.VITE_SUPABASE_ANON_KEY = "%VITE_SUPABASE_ANON_KEY%";
+      </script>
+
+      <!-- 
+        *** STEP 2: CRITICAL HEAD-FIRST HYDRATION SCRIPT ***
+        This script uses the globally defined keys to fetch blog data and update meta tags.
+      -->
+      <script>
+        // Check for necessary keys and the Supabase library
+        const SUPABASE_URL = window.VITE_SUPABASE_URL; 
+        const SUPABASE_ANON_KEY = window.VITE_SUPABASE_ANON_KEY; 
+        
+        if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined' && SUPABASE_URL !== "%VITE_SUPABASE_URL%") {
+            
+            // Initialize the Supabase client using the injected variables
+            const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            // --- 2.1: SLUG EXTRACTION LOGIC ---
+            function getSlugFromPath() {
+                const path = window.location.pathname.toLowerCase();
+                // Assumes the blog post path is exactly /blog/[slug]
+                const regex = /\/blog\/([a-z0-9-]+)\/?$/; 
+                const match = path.match(regex);
+                
+                return (match && match.length > 1) ? match[1] : null; 
+            }
+
+            // --- 2.2: DATA FETCHING AND TAG INJECTION ---
+            async function fetchAndInjectMetaTags(slug) {
+                try {
+                    const { data, error } = await supabaseClient
+                        .from('blog_post')
+                        .select('title, description, featured_image_url')
+                        .eq('slug', slug)
+                        .limit(1)
+                        .maybeSingle();
+
+                    if (error || !data) {
+                        console.error('Supabase fetch failed in head script:', error ? error.message : 'No data found.');
+                        return; 
+                    }
+
+                    const article = data;
+                    const currentUrl = window.location.href;
+                    // Fallback to the generic meta image if no featured image is provided
+                    const imageUrl = article.featured_image_url || 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
+
+                    // Update all necessary tags
+                    document.getElementById('base-title').textContent = article.title;
+                    document.getElementById('base-description').setAttribute('content', article.description);
+                    
+                    document.getElementById('og-url').setAttribute('content', currentUrl);
+                    document.getElementById('og-title').setAttribute('content', article.title);
+                    document.getElementById('og-description').setAttribute('content', article.description);
+                    document.getElementById('og-image').setAttribute('content', imageUrl);
+                    document.getElementById('og-type').setAttribute('content', 'article'); 
+
+                    document.getElementById('twitter-title').setAttribute('content', article.title);
+                    document.getElementById('twitter-description').setAttribute('content', article.description);
+                    document.getElementById('twitter-image').setAttribute('content', imageUrl);
+                
+                } catch (e) {
+                    console.error('Critical error during meta tag injection:', e);
+                }
+            }
+
+            // --- 2.3: EXECUTION ---
+            const slug = getSlugFromPath();
+            
+            if (slug) {
+                // Fire the asynchronous fetch operation immediately
+                fetchAndInjectMetaTags(slug); 
+            }
+        } else {
+             console.warn('Vite environment variables were not successfully injected or Supabase client is missing.');
+        }
+      </script>
+
+      <!-- Existing Reb2b script -->
       <script>
       !function(key) 
       {if (window.reb2b) return;
@@ -41,6 +139,7 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- Your main React application loader -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
