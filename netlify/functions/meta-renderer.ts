@@ -2,7 +2,7 @@
 //import { createClient } from 'npm:@supabase/supabase-js';
 const { createClient } = require('@supabase/supabase-js');
 
-// --- Configuration (Pulling from Netlify Environment Variables) ---
+// --- Configuration (Pulling from Netlify Environment Variables) ----
 // IMPORTANT: You MUST set these variables in your Netlify UI under Site Settings > Build & deploy > Environment
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY;
