@@ -180,6 +180,7 @@ useEffect(() => {
 
   const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
   console.log('Blog Post metaTitle', metaTitle)
+  console.log('Slug Url from canonical',canonicalUrl)
 
   return (
 
