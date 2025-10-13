@@ -15,7 +15,7 @@ from = "/blog/*"
 to = "/blog/:splat"
 status = 200
 force = true
-query = { escaped_fragment = ":fragment" }
+query = { _escaped_fragment = ":fragment" }
 conditions = { UserAgent = ["linkedinbot", "twitterbot", "slackbot", "facebookexternalhit/"] }  
 
 [[redirects]]
