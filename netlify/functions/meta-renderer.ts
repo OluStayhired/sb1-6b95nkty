@@ -1,5 +1,6 @@
 // Set up imports using the modern Netlify functions approach (ES Modules)
-import { createClient } from 'npm:@supabase/supabase-js';
+//import { createClient } from 'npm:@supabase/supabase-js';
+const { createClient } = require('@supabase/supabase-js');
 
 // --- Configuration (Pulling from Netlify Environment Variables) ---
 // IMPORTANT: You MUST set these variables in your Netlify UI under Site Settings > Build & deploy > Environment
