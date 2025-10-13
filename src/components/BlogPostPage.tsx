@@ -72,6 +72,53 @@ export function BlogPostPage() {
     window.location.href = 'https://app.sosavvy.so/login';
   };
 
+// Fetch recent and related posts
+useEffect(() => {
+  const fetchSidebarPosts = async () => {
+    try {
+      // Fetch recent posts (top 10, excluding current post)
+      const { data: recentData, error: recentError } = await supabase
+        .from('blog_post')
+        .select('id, title, slug, featured_image_url') // Only fetch necessary fields
+        .order('created_at', { ascending: false })
+        .neq('slug', slug) // Exclude current post
+        .limit(10);
+
+      if (recentError) throw recentError;
+      setRecentPosts(recentData || []);
+
+      // Fetch 3 random related posts (excluding current and recent posts)
+      // This is a simplified random fetch. For a more robust solution, consider
+      // fetching by tags/categories or implementing a more complex random query.
+      const { data: randomData, error: randomError } = await supabase
+        .from('blog_post')
+        .select('id, title, slug, description, featured_image_url, author_name, created_at')
+        .neq('slug', slug) // Exclude current post
+        .order('created_at', { ascending: true }) // Order by something to make limit consistent, then shuffle client-side
+        .limit(100); // Fetch more than 3 to ensure randomness after filtering
+
+      if (randomError) throw randomError;
+
+      // Filter out posts that are already in the recent posts list
+      const filteredRandomData = (randomData || []).filter(
+        (rp: BlogPost) => !recentPosts.some(recP => recP.id === rp.id)
+      );
+
+      // Shuffle and pick 3
+      const shuffled = filteredRandomData.sort(() => 0.5 - Math.random());
+      setRelatedPosts(shuffled.slice(0, 3));
+
+    } catch (err: any) {
+      console.error('Error fetching sidebar posts:', err);
+      // Handle error for sidebar posts gracefully without blocking main content
+    }
+  };
+
+  if (slug) {
+    fetchSidebarPosts();
+  }
+}, [slug, recentPosts]); // Depend on recentPosts to filter related posts correctly
+
   // Fetch single blog post
   useEffect(() => {
     const fetchPost = async () => {
@@ -114,54 +161,6 @@ export function BlogPostPage() {
   const currentUrl = window.location.href;
   const imageUrl = featured_image_url || DEFAULT_META_IMAGE;
 
-  
-
-  // Fetch recent and related posts
-  useEffect(() => {
-    const fetchSidebarPosts = async () => {
-      try {
-        // Fetch recent posts (top 10, excluding current post)
-        const { data: recentData, error: recentError } = await supabase
-          .from('blog_post')
-          .select('id, title, slug, featured_image_url') // Only fetch necessary fields
-          .order('created_at', { ascending: false })
-          .neq('slug', slug) // Exclude current post
-          .limit(10);
-
-        if (recentError) throw recentError;
-        setRecentPosts(recentData || []);
-
-        // Fetch 3 random related posts (excluding current and recent posts)
-        // This is a simplified random fetch. For a more robust solution, consider
-        // fetching by tags/categories or implementing a more complex random query.
-        const { data: randomData, error: randomError } = await supabase
-          .from('blog_post')
-          .select('id, title, slug, description, featured_image_url, author_name, created_at')
-          .neq('slug', slug) // Exclude current post
-          .order('created_at', { ascending: true }) // Order by something to make limit consistent, then shuffle client-side
-          .limit(100); // Fetch more than 3 to ensure randomness after filtering
-
-        if (randomError) throw randomError;
-
-        // Filter out posts that are already in the recent posts list
-        const filteredRandomData = (randomData || []).filter(
-          (rp: BlogPost) => !recentPosts.some(recP => recP.id === rp.id)
-        );
-
-        // Shuffle and pick 3
-        const shuffled = filteredRandomData.sort(() => 0.5 - Math.random());
-        setRelatedPosts(shuffled.slice(0, 3));
-
-      } catch (err: any) {
-        console.error('Error fetching sidebar posts:', err);
-        // Handle error for sidebar posts gracefully without blocking main content
-      }
-    };
-
-    if (slug) {
-      fetchSidebarPosts();
-    }
-  }, [slug, recentPosts]); // Depend on recentPosts to filter related posts correctly
 
   if (loading) {
     return (
