@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { format } from 'date-fns';
-import { Loader2, AlertCircle, User, Calendar, PenTool, Send, Menu } from 'lucide-react';
+import { Loader2, AlertCircle, User, Calendar, PenTool, Send, Menu, X } from 'lucide-react';
 // Reusing BlogCard from BlogListPage for the "You May Also Like" section
 import  { BlogCard }  from './BlogListPage';
 import BlueskyLogo from '../images/bluesky-logo.svg';
@@ -11,6 +11,9 @@ import LinkedInLogo from '../images/linkedin-logo.svg';
 import LinkedInSolidLogo from '../images/linkedin-solid-logo.svg';
 import LinkedInSolidLogoWhite from '../images/linkedin-solid-logo-white.svg';
 import XLogo from '../images/x-logo.svg';
+import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
+
+const DEFAULT_META_IMAGE = 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
 
 // Interfaces for data structures (can be reused or defined here)
 interface BlogPost {
@@ -98,6 +101,20 @@ export function BlogPostPage() {
       fetchPost();
     }
   }, [slug]);
+
+  if (loading) {
+    return <div className="text-center p-8">Loading post details...</div>;
+  }
+
+  if (!post) {
+    return <div className="text-center p-8 text-red-500">Blog post not found.</div>;
+  }
+
+  const { title, description, featured_image_url } = post;
+  const currentUrl = window.location.href;
+  const imageUrl = featured_image_url || DEFAULT_META_IMAGE;
+
+  
 
   // Fetch recent and related posts
   useEffect(() => {
@@ -368,6 +385,26 @@ export function BlogPostPage() {
       )}
         
       </nav>
+
+      <Helmet>
+        {/* Base Tags */}
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        
+        {/* Open Graph Tags (for LinkedIn/Facebook) */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="article" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={imageUrl} />
+      </Helmet>
+
+
       <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column: Blog Post Content */}
