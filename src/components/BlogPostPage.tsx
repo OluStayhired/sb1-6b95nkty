@@ -202,6 +202,29 @@ useEffect(() => {
 
     <>
     
+
+    {/* CRITICAL FIX: HELMET IS MOVED HERE! 
+        It executes on every render, ensuring the 'og:url' (using canonicalUrl) 
+        is available even during the first render before data loads. 
+    */}
+      <Helmet>
+        {/* Base Tags */}
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        
+        {/* Open Graph Tags (for LinkedIn/Facebook) */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={metaImageUrl} />
+        {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
+        <meta property="og:url" content={canonicalUrl} /> 
+        <meta property="og:type" content="article" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={metaImageUrl} />
+      </Helmet>
      <div className="pb-16 bg-gray-50 min-h-screen">
     
     <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
@@ -393,25 +416,6 @@ useEffect(() => {
         
       </nav>
 
-      <Helmet>
-        {/* Base Tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        
-        {/* Open Graph Tags (for LinkedIn/Facebook) */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={imageUrl} />
-        {/*<meta property="og:url" content={currentUrl} />*/}
-        <meta property="og:url" content={canonicalUrl} /> 
-        <meta property="og:type" content="article" />
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={imageUrl} />
-      </Helmet>
-      
       <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column: Blog Post Content */}
