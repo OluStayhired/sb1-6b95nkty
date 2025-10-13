@@ -15,7 +15,7 @@ from = "/blog/*"
 to = "/.netlify/functions/meta-renderer"
 status = 200
 force = true
-conditions = { UserAgent = ["linkedinbot", "twitterbot", "slackbot", "facebookexternalhit/"] }  
+# REMOVED conditions = { UserAgent = ["linkedinbot", "twitterbot", "slackbot", "facebookexternalhit/"] }  
 
 [[redirects]]
   from = "/*"
