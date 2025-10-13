@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://sosavvy.so/images/sosavvy-logo-48.svg"> 
+    <link rel="icon" type="image/svg+xml" href="https://sosavvy.so/images/sosavvy-logo-48.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- BASE META TAGS (IDs added for dynamic update by the script below) -->
     <title id="base-title">SoSavvy - Create & Schedule content that gets you customers on LinkedIn and X</title>
     <meta name="description" content="SoSavvy replaces your social media manager. It turns blogs and landing page content into weeks of post for LinkedIn and X in minutes." id="base-description" />
-    <meta name="keywords" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes" id="base-keywords" />  
-    
+    <meta name="keywords" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes" id="base-keywords" />
+
     <!-- Open Graph Tags (crucial for Facebook/LinkedIn) -->
     <meta property="og:url" content="https://sosavvy.so/" id="og-url" />
     <meta property="og:title" content="Meet your social media manager" id="og-title" />
@@ -18,12 +18,13 @@
     <meta property="og:type" content="website" id="og-type" />
 
     <!-- Twitter Card Tags (crucial for X/Twitter) -->
-    <meta name="twitter:card" content="summary_large_image" id="twitter-card" /> 
+    <meta name="twitter:card" content="summary_large_image" id="twitter-card" />
     <meta name="twitter:title" content="Fire your social media manager" id="twitter-title" />
     <meta name="twitter:description" content="SoSavvy replaces your social media manager. It turns your blogs and landing page content into weeks of post for LinkedIn and X in minutes." id="twitter-description" />
     <meta name="twitter:image" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" id="twitter-image" />
-    
-    <script type="application/ld+json">
+
+    <!-- Placeholder for dynamic LD+JSON. Will be updated by script. -->
+    <script type="application/ld+json" id="ld-json-schema">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
@@ -35,107 +36,167 @@
           "https://sosavvy.so/images/sosavvy_meta_img_square.png"
         ]
       }
-      </script>
+    </script>
 
-      <!-- Load Supabase client from CDN -->
-      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-      
-      <!-- 
-        *** STEP 1: VITE ENVIRONMENT VARIABLE INJECTION ***
-        Vite substitutes the %VITE_...% strings during the build, 
-        making the keys globally available on the window object...
-      -->
-      <script>
-          window.VITE_SUPABASE_URL = "%VITE_SUPABASE_URL%";
-          window.VITE_SUPABASE_ANON_KEY = "%VITE_SUPABASE_ANON_KEY%";
-      </script>
+    <!-- Load Supabase client from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-      <!-- 
-        *** STEP 2: CRITICAL HEAD-FIRST HYDRATION SCRIPT ***
-        This script uses the globally defined keys to fetch blog data and update meta tags.
-      -->
-      <script>
-        // Check for necessary keys and the Supabase library
-        //const SUPABASE_URL = window.VITE_SUPABASE_URL;
-        const SUPABASE_URL = 'https://selrznkggmoxbpflzwjz.supabase.co' 
-        const SUPABASE_ANON_KEY = window.VITE_SUPABASE_ANON_KEY; 
-        
-        if (SUPABASE_URL && SUPABASE_ANON_KEY && typeof supabase !== 'undefined' && SUPABASE_URL !== "%VITE_SUPABASE_URL%") {
-            
-            // Initialize the Supabase client using the injected variables
-            const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    <!--
+      *** STEP 1: VITE ENVIRONMENT VARIABLE INJECTION ***
+      Vite substitutes the %VITE_...% strings during the build,
+      making the keys globally available on the window object.
+    -->
+    <script>
+        // These variables are injected by Vite during the build process.
+        // They will remain as placeholders if Vite hasn't processed the file.
+        window.VITE_SUPABASE_URL = "%VITE_SUPABASE_URL%";
+        window.VITE_SUPABASE_ANON_KEY = "%VITE_SUPABASE_ANON_KEY%";
+    </script>
 
-            // --- 2.1: SLUG EXTRACTION LOGIC ---
-            function getSlugFromPath() {
-                const path = window.location.pathname.toLowerCase();
-                // Assumes the blog post path is exactly /blog/[slug]
-                const regex = /\/blog\/([a-z0-9-]+)\/?$/; 
-                const match = path.match(regex);
-                
-                return (match && match.length > 1) ? match[1] : null; 
+    <!--
+      *** STEP 2: CRITICAL HEAD-FIRST HYDRATION SCRIPT ***
+      This script runs as early as possible in the <head> to fetch blog data
+      and dynamically update meta tags before social media crawlers read them.
+    -->
+    <script>
+      (function() {
+        const SUPABASE_URL = window.VITE_SUPABASE_URL;
+        const SUPABASE_ANON_KEY = window.VITE_SUPABASE_ANON_KEY;
+
+        // Define default meta tag values for non-blog pages or in case of fetch errors
+        const DEFAULT_META_IMAGE = 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
+        const DEFAULT_META_TITLE = 'SoSavvy - Create & Schedule content that gets you customers on LinkedIn and X';
+        const DEFAULT_META_DESCRIPTION = 'SoSavvy replaces your social media manager. It turns blogs and landing page content into weeks of post for LinkedIn and X in minutes.';
+        const DEFAULT_META_URL = 'https://sosavvy.so/'; // Your base domain
+
+        // Check if Supabase variables are properly injected and Supabase client is available
+        if (SUPABASE_URL && SUPABASE_ANON_KEY && SUPABASE_URL !== "%VITE_SUPABASE_URL%" && typeof supabase !== 'undefined') {
+
+          const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+          // Function to extract the blog slug from the current URL path
+          function getSlugFromPath() {
+            const path = window.location.pathname.toLowerCase();
+            // Assumes the blog post path is exactly /blog/[slug]
+            const regex = /\/blog\/([a-z0-9-]+)\/?$/;
+            const match = path.match(regex);
+            return (match && match.length > 1) ? match[1] : null;
+          }
+
+          // Function to fetch blog post data and update meta tags
+          async function fetchAndInjectMetaTags(slug) {
+            try {
+              const { data, error } = await supabaseClient
+                .from('blog_post')
+                .select('title, description, featured_image_url, created_at, updated_at, author_name') // Fetch more data for LD+JSON
+                .eq('slug', slug)
+                .limit(1)
+                .maybeSingle();
+
+              if (error || !data) {
+                console.warn('Supabase fetch failed for slug:', slug, error ? error.message : 'No data found. Using default meta tags.');
+                // Fallback to default meta tags if no data or error
+                updateMetaTags(DEFAULT_META_TITLE, DEFAULT_META_DESCRIPTION, DEFAULT_META_IMAGE, DEFAULT_META_URL, 'website');
+                return;
+              }
+
+              const article = data;
+              const currentUrl = window.location.href;
+              const imageUrl = article.featured_image_url || DEFAULT_META_IMAGE;
+
+              // Update all meta tags with fetched article data
+              updateMetaTags(
+                article.title,
+                article.description,
+                imageUrl,
+                currentUrl,
+                'article', // Set OG type to 'article' for blog posts
+                article.author_name,
+                article.created_at,
+                article.updated_at
+              );
+
+            } catch (e) {
+              console.error('Critical error during meta tag injection:', e);
+              // Ensure default meta tags are set even on critical errors
+              updateMetaTags(DEFAULT_META_TITLE, DEFAULT_META_DESCRIPTION, DEFAULT_META_IMAGE, DEFAULT_META_URL, 'website');
             }
+          }
 
-            // --- 2.2: DATA FETCHING AND TAG INJECTION ---
-            async function fetchAndInjectMetaTags(slug) {
-                try {
-                    const { data, error } = await supabaseClient
-                        .from('blog_post')
-                        .select('title, description, featured_image_url')
-                        .eq('slug', slug)
-                        .limit(1)
-                        .maybeSingle();
+          // Centralized function to update all relevant meta tags
+          function updateMetaTags(title, description, imageUrl, url, type, authorName = null, datePublished = null, dateModified = null) {
+            // Base Meta Tags
+            document.getElementById('base-title').textContent = title;
+            document.getElementById('base-description').setAttribute('content', description);
 
-                    if (error || !data) {
-                        console.error('Supabase fetch failed in head script:', error ? error.message : 'No data found.');
-                        return; 
-                    }
+            // Open Graph Tags
+            document.getElementById('og-url').setAttribute('content', url);
+            document.getElementById('og-title').setAttribute('content', title);
+            document.getElementById('og-description').setAttribute('content', description);
+            document.getElementById('og-image').setAttribute('content', imageUrl);
+            document.getElementById('og-type').setAttribute('content', type);
 
-                    const article = data;
-                    const currentUrl = window.location.href;
-                    // Fallback to the generic meta image if no featured image is provided
-                    const imageUrl = article.featured_image_url || 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
+            // Twitter Card Tags
+            document.getElementById('twitter-title').setAttribute('content', title);
+            document.getElementById('twitter-description').setAttribute('content', description);
+            document.getElementById('twitter-image').setAttribute('content', imageUrl);
 
-                    // Update all necessary tags
-                    document.getElementById('base-title').textContent = article.title;
-                    document.getElementById('base-description').setAttribute('content', article.description);
-                    
-                    document.getElementById('og-url').setAttribute('content', currentUrl);
-                    document.getElementById('og-title').setAttribute('content', article.title);
-                    document.getElementById('og-description').setAttribute('content', article.description);
-                    document.getElementById('og-image').setAttribute('content', imageUrl);
-                    document.getElementById('og-type').setAttribute('content', 'article'); 
+            // Update LD+JSON Schema
+            const ldJsonScript = document.getElementById('ld-json-schema');
+            if (ldJsonScript) {
+              const schemaData = {
+                "@context": "https://schema.org",
+                "@type": (type === 'article' ? "BlogPosting" : "WebPage"), // Use BlogPosting for articles
+                "headline": title, // Use headline for BlogPosting
+                "description": description,
+                "url": url,
+                "image": [imageUrl],
+              };
 
-                    document.getElementById('twitter-title').setAttribute('content', article.title);
-                    document.getElementById('twitter-description').setAttribute('content', article.description);
-                    document.getElementById('twitter-image').setAttribute('content', imageUrl);
-                
-                } catch (e) {
-                    console.error('Critical error during meta tag injection:', e);
+              // Add author and date properties if available for BlogPosting
+              if (type === 'article') {
+                if (authorName) {
+                  schemaData.author = { "@type": "Person", "name": authorName };
                 }
+                if (datePublished) {
+                  schemaData.datePublished = datePublished;
+                }
+                if (dateModified) {
+                  schemaData.dateModified = dateModified;
+                }
+              }
+              ldJsonScript.textContent = JSON.stringify(schemaData, null, 2);
             }
+          }
 
-            // --- 2.3: EXECUTION ---
-            const slug = getSlugFromPath();
-            
-            if (slug) {
-                // Fire the asynchronous fetch operation immediately
-                fetchAndInjectMetaTags(slug); 
-            }
+          // --- EXECUTION LOGIC ---
+          const slug = getSlugFromPath();
+
+          if (slug) {
+            // If a slug is found, fetch data and update meta tags dynamically
+            fetchAndInjectMetaTags(slug);
+          } else {
+            // If no slug (i.e., not a blog post page), ensure default meta tags are set
+            // (These are already set statically, but this ensures consistency if defaults change)
+            updateMetaTags(DEFAULT_META_TITLE, DEFAULT_META_DESCRIPTION, DEFAULT_META_IMAGE, DEFAULT_META_URL, 'website');
+          }
         } else {
-             console.warn('Vite environment variables were not successfully injected or Supabase client is missing.');
+          console.warn('Supabase environment variables not injected or client not available. Using static default meta tags.');
+          // If Supabase isn't available or configured, the static meta tags will serve as fallback.
         }
-      </script>
+      })();
+    </script>
 
-      <!-- Existing Reb2b script -->
-      <script>
-      !function(key) 
-      {if (window.reb2b) return;
-          window.reb2b = {loaded: true};
-          var s = document.createElement("script");s.async = true;
-          s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
-          document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
-          }("0NW1GHLM85O4");
-      </script>
+    <!-- Existing Reb2b script -->
+    <script>
+    !function(key)
+    {if (window.reb2b) return;
+        window.reb2b = {loaded: true};
+        var s = document.createElement("script");s.async = true;
+        s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";
+        document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
+        }("0NW1GHLM85O4");
+    </script>
 
   </head>
   <body>
