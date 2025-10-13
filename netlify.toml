@@ -12,7 +12,7 @@
 
 [[redirects]]
 from = "/blog/*"
-to = "/blog/:splat"
+to = "/.netlify/functions/meta-renderer"
 status = 200
 force = true
 query = { _escaped_fragment = ":fragment" }
