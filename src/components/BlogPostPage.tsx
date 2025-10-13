@@ -14,6 +14,8 @@ import XLogo from '../images/x-logo.svg';
 import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 
 const DEFAULT_META_IMAGE = 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
+// CRITICAL: Define the base domain for absolute URLs
+const BLOG_BASE_URL = "https://www.sosavvy.so/blog"; 
 
 // Interfaces for data structures (can be reused or defined here)
 interface BlogPost {
@@ -71,6 +73,10 @@ export function BlogPostPage() {
     // This navigates to an external URL, not an internal route
     window.location.href = 'https://app.sosavvy.so/login';
   };
+
+   // FIX CONFIRMED: This calculation ensures the URL is absolute and slug-based.
+  // This is what the LinkedIn bot will see.
+  const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
 
 // Fetch recent and related posts
 useEffect(() => {
@@ -396,7 +402,8 @@ useEffect(() => {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imageUrl} />
-        <meta property="og:url" content={currentUrl} />
+        {/*<meta property="og:url" content={currentUrl} />*/}
+        <meta property="og:url" content={canonicalUrl} /> 
         <meta property="og:type" content="article" />
         
         {/* Twitter Card Tags */}
