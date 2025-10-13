@@ -194,6 +194,8 @@ export function BlogPostPage() {
   //{console.log('Raw content from database:', post.content)};
 
   return (
+
+    <>
     
      <div className="pb-16 bg-gray-50 min-h-screen">
     
@@ -403,8 +405,7 @@ export function BlogPostPage() {
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={imageUrl} />
       </Helmet>
-
-
+      
       <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column: Blog Post Content */}
@@ -420,7 +421,7 @@ export function BlogPostPage() {
                 <Calendar className="w-4 h-4 mr-1" /> {formattedDate}
               </span>
             </div>
-            
+      
             {/*
             //Remove Featured Image in URL
             {post.featured_image_url && (
@@ -578,5 +579,6 @@ export function BlogPostPage() {
 </footer>
       </div>
     </div>
+  </>
   );
 }
