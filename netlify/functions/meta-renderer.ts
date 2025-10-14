@@ -111,7 +111,7 @@ export async function handler(event, context) {
     <!-- The main React application loader remains here for client-side hydration. -->
     <div id="root"></div> 
     <!-- This script loads your main React bundle for client-side routing and rendering -->
-    <script type="module" src="/assets/index.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>`;
 
