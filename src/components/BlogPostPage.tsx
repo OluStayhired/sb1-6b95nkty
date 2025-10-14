@@ -185,6 +185,39 @@ useEffect(() => {
   return (
 
     <>
+
+<style>
+        {`
+          .subtle-scrollbar::-webkit-scrollbar {
+            width: 6px; /* 1. SCROLLBAR WIDTH: Reduced to 6px */
+          }
+          
+          /* 2. SCROLLBAR TRACK (The path): 
+            Set the background to a very low-opacity white/light-gray color. 
+            The '0.3' means 30% opacity.
+          */
+          .subtle-scrollbar::-webkit-scrollbar-track {
+            background: rgba(243, 244, 246, 0.3); 
+            border-radius: 10px;
+          }
+
+          /* 3. SCROLLBAR THUMB (The draggable handle): 
+            Set the color to a light gray with moderate transparency. 
+            The '0.6' means 60% opacity.
+          */
+          .subtle-scrollbar::-webkit-scrollbar-thumb {
+            background-color: rgba(189, 192, 196, 0.6); 
+            border-radius: 10px;
+          }
+
+          /* 4. THUMB ON HOVER: 
+            Slightly darker color (higher opacity) when the mouse is over it.
+          */
+          .subtle-scrollbar::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(156, 163, 175, 0.8); 
+          }
+        `}
+      </style>
     
     {/* CRITICAL FIX: HELMET IS MOVED HERE! 
         It executes on every render, ensuring the 'og:url' (using canonicalUrl) 
@@ -453,7 +486,8 @@ useEffect(() => {
           </div>
 
           {/* Right Column: Sidebar */}
-          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start">
+          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start overflow-y-auto max-h-[90vh] **subtle-scrollbar**"></div>
+          {/*<div className="lg:col-span-1 space-y-10 sticky top-8 self-start">*/}
           {/*<div className="lg:col-span-1 space-y-10 sticky top-8 self-start overflow-y-auto max-h-[90vh]">*/}
             {/* Advertising Section */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
