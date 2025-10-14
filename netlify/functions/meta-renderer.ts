@@ -15,12 +15,29 @@ if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
 // Initialize Supabase client outside the handler for warm starts (better performance)
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY); 
 
+// List of file extensions that should bypass the function and fall through to static assets.
+const ASSET_EXTENSIONS = ['.js', '.css', '.ico', '.png', '.jpg', '.jpeg', '.svg', '.gif', '.webmanifest', '.map', '.json'];
+
 // 2. Define the Netlify Function Handler
 export async function handler(event, context) {
     const requestedPath = event.path;
     const BLOG_PREFIX = '/blog/';
 
     console.log(`Request received for path: ${requestedPath}`);
+
+     // --- FIX: Bypass Static Assets ---
+     const isAsset = ASSET_EXTENSIONS.some(ext => requestedPath.toLowerCase().endsWith(ext));
+    
+     if (isAsset) {
+         console.log(`Bypassing asset request for: ${requestedPath}`);
+         // Returning a 404 status code forces the Netlify routing system 
+         // to look for the file in the static build folder and serve it correctly.
+         return {
+             statusCode: 404, 
+             body: 'Asset request bypassed.',
+         };
+     }
+     // ---------------------------------
 
     // Check if the path is a blog post
     if (!requestedPath.startsWith(BLOG_PREFIX) || requestedPath.length <= BLOG_PREFIX.length) {
