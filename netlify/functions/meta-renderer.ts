@@ -119,8 +119,8 @@ export async function handler(event, context) {
     return {
         statusCode: 200,
         headers: {
-            //"Content-Type": "text/html",
-            "Content-Type": "application/javascript",
+            "Content-Type": "text/html",
+            //"Content-Type": "application/javascript",
         },
         body: htmlContent,
     };
