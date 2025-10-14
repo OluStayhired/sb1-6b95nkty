@@ -211,7 +211,7 @@ useEffect(() => {
 
           /* 4. THUMB ON HOVER: 
             Slightly darker color (higher opacity) when the mouse is over it.
-          */
+           */
           .subtle-scrollbar::-webkit-scrollbar-thumb:hover {
             background-color: rgba(156, 163, 175, 0.8); 
           }
