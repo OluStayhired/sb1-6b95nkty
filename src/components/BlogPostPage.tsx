@@ -486,7 +486,7 @@ useEffect(() => {
           </div>
 
           {/* Right Column: Sidebar */}
-          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start overflow-y-auto max-h-[90vh] **subtle-scrollbar**"></div>
+          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start overflow-y-auto max-h-[90vh] **subtle-scrollbar**">
           {/*<div className="lg:col-span-1 space-y-10 sticky top-8 self-start">*/}
           {/*<div className="lg:col-span-1 space-y-10 sticky top-8 self-start overflow-y-auto max-h-[90vh]">*/}
             {/* Advertising Section */}
