@@ -1956,9 +1956,9 @@ const handleLoginClick = () => {
       <li className="text-gray-400">Support <em>(soon)</em></li>*/}
           <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
           <li> <a href="https://sosavvy.so/blog/the-sosavvy-playbook-linkedin-content-without-the-grind" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy Playboook</a></li>
-          <li> <a href="https://sosavvy.so/blog/10-ai-hook-prompts-for-scroll-stopping-linkedin-posts" className="no-underline hover:text-blue-400 transition-colors">Best AI Prompts for Scroll Stopping LinkedIn Posts</a></li>
-          <li> <a href="https://sosavvy.so/blog/7-ai-prompts-to-boost-linkedin-event-attendance" className="no-underline hover:text-blue-400 transition-colors">7 AI Prompts to Blow up your LinkedIn Event</a></li>
-          <li> <a href="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" className="no-underline hover:text-blue-400 transition-colors">How to Post Consistently on LinkedIn With AI</a></li>
+          <li> <a href="https://sosavvy.so/blog/10-ai-hook-prompts-for-scroll-stopping-linkedin-posts" className="no-underline hover:text-blue-400 transition-colors">Best AI Prompts for Viral LinkedIn Posts</a></li>
+          <li> <a href="https://sosavvy.so/blog/7-ai-prompts-to-boost-linkedin-event-attendance" className="no-underline hover:text-blue-400 transition-colors">7 Prompts to Boost Your LinkedIn Events</a></li>
+          <li> <a href="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" className="no-underline hover:text-blue-400 transition-colors">How to Post Consistently on LinkedIn</a></li>
           
         </ul>
       </div>
