@@ -1954,7 +1954,7 @@ const handleLoginClick = () => {
           {/*<li className="text-gray-400">Blog <em>(soon)</em></li>
           <li className="text-gray-400">Docs <em>(soon)</em></li>
       <li className="text-gray-400">Support <em>(soon)</em></li>*/}
-          <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
+          <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">Frequently Asked Questions</a></li>
           <li> <a href="https://sosavvy.so/blog/the-sosavvy-playbook-linkedin-content-without-the-grind" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy Playboook</a></li>
           <li> <a href="https://sosavvy.so/blog/10-ai-hook-prompts-for-scroll-stopping-linkedin-posts" className="no-underline hover:text-blue-400 transition-colors">Best AI Prompts for Viral LinkedIn Posts</a></li>
           <li> <a href="https://sosavvy.so/blog/7-ai-prompts-to-boost-linkedin-event-attendance" className="no-underline hover:text-blue-400 transition-colors">7 Prompts to Boost Your LinkedIn Events</a></li>

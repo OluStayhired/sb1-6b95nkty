@@ -571,21 +571,25 @@ useEffect(() => {
       <div>
         <h3 className="font-semibold mb-4">Product</h3>
         <ul className="space-y-2 text-sm text-gray-600">
-          <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
-          <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
-          <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
+          <li> <a href="https://sosavvy.so/#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
+          <li> <a href="https://sosavvy.so/#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
+          <li> <a href="https://sosavvy.so/#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
           <li className="text-gray-400">Roadmap <em>(soon)</em></li>
         </ul>
       </div>
 
       {/* Resources */}
       <div>
-        <h3 className="font-semibold mb-4">Resources</h3>
+        <h3 className="font-semibold mb-4">Tools and Resources</h3>
         <ul className="space-y-2 text-sm text-gray-600">
           {/*<li className="text-gray-400">Blog <em>(soon)</em></li>
           <li className="text-gray-400">Docs <em>(soon)</em></li>
       <li className="text-gray-400">Support <em>(soon)</em></li>*/}
-          <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
+          <li> <a href="https://sosavvy.so/#FAQ" className="no-underline hover:text-blue-400 transition-colors">Frequently Asked Questions</a></li>
+          <li> <a href="https://sosavvy.so/blog/the-sosavvy-playbook-linkedin-content-without-the-grind" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy Playboook</a></li>
+          <li> <a href="https://sosavvy.so/blog/10-ai-hook-prompts-for-scroll-stopping-linkedin-posts" className="no-underline hover:text-blue-400 transition-colors">Best AI Prompts for Viral LinkedIn Posts</a></li>
+          <li> <a href="https://sosavvy.so/blog/7-ai-prompts-to-boost-linkedin-event-attendance" className="no-underline hover:text-blue-400 transition-colors">7 Prompts to Boost Your LinkedIn Events</a></li>
+          <li> <a href="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" className="no-underline hover:text-blue-400 transition-colors">How to Post Consistently on LinkedIn</a></li>
         </ul>
       </div>
 
