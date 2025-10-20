@@ -73,7 +73,7 @@ export async function handler(event, context) {
     // Check if the path is a blog post
     if (!requestedPath.startsWith(BLOG_PREFIX) || requestedPath.length <= BLOG_PREFIX.length) {
         return {
-            statusCode: 200,
+            statusCode: 404,
             body: 'Not a blog path.',
         };
     }
