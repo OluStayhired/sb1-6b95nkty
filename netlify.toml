@@ -11,6 +11,11 @@
   autoLaunch = true
 
 [[redirects]]
+from = "/blog"
+to = "/index.html"
+status = 200  
+
+[[redirects]]
 from = "/blog/*"
 to = "/.netlify/functions/meta-renderer"
 status = 200
