@@ -1322,12 +1322,6 @@ const handleLoginClick = () => {
 
     </div>
           <img
-            //src="https://placehold.co/1200x500/E0E7FF/000000?text=SoSavvy+Dashboard+Screenshot"
-            //src="https://i.imghippo.com/files/Lp8140co.png"
-            //src="https://i.imghippo.com/files/hjBw8272m.png"
-            //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/desktop_big_writing_view.png"
-            //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/v2_sosavvy_dashboard.png"
-            //src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/sosavvy_dashboard.png"
             src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/v1_sosavvy_dashboard.png"
             alt="SoSavvy Dashboard Screenshot"
             className="hidden sm:block w-full max-w-5xl h-[300px] md:h-[400px] lg:h-[500px] object-cover rounded-lg mx-auto mt-8 block"
@@ -1680,30 +1674,42 @@ const handleLoginClick = () => {
    Learn how SoSavvy can transform your social media strategy.
   </p>
 
-  {/*     
-<section className="mt-32 text-center">
-  <h2 className="text-4xl font-bold text-gray-900 mb-4">
-    Frequently Asked Questions
-  </h2>
-  <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-    Have questions? We've got answers. Find out more about how SoSavvy can transform your social media strategy.
-  </p>
-*/}
   <div className="max-w-3xl mx-auto space-y-4 text-left">
-    {/* FAQ Item 1 */}
-   <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
-    My social media content often feels generic. How does SoSavvy ensure it truly connects with my specific audience?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    {/* FAQ Item 0.1 */}
+    <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+    I don't want to get banned on LinkedIn. How safe is all this automation on LinkedIn?
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
+    <p>
+      We are taking absolutely no chances when it comes to making sure your LinkedIn accounts are safe. We are fully compliant with LinkedIn's TOS. SoSavvy uses LinkedIn and Twitter's official APIs to connect and schedule posts. We DON'T use chrome extensions and we stay away from Scrapers. 
+    </p>
+  </div>
+</details>
+
+
+    {/* FAQ Item 1 */}
+   <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+    My social media content often feels generic. How does SoSavvy ensure it truly connects with my specific audience?
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+      </svg>
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+      </svg>
+    </div>
+  </summary>
+  <div className="px-5 pb-5 text-gray-700">
     <p>We go deep to understand your customers' specific pains and desires, then craft content that speaks directly to them. This creates that "aha!" moment, building trust and ensuring your message resonates, rather than getting lost in the noise. It's about turning passive scrollers into engaged prospects.</p>
   </div>
 </details>
@@ -1711,126 +1717,126 @@ const handleLoginClick = () => {
 
     {/* FAQ Item 2 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
     I spend too much time creating social media content. How does SoSavvy save me time?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>SoSavvy drastically cuts down your content creation time by crafting and scheduling months of customer-focused content for you in minutes. You'll free up hours currently spent brainstorming, writing, and posting, letting you focus on core business growth.</p>
   </div>
 </details>
 
     {/* FAQ Item 3 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
    How will SoSavvy help me generate actual leads, not just likes?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>Our content is designed specifically to drive inbound leads, not just vanity metrics. By deeply understanding your customers' needs and positioning your solution effectively, we create content that motivates prospects to take action – whether that's booking a meeting, sending an inquiry, or making a purchase. We focus on content that fills your sales pipeline.</p>
   </div>
 </details>
 
      {/* FAQ Item 4 */}
     <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
    I struggle with consistent posting. How does SoSavvy ensure my social media presence remains active?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>SoSavvy tackles inconsistency head-on by providing months of pre-scheduled, high-quality content. This ensures your brand maintains a steady, authoritative presence across platforms like LinkedIn, Twitter, and Bluesky, keeping you top-of-mind with your audience and positively impacting algorithm visibility.</p>
   </div>
 </details>
 
      {/* FAQ Item 5 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"> 
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
     Is this solution only for large companies, or does it work for startups and smaller teams too?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>SoSavvy is designed to empower founders, marketers, and small teams who are resource-constrained but ambitious. Our solution provides the strategic, high-quality content capabilities typically reserved for larger companies, allowing you to compete effectively and scale your inbound lead generation without needing a huge in-house content team.</p>
   </div>
 </details>
 
      {/* FAQ Item 6 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
     How does SoSavvy understand my specific business and customer pain points to create effective content?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>We start with a focused onboarding process to deeply understand your unique value proposition, target audience, and their core challenges. Our process is built around extracting those specific pain points, ensuring every piece of content we craft directly addresses what your customers care about most, leading to genuine connections and inquiries.</p>
   </div>
 </details>
 
      {/* FAQ Item 7 */}
     <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
     What kind of results can I expect from using SoSavvy?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>You can expect to grow inbound leads more efficiently by consistently publishing customer-focused content that actually converts. This means a more engaged audience, a healthier sales pipeline, and a reduced reliance on manual, high-effort outbound methods. Ultimately, it frees you to focus on closing deals and scaling your business.</p>
   </div>
 </details>
 
      {/* FAQ Item 8 */}
      <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-  <summary class="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
+  <summary className="flex items-center justify-between p-5 cursor-pointer font-semibold text-lg text-gray-800 hover:bg-gray-50 transition-colors">
     How quickly can I get started and see my content live?
-    <div class="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <div className="relative w-6 h-6 rounded-full items-center p-2 justify-center"> 
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 group-open:hidden transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
       </svg>
-      <svg class="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute inset-0 w-6 h-6 text-blue-500 hidden group-open:block transition-opacity duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
       </svg>
     </div>
   </summary>
-  <div class="px-5 pb-5 text-gray-700">
+  <div className="px-5 pb-5 text-gray-700">
     <p>SoSavvy is designed for speed and efficiency. Once onboarded, we can get months of crafted and scheduled customer-focused content ready for you in minutes, allowing you to launch or refresh your social media strategy almost immediately and start seeing an impact on your lead generation efforts very quickly.</p>
   </div>
 </details>
@@ -1844,12 +1850,12 @@ const handleLoginClick = () => {
 
   {/* ------------------------------ Start Final Call to Action Section --------------------------*/}    
 
-<section class="mt-24 py-16 bg-gradient-to-b from-blue-500 via-blue-400 to-white text-gray-900 text-center rounded-xl">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-2xl text-white sm:text-4xl md:text-6xl font-bold leading-tight mb-8">
+<section className="mt-24 py-16 bg-gradient-to-b from-blue-500 via-blue-400 to-white text-gray-900 text-center rounded-xl">
+  <div className="max-w-4xl mx-auto px-6">
+    <h2 className="text-2xl text-white sm:text-4xl md:text-6xl font-bold leading-tight mb-8">
       Stop wasting your time on random acts of content
     </h2>
-    <p class="text-white text-md sm:text-xl md:text-2xl font-light text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+    <p className="text-white text-md sm:text-xl md:text-2xl font-light text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
       Start Creating With Purpose on SoSavvy 🚀
     </p>
 
@@ -1886,32 +1892,6 @@ const handleLoginClick = () => {
 
   {/*---------------------------------End Final Call to Action Section-----------------------------*/}      
 
-
-        {/* Start Feature Section */}
-        {/*
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <FeatureCard
-            icon={<PenSquare className="h-8 w-8 text-blue-500" />}
-            title="Compose Posts"
-            description="Create engaging content for your social media channels"
-          />
-          <FeatureCard
-            icon={<Clock className="h-8 w-8 text-blue-500" />}
-            title="Create Schedule"
-            description="Plan and schedule your posts for optimal engagement"
-          />
-          <FeatureCard
-            icon={<Calendar className="h-8 w-8 text-blue-500" />}
-            title="View Calendars"
-            description="Visualize your content calendar across platforms"
-          />
-          <FeatureCard
-            icon={<Users className="h-8 w-8 text-blue-500" />}
-            title="Access Accounts"
-            description="Manage all your social media accounts in one place"
-          />
-        </div>
-*/}
         {/* Start Footer - Full Foot Breakdown */}
 
 <footer className="mt-24 border-t border-gray-300 text-left">
@@ -1923,12 +1903,6 @@ const handleLoginClick = () => {
               <div className="inline-flex bg-blue-600 rounded-full p-2 rotate-180">
                 <PenTool className="h-9 w-9 fill-white stroke-blue-600" />
               </div>
-        {/*
-        <div className="flex  items-center space-x-2">
-          <img src={klaowtIcon} alt="Klaowt Icon in-App" className="w-9 h-9 bg-blue-200 p-1.5 rounded-full" />
-          <span className="font-bold text-xl">Klaowt</span>
-        </div>
-        */}
         
         <p className="text-sm text-gray-600">
           The smart solution for audience builders on Bluesky <img src={BlueskyLogo} alt="Bluesky" className="inline-block w-3 h-3 align-middle" /> LinkedIn <img src={LinkedInSolidLogo} alt="LinkedIn" className="inline-block w-3 h-3 align-middle" /> and Twitter <img src={XLogo} alt="Twitter" className="inline-block w-3 h-3 align-middle" />
