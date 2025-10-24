@@ -463,33 +463,6 @@ useEffect(() => {
 
           {/* Right Column: Sidebar */}
           <div className="lg:col-span-1 space-y-10 sticky top-8 self-start">
-            {/* Advertising Section */}
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Boost Your Social Presence!</h3>
-              <img
-                //src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Example image from Pexels
-                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/blog_images/cf606bf7-cf80-429c-836a-cbd0d01256a6/sosavvy_advert_image_1.png"
-                alt="Advertisement"
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
-              <p className="text-gray-600 mb-4">
-                Discover how SoSavvy saves Solopreneurs <br/> 10 hours every week.👇 
-              </p>
-              {/*
-              <Link
-                to="/signup"
-                className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                Get Started Free
-              </Link>
-          */}
-
-              <button
-                onClick={handleLoginClick}
-                className="inline-block space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:bg-blue-700                   transition-colors shadow-lg shadow-blue-500/60 hover:shadow-xl hover:shadow-blue-500/80 ">
-                      <span>Get Started for Free</span>         
-              </button>
-            </div>
 
             {/* Recent Posts */}
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -502,6 +475,29 @@ useEffect(() => {
                 )}
               </div>
             </div>
+              
+          {/* Start Advertising Section */}
+            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Boost Your Social Presence!</h3>
+              <img
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/blog_images/cf606bf7-cf80-429c-836a-cbd0d01256a6/sosavvy_advert_image_1.png"
+                alt="Advertisement"
+                className="w-full h-48 object-cover rounded-lg mb-4"
+              />
+              <p className="text-gray-600 mb-4">
+                Discover how SoSavvy saves Solopreneurs <br/> 10 hours every week.👇 
+              </p>
+
+              <button
+                onClick={handleLoginClick}
+                className="inline-block space-x-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:bg-blue-700                   transition-colors shadow-lg shadow-blue-500/60 hover:shadow-xl hover:shadow-blue-500/80 ">
+                      <span>Get Started for Free</span>         
+              </button>
+            </div>
+            {/*End Advertising Section*/}
+
+
+
           </div>
         </div>
 
