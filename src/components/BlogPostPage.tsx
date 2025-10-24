@@ -15,7 +15,7 @@ import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 
 const DEFAULT_META_IMAGE = 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
 // CRITICAL: Define the base domain for absolute URLs
-const BLOG_BASE_URL = "https://www.sosavvy.so/blog"; 
+const BLOG_BASE_URL = "https://sosavvy.so/blog"; 
 
 // Interfaces for data structures (can be reused or defined here)
 interface BlogPost {
@@ -69,17 +69,18 @@ export function BlogPostPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-   const handleLoginClick = () => {
-    // This navigates to an external URL, not an internal route
-    window.location.href = 'https://app.sosavvy.so/login';
-  };
-
-   // FIX CONFIRMED: This calculation ensures the URL is absolute and slug-based.
-  // This is what the LinkedIn bot will see.
+  // CRITICAL FIX: Define safe meta variables here, at the top of the component,
+  // so they are available immediately for the initial Helmet render.
   const canonicalUrl = slug ? `${BLOG_BASE_URL}/${slug}` : BLOG_BASE_URL;
   const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
   const metaDescription = post?.description || 'Discover the latest insights from SoSavvy.'; // Default description
   const metaImageUrl = post?.featured_image_url || DEFAULT_META_IMAGE;
+
+
+   const handleLoginClick = () => {
+    // This navigates to an external URL, not an internal route
+    window.location.href = 'https://app.sosavvy.so/login';
+  };
 
 
 // Fetch recent and related posts
@@ -160,61 +161,82 @@ useEffect(() => {
   }, [slug]);
 
   if (loading) {
-    return <div className="text-center p-8">Loading post details...</div>;
+    return (
+        <div className="flex items-center justify-center min-h-screen">
+          <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
+          <p className="ml-2 text-gray-600">Loading post details...</p>
+        </div>
+      );
   }
+
+  // The original redundant loading checks are removed from here.
 
   if (!post) {
     return <div className="text-center p-8 text-red-500">Blog post not found.</div>;
   }
-
-  const { title, description, featured_image_url } = post;
-  const currentUrl = window.location.href;
-  const imageUrl = featured_image_url || DEFAULT_META_IMAGE;
-
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <Loader2 className="w-8 h-8 text-blue-500 animate-spin" />
-      </div>
-    );
-  }
-
-  if (error) {
-    return (
-      <div className="text-center text-red-600 py-20">
-        <AlertCircle className="w-6 h-6 inline-block mr-2" />
-        {error}
-      </div>
-    );
-  }
-
-  if (!post) {
-    return (
-      <div className="text-center text-gray-600 py-20">
-        <AlertCircle className="w-6 h-6 inline-block mr-2" />
-        Blog post not found.
-      </div>
-    );
-  }
-
+  
+  // Destructuring moved up for post data usage (already handled by metaTitle/metaDescription above)
   const formattedDate = post.created_at ? format(new Date(post.created_at), 'dd MMM, yyyy') : 'N/A';
 
-  //{console.log('Raw content from database:', post.content)};
+  //const metaTitle = post?.title || 'SoSavvy Blog'; // Default title while loading
+  //console.log('Blog Post metaTitle', metaTitle)
+  //console.log('Slug Url from canonical',canonicalUrl)
 
   return (
 
     <>
-    
 
+<style>
+        {`
+          .subtle-scrollbar::-webkit-scrollbar {
+            width: 6px; /* 1. SCROLLBAR WIDTH: Reduced to 6px */
+          }
+          
+          /* 2. SCROLLBAR TRACK (The path): 
+            Set the background to a very low-opacity white/light-gray color. 
+            The '0.3' means 30% opacity.
+          */
+          .subtle-scrollbar::-webkit-scrollbar-track {
+            background: rgba(243, 244, 246, 0.3); 
+            border-radius: 10px;
+          }
+
+          /* 3. SCROLLBAR THUMB (The draggable handle): 
+            Set the color to a light gray with moderate transparency. 
+            The '0.6' means 60% opacity.
+          */
+          .subtle-scrollbar::-webkit-scrollbar-thumb {
+            background-color: rgba(189, 192, 196, 0.6); 
+            border-radius: 10px;
+          }
+
+          /* 4. THUMB ON HOVER: 
+            Slightly darker color (higher opacity) when the mouse is over it.
+          */
+          .subtle-scrollbar::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(156, 163, 175, 0.8); 
+          }
+        `}
+      </style>
+    
     {/* CRITICAL FIX: HELMET IS MOVED HERE! 
         It executes on every render, ensuring the 'og:url' (using canonicalUrl) 
         is available even during the first render before data loads. 
     */}
+
+    {/*
+    <meta property="og:url" content="https://sosavvy.so/" id="og-url" />
+    <meta property="og:title" content="Meet your social media manager" id="og-title" />
+    <meta property="og:description" content="Grow inquiries and book appointments with High Converting social media posts done for you" id="og-description" />
+    <meta property="og:image" content="https://sosavvy.so/images/sosavvy_meta_img_v4.png" id="og-image" />
+    <meta property="og:type" content="website" id="og-type" />
+  */}
+
       <Helmet>
         {/* Base Tags */}
         <title>{metaTitle}</title>
         <meta name="description" content={metaDescription} />
+        <link rel="canonical" />
         
         {/* Open Graph Tags (for LinkedIn/Facebook) */}
         <meta property="og:title" content={metaTitle} />
@@ -222,6 +244,7 @@ useEffect(() => {
         <meta property="og:image" content={metaImageUrl} />
         {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
         <meta property="og:url" content={canonicalUrl} /> 
+        {/*<meta property="og:url" content="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />*/}
         <meta property="og:type" content="article" />
         
         {/* Twitter Card Tags */}
@@ -229,6 +252,7 @@ useEffect(() => {
         <meta name="twitter:description" content={metaDescription} />
         <meta name="twitter:image" content={metaImageUrl} />
       </Helmet>
+    
      <div className="pb-16 bg-gray-50 min-h-screen">
     
     <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
@@ -243,7 +267,7 @@ useEffect(() => {
         </a>
         
         {/*Desktop Navigation Buttons */}
-        {/*  <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
+        {/* <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
           
         <div className="hidden sm:flex items-center space-x-4">
           <div className="items-center justify-center space-x-2">
@@ -419,7 +443,7 @@ useEffect(() => {
       )}
         
       </nav>
-
+      
       <div className="mt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column: Blog Post Content */}
@@ -462,7 +486,9 @@ useEffect(() => {
           </div>
 
           {/* Right Column: Sidebar */}
-          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start">
+          <div className="lg:col-span-1 space-y-10 sticky top-8 self-start overflow-y-auto max-h-[90vh] **subtle-scrollbar**">
+       
+            
 
             {/* Recent Posts */}
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -475,11 +501,12 @@ useEffect(() => {
                 )}
               </div>
             </div>
-              
-          {/* Start Advertising Section */}
+
+            {/* Advertising Section */}
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Boost Your Social Presence!</h3>
               <img
+                //src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" // Example image from Pexels
                 src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/blog_images/cf606bf7-cf80-429c-836a-cbd0d01256a6/sosavvy_advert_image_1.png"
                 alt="Advertisement"
                 className="w-full h-48 object-cover rounded-lg mb-4"
@@ -487,6 +514,7 @@ useEffect(() => {
               <p className="text-gray-600 mb-4">
                 Discover how SoSavvy saves Solopreneurs <br/> 10 hours every week.👇 
               </p>
+             
 
               <button
                 onClick={handleLoginClick}
@@ -494,10 +522,8 @@ useEffect(() => {
                       <span>Get Started for Free</span>         
               </button>
             </div>
-            {/*End Advertising Section*/}
 
-
-
+            {/* Advertising Section */}
           </div>
         </div>
 
@@ -506,7 +532,8 @@ useEffect(() => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">You May Also Like</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {relatedPosts.length > 0 ? (
-              relatedPosts.map((rp) => <BlogCard key={rp.id} post={{ ...rp, categories: [] }} />) // Pass empty categories array or fetch them if needed
+              // Note: You originally passed an empty categories array which I've maintained for type safety
+              relatedPosts.map((rp) => <BlogCard key={rp.id} post={{ ...rp, categories: [] }} />) 
             ) : (
               <p className="text-center text-gray-600 col-span-full">No related posts found.</p>
             )}
@@ -540,21 +567,26 @@ useEffect(() => {
       <div>
         <h3 className="font-semibold mb-4">Product</h3>
         <ul className="space-y-2 text-sm text-gray-600">
-          <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
-          <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
-          <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
+          <li> <a href="https://sosavvy.so/#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
+          <li> <a href="https://sosavvy.so/#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
+          <li> <a href="https://sosavvy.so/#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
           <li className="text-gray-400">Roadmap <em>(soon)</em></li>
         </ul>
       </div>
 
       {/* Resources */}
       <div>
-        <h3 className="font-semibold mb-4">Resources</h3>
+        <h3 className="font-semibold mb-4">Tools and Resources</h3>
         <ul className="space-y-2 text-sm text-gray-600">
           {/*<li className="text-gray-400">Blog <em>(soon)</em></li>
           <li className="text-gray-400">Docs <em>(soon)</em></li>
       <li className="text-gray-400">Support <em>(soon)</em></li>*/}
-          <li> <a href="#FAQ" className="no-underline hover:text-blue-400 transition-colors">FAQ</a></li>
+          <li> <a href="https://sosavvy.so/#FAQ" className="no-underline hover:text-blue-400 transition-colors">Frequently Asked Questions</a></li>
+          <li> <a href="https://sosavvy.so/blog/the-sosavvy-playbook-linkedin-content-without-the-grind" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy Playboook</a></li>
+          <li> <a href="https://sosavvy.so/blog/10-ai-hook-prompts-for-scroll-stopping-linkedin-posts" className="no-underline hover:text-blue-400 transition-colors">Best AI Prompts for Viral LinkedIn Posts</a></li>
+          <li> <a href="https://sosavvy.so/blog/7-ai-prompts-to-boost-linkedin-event-attendance" className="no-underline hover:text-blue-400 transition-colors">7 Prompts to Boost Your LinkedIn Events</a></li>
+          <li> <a href="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" className="no-underline hover:text-blue-400 transition-colors">How to Post Consistently on LinkedIn</a></li>
+          <li> <a href="https://sosavvy.so/blog/best-linkedin-content-strategy-for-small-business-owners" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy for Small Business</a></li>
         </ul>
       </div>
 
