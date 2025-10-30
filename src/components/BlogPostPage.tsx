@@ -589,7 +589,7 @@ useEffect(() => {
           <li> <a href="https://sosavvy.so/blog/best-linkedin-content-strategy-for-small-business-owners" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Strategy for Small Businesses</a></li>
           <li> <a href="https://sosavvy.so/blog/linkedin-posting-strategy-for-tech-recruiters-get-ceos-booking-calls-on-autopilot" className="no-underline hover:text-blue-400 transition-colors">Best LinkedIn Strategy for Recruiters</a></li>
           <li> <a href="https://sosavvy.so/blog/5-linkedin-posts-for-tax-accountants-and-cpas-to-grow-client-inquiries" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Guide for CPAs & Accountants</a></li>
-          <li> <a href="https://sosavvy.so/blog/get-more-demos-7-best-prompts-for-linkedin-ctas" className="no-underline hover:text-blue-400 transition-colors">Book More Demos with 7 AI Prompts</a></li>
+          <li> <a href="https://sosavvy.so/blog/get-more-demos-7-best-prompts-for-linkedin-ctas" className="no-underline hover:text-blue-400 transition-colors">Ultimate LinkedIn Prompts to Boost Demos</a></li>
 
         </ul>
       </div>
