@@ -586,7 +586,11 @@ useEffect(() => {
           <li> <a href="https://sosavvy.so/blog/10-ai-hook-prompts-for-scroll-stopping-linkedin-posts" className="no-underline hover:text-blue-400 transition-colors">Best AI Prompts for Viral LinkedIn Posts</a></li>
           <li> <a href="https://sosavvy.so/blog/7-ai-prompts-to-boost-linkedin-event-attendance" className="no-underline hover:text-blue-400 transition-colors">7 Prompts to Boost Your LinkedIn Events</a></li>
           <li> <a href="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" className="no-underline hover:text-blue-400 transition-colors">How to Post Consistently on LinkedIn</a></li>
-          <li> <a href="https://sosavvy.so/blog/best-linkedin-content-strategy-for-small-business-owners" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy for Small Business</a></li>
+          <li> <a href="https://sosavvy.so/blog/best-linkedin-content-strategy-for-small-business-owners" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Strategy for Small Businesses</a></li>
+          <li> <a href="https://sosavvy.so/blog/linkedin-posting-strategy-for-tech-recruiters-get-ceos-booking-calls-on-autopilot" className="no-underline hover:text-blue-400 transition-colors">Best LinkedIn Strategy for Recruiters</a></li>
+          <li> <a href="https://sosavvy.so/blog/5-linkedin-posts-for-tax-accountants-and-cpas-to-grow-client-inquiries" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Guide for CPAs & Accountants</a></li>
+          <li> <a href="https://sosavvy.so/blog/get-more-demos-7-best-prompts-for-linkedin-ctas" className="no-underline hover:text-blue-400 transition-colors">Book More Demos with 7 AI Prompts</a></li>
+
         </ul>
       </div>
 
