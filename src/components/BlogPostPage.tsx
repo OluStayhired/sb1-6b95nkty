@@ -128,7 +128,7 @@ useEffect(() => {
   if (slug) {
     fetchSidebarPosts();
   }
-}, [slug, recentPosts]); // Depend on recentPosts to filter related posts correctly
+}, [slug]); // Depend on recentPosts to filter related posts correctly
 
   // Fetch single blog post
   useEffect(() => {
