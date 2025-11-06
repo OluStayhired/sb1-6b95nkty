@@ -287,12 +287,11 @@ const handleLoginClick = () => {
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-l from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-              Meet your <br className="sm:hidden" /> AI Ghostwriter <br className="sm:hidden" /> {/* This is the key change! */}
-       <p className="block font-semibold text-xl sm:font-normal text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-500 leading-tight mt-1 sm:mt-3">
+                Meet your <br className="sm:hidden" /> social media manager <br className="sm:hidden" /> {/* This is the key change! */}
+       <p className="block font-semibold text-xl sm:font-semibold text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-700 leading-tight mt-1 sm:mt-3">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
-         {/*Let SoSavvy write <br className="sm:hidden block" /> & schedule posts <br className="sm:hidden block" /> to help you Grow!*/}
-         write viral posts <br className="sm:hidden block" /> for X and LinkedIn in minutes! 
+         Let SoSavvy write <br className="sm:hidden block" /> & schedule posts <br className="sm:hidden block" /> to help you Grow!
          </p>
               </span>
             </p>
@@ -305,8 +304,7 @@ const handleLoginClick = () => {
         */}
 
       <p className="mt-10 text-base sm:text-xl md:text-xl text-gray-700 sm:font-normal font-normal mb-8 sm:mb-10">
-            {/*Turn your website into months of <br className="sm:hidden" /> engaging content <br className="sm:block" /> for X and LinkedIn, <br className="sm:hidden" /> in minutes 🔥*/}
-            220 Viral Hooks 🪝 . 14 day Content Strategy ✍️ . Instant Post Scheduler 📅 
+            Turn your website into months of <br className="sm:hidden" /> engaging content <br className="sm:block" /> for X and LinkedIn, <br className="sm:hidden" /> in minutes 🔥
       </p>
 
   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center mx-auto w-fit"> 
@@ -340,7 +338,7 @@ const handleLoginClick = () => {
         style={{ animationDelay: '0s', animationDuration: '6s' }}
         onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/agency_owner_img.png"; }}
       />
-      {/* Image 2: Bottom-right, floating rounded rectangle 
+      {/* Image 2: Bottom-right, floating rounded rectangle */}
       <img
         src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/investor_image.png"
         alt="Abstract pink shape"
@@ -348,7 +346,6 @@ const handleLoginClick = () => {
         style={{ animationDelay: '2s', animationDuration: '7s' }}
         onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/investor_image.png"; }}
       />
-      */}
       {/* Image 3: Mid-right, smaller floating circle */}
       <img
         src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/marketing_exec.png"
@@ -357,7 +354,7 @@ const handleLoginClick = () => {
         style={{ animationDelay: '4s', animationDuration: '5s' }}
         onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/marketing_exec.png"; }}
       />
-        {/* Image 4: Bottom-left, larger floating rectangle 
+        {/* Image 4: Bottom-left, larger floating rectangle */}
         <img
         src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/the_startup_founder.png"
         alt="Abstract orange shape"
@@ -365,7 +362,6 @@ const handleLoginClick = () => {
         style={{ animationDelay: '1s', animationDuration: '8s' }}
         onError={(e) => { e.target.onerror = null; e.target.src = "https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/the_startup_founder.png"; }}
       />
-      */}
       {/* Image 5: Mid-left, medium floating circle */}
       <img
         src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/user-post-images/accountant_image.png"
@@ -428,15 +424,15 @@ const handleLoginClick = () => {
 
 {/*----------------- Start Video Section for SoSavvy ----------------------- */}
 <section className="mt-16 text-center">
-  {/*
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-2">
           Struggling to Grow on LinkedIn? 😥
         </h2>
         <p className="text-base sm:text-3xl md:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
     
-            Unlock weeks of high-converting content without a content creator.  
+            Unlock weeks of high-converting content without a content creator. 
+            
+            {/*<br/> Generate posts that build your brand with zero effort.   */}
         </p>
-        */}
 
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
           {/* Outer div for responsive aspect ratio (16:9 - 56.25%) */}
