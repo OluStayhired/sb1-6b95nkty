@@ -292,7 +292,7 @@ const handleLoginClick = () => {
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
          {/*Let SoSavvy write <br className="sm:hidden block" /> & schedule posts <br className="sm:hidden block" /> to help you Grow!*/}
-         write viral posts <br className="sm:hidden block" /> for X and LinkedIn in minutes! 
+         write viral posts <br className="sm:hidden block" /> for X and LinkedIn on Autopilot! 
          </p>
               </span>
             </p>
