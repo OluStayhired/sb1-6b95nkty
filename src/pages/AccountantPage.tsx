@@ -72,6 +72,7 @@ const handleLoginClick = () => {
   return (
       <div id="top_page" className="min-h-screen bg-white">
         <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
+        <a href="https://www.sosavvy.so">
         <div className="flex items-center space-x-2">
 
          <div className="bg-blue-600 rounded-full p-1.5 rotate-180 sm:p-2">
@@ -79,7 +80,7 @@ const handleLoginClick = () => {
           </div>
           <span className="text-2xl  font-bold text-black sm:text-2xl">SoSavvy</span>
         </div>
-        
+        </a>
         {/*Desktop Navigation Buttons */}
         {/*  <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
 
