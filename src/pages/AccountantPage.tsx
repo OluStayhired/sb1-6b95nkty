@@ -29,7 +29,7 @@ function AccountantPage() {
 
    // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
-  const canonicalUrl = 'linkedin_for_accountants';
+  const canonicalUrl = 'https://sosavvy.so/linkedin_for_accountants';
   const metaTitle = 'LinkedIn for Accountants - Grow with SoSavvy'; // Default title while loading
   const metaDescription = "AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X"; // Default description
   const metaImageUrl = "https://sosavvy.so/images/sosavvy_accountant_img.png";
