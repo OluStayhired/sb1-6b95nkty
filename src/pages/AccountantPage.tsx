@@ -718,7 +718,7 @@ const handleLoginClick = () => {
 
         {/* Paragraph (P) - Centered by parent text-center */}
         <p className="text-xl sm:text-3xl font-light opacity-90 max-w-2xl mx-auto">
-            SoSavvy crafts compelling LinkedIn & X content about <br/> saving money, avoiding penalties and generating financial freedom.
+            SoSavvy crafts compelling LinkedIn content about saving money, avoiding penalties and achieving financial freedom.
         </p>
 
     </div>
