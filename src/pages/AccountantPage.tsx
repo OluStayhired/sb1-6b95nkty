@@ -16,7 +16,7 @@ import { TooltipExtended } from '/src/utils/TooltipExtended';
 import { WaitlistModal } from '../components/WaitlistModal.tsx';
 import { Link } from 'react-router-dom';
 
-function LandingPage() {
+function AccountantPage() {
   const navigate = useNavigate();
   //const { isAuthenticated } = useAuth();
   const { signIn } = useAuth();
@@ -287,7 +287,7 @@ const handleLoginClick = () => {
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-l from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-              Meet your <br className="sm:hidden" /> AI Ghostwriter <br className="sm:hidden" /> {/* This is the key change! */}
+              LinkedIn for <br className="sm:hidden" /> Accountants <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold text-xl sm:font-normal text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-500 leading-tight mt-1 sm:mt-3">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
@@ -2012,4 +2012,4 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode; titl
   );
 }
 
-export default LandingPage;
+export default AccountantPage;
