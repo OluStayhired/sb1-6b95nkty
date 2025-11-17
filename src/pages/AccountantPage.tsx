@@ -31,7 +31,7 @@ function AccountantPage() {
   const canonicalUrl = 'linkedin_for_accountants';
   const metaTitle = 'LinkedIn for Accountants - Grow with SoSavvy'; // Default title while loading
   const metaDescription = "AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X"; // Default description
-  const metaImageUrl = "https://sosavvy.so/images/sosavvy_meta_img_v5.png";
+  const metaImageUrl = "https://sosavvy.so/images/sosavvy_accountant_img.png";
 
 const handleLoginClick = () => {
     // This navigates to an external URL, not an internal route
