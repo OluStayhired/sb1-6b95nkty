@@ -15,6 +15,7 @@ import googleLogo from '../images/google-logo-48.svg';
 import { TooltipExtended } from '/src/utils/TooltipExtended';
 import { WaitlistModal } from '../components/WaitlistModal.tsx';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 
 function AccountantPage() {
   const navigate = useNavigate();
@@ -70,6 +71,28 @@ const handleLoginClick = () => {
 
   
   return (
+      <>
+    <Helmet>
+        {/* Base Tags */}
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" />
+        
+        {/* Open Graph Tags (for LinkedIn/Facebook) */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={metaImageUrl} />
+        {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
+        <meta property="og:url" content={canonicalUrl} /> 
+        {/*<meta property="og:url" content="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />*/}
+        <meta property="og:type" content="article" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={metaImageUrl} />
+      </Helmet>
+
       <div id="top_page" className="min-h-screen bg-white">
         <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
         <a href="https://www.sosavvy.so">
@@ -2007,6 +2030,9 @@ const handleLoginClick = () => {
   </div>
 ) : null}          
     </div>
+  
+  </>
+  
   );
 }
 
