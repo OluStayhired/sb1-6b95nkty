@@ -773,8 +773,8 @@ const handleLoginClick = () => {
 {/*----------------- Start Create Campaign Video Section for SoSavvy ----------------------- */}
         <section className="mt-16 text-center">
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-            SoSavvy reads your website <br className="sm:hidden"/> and 
-            <br className="hidden sm:block"/>builds the right content 
+            SoSavvy uses your website <br className="sm:hidden"/> to 
+            <br className="hidden sm:block"/>create viral LinkedIn posts 
             <br className="sm:hidden"/> for your goals 🔥
         </h2>
         <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
