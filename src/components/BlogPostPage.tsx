@@ -13,7 +13,7 @@ import LinkedInSolidLogoWhite from '../images/linkedin-solid-logo-white.svg';
 import XLogo from '../images/x-logo.svg';
 import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 
-const DEFAULT_META_IMAGE = 'https://sosavvy.so/images/sosavvy_meta_img_v4.png';
+const DEFAULT_META_IMAGE = 'https://sosavvy.so/images/sosavvy_meta_img_v5.png';
 // CRITICAL: Define the base domain for absolute URLs
 const BLOG_BASE_URL = "https://sosavvy.so/blog"; 
 

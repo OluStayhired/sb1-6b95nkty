@@ -26,6 +26,13 @@ function AccountantPage() {
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
   const [isWaitlistSuccessModalOpen, setIsWaitlistSuccessModalOpen] = useState(false);
 
+   // CRITICAL FIX: Define safe meta variables here, at the top of the component,
+  // so they are available immediately for the initial Helmet render.
+  const canonicalUrl = 'linkedin_for_accountants';
+  const metaTitle = 'LinkedIn for Accountants - Grow with SoSavvy'; // Default title while loading
+  const metaDescription = "AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X"; // Default description
+  const metaImageUrl = "https://sosavvy.so/images/sosavvy_meta_img_v5.png";
+
 const handleLoginClick = () => {
     // This navigates to an external URL, not an internal route
     window.location.href = 'https://app.sosavvy.so/login';
