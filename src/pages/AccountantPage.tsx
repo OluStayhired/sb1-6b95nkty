@@ -292,7 +292,7 @@ const handleLoginClick = () => {
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
          {/*Let SoSavvy write <br className="sm:hidden block" /> & schedule posts <br className="sm:hidden block" /> to help you Grow!*/}
-         write viral posts <br className="sm:hidden block" /> for X and LinkedIn on Autopilot! 
+         write viral posts <br className="sm:hidden block" /> & grow client inquiries on Autopilot! 
          </p>
               </span>
             </p>
@@ -466,7 +466,7 @@ const handleLoginClick = () => {
 
 <section className="mt-24 text-center">
   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-    Why Founders & Consultants Love SoSavvy❤️
+    Why Our Customers Love SoSavvy❤️
   </h2>
   <div className="flex items-center justify-center flex-wrap gap-4 mb-6">
     {/* Mini Testimonial 1 */}
@@ -604,7 +604,7 @@ const handleLoginClick = () => {
                 <span>Here's the Problem</span>
           </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
-            Your social media manager <br/> is costing you 😏
+            It's hard to stay <br/> consistent on LinkedIn 😏
             </h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             {/*Many founders have tried to crack the code, unfortunately many have hit the same issues:*/}
@@ -698,7 +698,7 @@ const handleLoginClick = () => {
 
         {/* Headline (H2) - Now stands alone, centered by parent text-center */}
         <h2 className="text-2xl sm:text-4xl font-bold mb-6"> {/* Added mb-6 for spacing below the headline */}
-            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊  
+            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your clients' pain 😊  
         </h2>
 
         {/* Button Call to Action for Customers */}
@@ -718,7 +718,7 @@ const handleLoginClick = () => {
 
         {/* Paragraph (P) - Centered by parent text-center */}
         <p className="text-xl sm:text-3xl font-light opacity-90 max-w-2xl mx-auto">
-            SoSavvy crafts compelling social media content that <br/> resonates with your customers and generates inquiries on AutoPilot
+            SoSavvy crafts compelling LinkedIn & X content about <br/> saving money, avoiding penalties and generating financial freedom.
         </p>
 
     </div>
@@ -799,7 +799,7 @@ const handleLoginClick = () => {
        <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-3"> Website Analysis</h3>
         <p className="text-gray-600 text-xl">
-          SoSavvy performs a deep analysis of your business to understand your ideal customer and the content you need to meet your goals. 
+          SoSavvy performs a deep analysis of your business to understand your ideal client and the content you need to meet your goals. 
         </p>
       </div>
     </div>
@@ -816,7 +816,7 @@ const handleLoginClick = () => {
       <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
          <h3 className="text-2xl font-bold text-gray-900 mb-3">Content Creation</h3>
         <p className="text-gray-600 text-xl">
-          The content creation process uses copywriting frameworks and nuanced industry insights to generate hyper targeted posts that resonate.
+          The content creation process uses copywriting frameworks and nuanced accounting insights to generate hyper targeted posts that resonate.
         </p>
       </div>
     </div>
