@@ -46,7 +46,8 @@ function AppRoutes() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/blog" element={<BlogListPage />} />
       <Route path="blog/:slug" element={<BlogPostPage />} /> 
-      <Route path="/linkedin_for_accountants" element={<AccountantPage />} />
+      <Route path="/linkedin" element={<AccountantPage />} />
+      <Route path="linkedin/linkedin_for_accountants" element={<AccountantPage />} />
       <Route
         path="/dashboard/*"
         element={

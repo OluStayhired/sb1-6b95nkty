@@ -23,6 +23,18 @@ force = true
 # REMOVED conditions = { UserAgent = ["linkedinbot", "twitterbot", "slackbot", "facebookexternalhit/"] }  
 
 [[redirects]]
+from = "/linkedin/*"
+to = "/index.html"
+status = 200  
+
+[[redirects]]
+from = "/linkedin/*"
+to = "/.netlify/functions/meta-accountant-renderer"
+status = 200
+force = true
+# REMOVED conditions = { UserAgent = ["linkedinbot", "twitterbot", "slackbot", "facebookexternalhit/"] }  
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

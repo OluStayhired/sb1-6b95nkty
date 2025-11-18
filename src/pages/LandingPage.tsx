@@ -1921,7 +1921,7 @@ const handleLoginClick = () => {
           <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
           <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
           <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
-          <li> <a href="https://sosavvy.so/linkedin_for_accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
+          <li> <a href="https://sosavvy.so/linkedin/linkedin_for_accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
         </ul>
       </div>
 
