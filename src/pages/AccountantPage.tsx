@@ -29,7 +29,7 @@ function AccountantPage() {
 
    // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
-  const canonicalUrl = 'https://sosavvy.so/linkedin/linkedin_for_accountants';
+  const canonicalUrl = 'https://sosavvy.so/linkedin/linkedin-for-accountants';
   const metaTitle = 'LinkedIn for Accountants - Grow with SoSavvy'; // Default title while loading
   const metaDescription = "AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X"; // Default description
   const metaImageUrl = "https://sosavvy.so/images/sosavvy_accountant_img.png";
@@ -774,7 +774,7 @@ const handleLoginClick = () => {
         <section className="mt-16 text-center">
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
             SoSavvy uses your website <br className="sm:hidden"/> to 
-            <br className="hidden sm:block"/>create viral LinkedIn posts 
+            <br className="hidden sm:block"/> create viral LinkedIn posts 
             <br className="sm:hidden"/> for your goals 🔥
         </h2>
         <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
@@ -1952,7 +1952,7 @@ const handleLoginClick = () => {
           <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
           <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
           <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
-          <li> <a href="https://sosavvy.so/linkedin_for_accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
+          <li> <a href="https://sosavvy.so/linkedin-for-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
         </ul>
       </div>
 

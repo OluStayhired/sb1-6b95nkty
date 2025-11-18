@@ -110,7 +110,7 @@ export async function handler(event, context) {
      const title = 'LinkedIn for Accountants - Grow with SoSavvy';
      const description = 'AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X';
      const imageUrl = 'https://sosavvy.so/images/sosavvy_accountant_img.png';
-     const currentUrl = 'https://sosavvy.so/linkedin/'; 
+     const currentUrl = 'https://sosavvy.so/linkedin/linkedin-for-accountants'; 
 
     const dynamicMetaTags = `
         <title>${title}</title>
