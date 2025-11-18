@@ -309,7 +309,7 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
-        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">For Entrepreneurs and Professionals</span>
+        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">AI Writing Assistant</span>
           
            {/*start alternative header */}
     
@@ -774,8 +774,9 @@ const handleLoginClick = () => {
         <section className="mt-16 text-center">
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
             SoSavvy uses your website <br className="sm:hidden"/> to 
-            <br className="hidden sm:block"/> create viral LinkedIn posts 
-            <br className="sm:hidden"/> for your goals 🔥
+            {/*<br className="hidden sm:block"/> create viral LinkedIn posts*/}
+            <br className="hidden sm:block"/> create impactful posts that
+            <br className="sm:hidden"/> generate client inquiries 🔥
         </h2>
         <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
             
