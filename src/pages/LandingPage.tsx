@@ -780,7 +780,8 @@ const handleLoginClick = () => {
 {/* Start How it Works Section */}
 <section className="mt-20 text-center">
 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-  Write posts to build your <br className="sm:hidden"/> brand <br className="hidden sm:block"/> <span className="text-blue-500">without hiring</span> a ghostwriter  
+  {/*Write posts to build your <br className="sm:hidden"/> brand <br className="hidden sm:block"/> <span className="text-blue-500">without hiring</span> a ghostwriter  */}
+  Write engaging LinkedIn <br className="sm:hidden"/> posts <br className="hidden sm:block"/> <span className="text-blue-500">without</span> a ghostwriter  
 </h2>
   
   <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
