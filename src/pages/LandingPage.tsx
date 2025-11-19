@@ -278,7 +278,7 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
-        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">For Entrepreneurs and Professionals</span>
+        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">Simplify Content Creation for your Business</span>
           
            {/*start alternative header */}
     
@@ -466,7 +466,7 @@ const handleLoginClick = () => {
 
 <section className="mt-24 text-center">
   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-    Why Founders & Consultants Love SoSavvy❤️
+    Why Customers Love SoSavvy❤️
   </h2>
   <div className="flex items-center justify-center flex-wrap gap-4 mb-6">
     {/* Mini Testimonial 1 */}
@@ -604,7 +604,8 @@ const handleLoginClick = () => {
                 <span>Here's the Problem</span>
           </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
-            Your social media manager <br/> is costing you 😏
+            {/*Your social media manager <br/> is costing you 😏*/}
+            Turning content into leads <br/> on LinkedIn is really hard 😏
             </h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
             {/*Many founders have tried to crack the code, unfortunately many have hit the same issues:*/}
