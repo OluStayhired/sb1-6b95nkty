@@ -10,6 +10,7 @@ import { HooksProvider } from './context/HooksContext';
 import { BlogListPage } from './components/BlogListPage'; 
 import { BlogPostPage } from './components/BlogPostPage';
 import AccountantPage from './pages/AccountantPage';
+import CoachesPage from './pages/CoachesPage';
 
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -48,6 +49,7 @@ function AppRoutes() {
       <Route path="blog/:slug" element={<BlogPostPage />} /> 
       <Route path="/linkedin" element={<AccountantPage />} />
       <Route path="linkedin/linkedin-for-accountants" element={<AccountantPage />} />
+      <Route path="linkedin/linkedin-for-coaches" element={<CoachesPage />} />
       <Route
         path="/dashboard/*"
         element={

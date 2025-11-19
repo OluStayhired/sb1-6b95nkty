@@ -15,8 +15,9 @@ import googleLogo from '../images/google-logo-48.svg';
 import { TooltipExtended } from '/src/utils/TooltipExtended';
 import { WaitlistModal } from '../components/WaitlistModal.tsx';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 
-function LandingPage() {
+function CoachesPage() {
   const navigate = useNavigate();
   //const { isAuthenticated } = useAuth();
   const { signIn } = useAuth();
@@ -25,6 +26,13 @@ function LandingPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
   const [isWaitlistSuccessModalOpen, setIsWaitlistSuccessModalOpen] = useState(false);
+
+   // CRITICAL FIX: Define safe meta variables here, at the top of the component,
+  // so they are available immediately for the initial Helmet render.
+  const canonicalUrl = 'https://sosavvy.so/linkedin/linkedin-for-accountants';
+  const metaTitle = 'LinkedIn for Accountants - Grow with SoSavvy'; // Default title while loading
+  const metaDescription = "AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X"; // Default description
+  const metaImageUrl = "https://sosavvy.so/images/sosavvy_accountant_img.png";
 
 const handleLoginClick = () => {
     // This navigates to an external URL, not an internal route
@@ -63,8 +71,31 @@ const handleLoginClick = () => {
 
   
   return (
+      <>
+    <Helmet>
+        {/* Base Tags */}
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <link rel="canonical" />
+        
+        {/* Open Graph Tags (for LinkedIn/Facebook) */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={metaImageUrl} />
+        {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
+        <meta property="og:url" content={canonicalUrl} /> 
+        {/*<meta property="og:url" content="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />*/}
+        <meta property="og:type" content="article" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={metaImageUrl} />
+      </Helmet>
+
       <div id="top_page" className="min-h-screen bg-white">
         <nav className="px-4 py-3 flex items-center justify-between sm:px-6 sm:py-4">
+        <a href="https://www.sosavvy.so">
         <div className="flex items-center space-x-2">
 
          <div className="bg-blue-600 rounded-full p-1.5 rotate-180 sm:p-2">
@@ -72,7 +103,7 @@ const handleLoginClick = () => {
           </div>
           <span className="text-2xl  font-bold text-black sm:text-2xl">SoSavvy</span>
         </div>
-        
+        </a>
         {/*Desktop Navigation Buttons */}
         {/*  <div className="hidden flex space-x-2 space-x-4 sm:space-y-0 sm:space-x-2">*/}
 
@@ -278,7 +309,7 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">
           
-        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">Simplify Content Creation for your Business</span>
+        <span className="text-sm sm:text-lg p-3 font-semibold bg-blue-100 rounded-full text-blue-500 border-8 border-blue-50">Simplify Content Creation for your Coaching Business</span>
           
            {/*start alternative header */}
     
@@ -287,12 +318,12 @@ const handleLoginClick = () => {
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-l from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-              Meet your <br className="sm:hidden" /> AI Ghostwriter <br className="sm:hidden" /> {/* This is the key change! */}
+              LinkedIn for <br className="sm:hidden" /> Coaches <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold text-xl sm:font-normal text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-500 leading-tight mt-1 sm:mt-3">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
          {/*Let SoSavvy write <br className="sm:hidden block" /> & schedule posts <br className="sm:hidden block" /> to help you Grow!*/}
-         write viral posts <br className="sm:hidden block" /> for X and LinkedIn on Autopilot! 
+         write viral posts <br className="sm:hidden block" /> & grow client inquiries on Autopilot! 
          </p>
               </span>
             </p>
@@ -466,7 +497,7 @@ const handleLoginClick = () => {
 
 <section className="mt-24 text-center">
   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
-    Why Customers Love SoSavvy❤️
+    Why Our Customers Love SoSavvy❤️
   </h2>
   <div className="flex items-center justify-center flex-wrap gap-4 mb-6">
     {/* Mini Testimonial 1 */}
@@ -604,7 +635,6 @@ const handleLoginClick = () => {
                 <span>Here's the Problem</span>
           </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-gray-900">
-            {/*Your social media manager <br/> is costing you 😏*/}
             Turning content into leads <br/> is really hard 😏
             </h2>
           <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
@@ -699,7 +729,7 @@ const handleLoginClick = () => {
 
         {/* Headline (H2) - Now stands alone, centered by parent text-center */}
         <h2 className="text-2xl sm:text-4xl font-bold mb-6"> {/* Added mb-6 for spacing below the headline */}
-            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊  
+            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your clients' pain 😊  
         </h2>
 
         {/* Button Call to Action for Customers */}
@@ -719,7 +749,8 @@ const handleLoginClick = () => {
 
         {/* Paragraph (P) - Centered by parent text-center */}
         <p className="text-xl sm:text-3xl font-light opacity-90 max-w-2xl mx-auto">
-            SoSavvy crafts compelling social media content that <br/> resonates with your customers and generates inquiries on AutoPilot
+         SoSavvy crafts compelling posts about leadership insights & career development goals that resonate with your clients.  
+         {/*SoSavvy crafts compelling LinkedIn content about saving money, avoiding penalties and achieving financial freedom.*/}
         </p>
 
     </div>
@@ -750,10 +781,10 @@ const handleLoginClick = () => {
             */}
         <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
             Build relatable content <br className="sm:hidden"/> calendars on Demand 🔥
-        </h2>    
+        </h2> 
         <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
             
-            Watch how to create weeks of linkedin & twitter posts in seconds!
+            Watch how to create weeks of linkedin posts from a website in seconds!
           
           </p>
         <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl">
@@ -804,7 +835,7 @@ const handleLoginClick = () => {
        <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-3"> Website Analysis</h3>
         <p className="text-gray-600 text-xl">
-          SoSavvy performs a deep analysis of your business to understand your ideal customer and the content you need to meet your goals. 
+          SoSavvy performs a deep analysis of your business to understand your ideal client and the content you need to meet your goals. 
         </p>
       </div>
     </div>
@@ -821,7 +852,7 @@ const handleLoginClick = () => {
       <div className="p-6 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center text-center">
          <h3 className="text-2xl font-bold text-gray-900 mb-3">Content Creation</h3>
         <p className="text-gray-600 text-xl">
-          The content creation process uses copywriting frameworks and nuanced industry insights to generate hyper targeted posts that resonate.
+          The content creation process uses copywriting frameworks and nuanced accounting insights to generate hyper targeted posts that resonate.
         </p>
       </div>
     </div>
@@ -1927,7 +1958,7 @@ const handleLoginClick = () => {
           <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
           <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
           <li> <a href="https://sosavvy.so/linkedin/linkedin-for-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
-          <li> <a href="https://sosavvy.so/linkedin/linkedin/linkedin-for-coaches" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Coaches</a></li>
+          <li> <a href="https://sosavvy.so/linkedin/linkedin-for-coaches" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Coaches</a></li>
         </ul>
       </div>
 
@@ -2005,6 +2036,9 @@ const handleLoginClick = () => {
   </div>
 ) : null}          
     </div>
+  
+  </>
+  
   );
 }
 
@@ -2018,4 +2052,4 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode; titl
   );
 }
 
-export default LandingPage;
+export default CoachesPage;
