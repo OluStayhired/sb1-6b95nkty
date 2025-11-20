@@ -729,7 +729,8 @@ const handleLoginClick = () => {
 
         {/* Headline (H2) - Now stands alone, centered by parent text-center */}
         <h2 className="text-2xl sm:text-4xl font-bold mb-6"> {/* Added mb-6 for spacing below the headline */}
-            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your clients' pain 😊  
+             {/*Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊*/}
+             Create <span className="text-blue-400 justify-center items-center">human-sounding</span> posts that <br/> uncovers your clients' deepest pain 🥰  
         </h2>
 
         {/* Button Call to Action for Customers */}
@@ -811,7 +812,7 @@ const handleLoginClick = () => {
 {/* Start How it Works Section */}
 <section className="mt-20 text-center">
 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-  Write engaging LinkedIn <br className="sm:hidden"/> posts <br className="hidden sm:block"/> <span className="text-blue-500">without</span> a ghostwriter  
+  Write engaging LinkedIn <br className="sm:hidden"/> posts <br className="hidden sm:block"/> <span className="text-blue-500">without</span> a ghostwriter ✍️  
 </h2>
   
   <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
