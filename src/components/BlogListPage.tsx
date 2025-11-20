@@ -458,7 +458,7 @@ export function BlogListPage() {
         <div className="text-center mb-16">
         <h1 className="mt-24 text-5xl font-bold text-gray-900 mb-4">
             {/*Learn How to Build*/}
-            Learn How to Write
+            Write
             {/*<span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"> <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"> Unstoppable Brands</span> </span> */}
             <span>
              <span className="bg-gradient-to-r from-blue-700 to-blue-400  bg-clip-text text-transparent"> Banger Posts </span> 
