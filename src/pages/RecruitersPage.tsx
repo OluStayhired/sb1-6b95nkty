@@ -17,7 +17,7 @@ import { WaitlistModal } from '../components/WaitlistModal.tsx';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 
-function AccountantPage() {
+function RecruitersPage() {
   const navigate = useNavigate();
   //const { isAuthenticated } = useAuth();
   const { signIn } = useAuth();
@@ -29,7 +29,7 @@ function AccountantPage() {
 
    // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
-  const canonicalUrl = 'https://sosavvy.so/linkedin/linkedin-for-accountants';
+  const canonicalUrl = 'https://sosavvy.so/linkedin/linkedin-for-recruiters';
   const metaTitle = 'LinkedIn for Accountants - Grow with SoSavvy'; // Default title while loading
   const metaDescription = "AI Powered Writing Assistant that creates and scheduleds scroll stopping, high converting LinkedIn and X posts on demand. SoSavvy is a human-sounding ghostwriter that generates inquiries with super targeted posts focused on helping Accountants grow on LinkedIn and X"; // Default description
   const metaImageUrl = "https://sosavvy.so/images/sosavvy_accountant_img.png";
@@ -83,8 +83,7 @@ const handleLoginClick = () => {
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={metaImageUrl} />
         {/* This tag is the key fix, as canonicalUrl is based on 'slug' which is available immediately */}
-        <meta property="og:url" content={canonicalUrl} /> 
-        {/*<meta property="og:url" content="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" id="og-url" />*/}
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
         
         {/* Twitter Card Tags */}
@@ -318,7 +317,7 @@ const handleLoginClick = () => {
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-l from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-              LinkedIn for <br className="sm:hidden" /> Accountants <br className="sm:hidden" /> {/* This is the key change! */}
+              LinkedIn for <br className="sm:hidden" /> Coaches <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold text-xl sm:font-normal text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-500 leading-tight mt-1 sm:mt-3">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
@@ -750,7 +749,8 @@ const handleLoginClick = () => {
 
         {/* Paragraph (P) - Centered by parent text-center */}
         <p className="text-xl sm:text-3xl font-light opacity-90 max-w-2xl mx-auto">
-            SoSavvy crafts compelling LinkedIn content about saving money, avoiding penalties and achieving financial freedom.
+         SoSavvy crafts compelling posts about leadership insights & career development goals that resonate with your clients.  
+         {/*SoSavvy crafts compelling LinkedIn content about saving money, avoiding penalties and achieving financial freedom.*/}
         </p>
 
     </div>
@@ -811,7 +811,7 @@ const handleLoginClick = () => {
 {/* Start How it Works Section */}
 <section className="mt-20 text-center">
 <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 mb-4">
-  Write engaging LinkedIn <br className="sm:hidden"/> posts <br className="hidden sm:block"/> <span className="text-blue-500">without</span> a ghostwriter ✍️ 
+  Write engaging LinkedIn <br className="sm:hidden"/> posts <br className="hidden sm:block"/> <span className="text-blue-500">without</span> a ghostwriter ✍️  
 </h2>
   
   <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
@@ -1957,7 +1957,7 @@ const handleLoginClick = () => {
           <li> <a href="#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
           <li> <a href="#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
           <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
-          <li> <a href="https://sosavvy.so/linkedin-for-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
+          <li> <a href="https://sosavvy.so/linkedin/linkedin-for-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
           <li> <a href="https://sosavvy.so/linkedin/linkedin-for-coaches" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Coaches</a></li>
           <li> <a href="https://sosavvy.so/linkedin/linkedin-for-recruiters" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Tech Recruiters</a></li>
         </ul>
@@ -1977,7 +1977,7 @@ const handleLoginClick = () => {
           <li> <a href="https://sosavvy.so/blog/3-rules-for-posting-consistently-on-linkedin-with-ai-scheduling" className="no-underline hover:text-blue-400 transition-colors">How to Post Consistently on LinkedIn</a></li>
           <li> <a href="https://sosavvy.so/blog/best-linkedin-content-strategy-for-small-business-owners" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Content Strategy for Small Business</a></li>
           <li> <a href="https://sosavvy.so/blog/linkedin-posting-strategy-for-tech-recruiters-get-ceos-booking-calls-on-autopilot" className="no-underline hover:text-blue-400 transition-colors">Best LinkedIn Strategy for Recruiters</a></li>
-          <li> <a href="https://sosavvy.so/blog/5-linkedin-posts-for-tax-accountants-and-cpas-to-grow-client-inquiries" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Guide for CPAs & Accountants</a></li>
+          <li> <a href="https://sosavvy.so/blog/linkedin-strategy-for-tax-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn Guide for CPAs & Accountants</a></li>
           <li> <a href="https://sosavvy.so/blog/get-more-demos-7-best-prompts-for-linkedin-ctas" className="no-underline hover:text-blue-400 transition-colors">Top LinkedIn Prompts to Book Demos</a></li>
         </ul>
       </div>
@@ -2053,4 +2053,4 @@ function FeatureCard({ icon, title, description }: { icon: React.ReactNode; titl
   );
 }
 
-export default AccountantPage;
+export default RecruitersPage;

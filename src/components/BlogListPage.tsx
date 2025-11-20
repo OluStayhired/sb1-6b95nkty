@@ -542,7 +542,9 @@ export function BlogListPage() {
           <li> <a href="https://sosavvy.so/#key_features" className="no-underline hover:text-blue-400 transition-colors">Features</a></li>
           <li> <a href="https://sosavvy.so/#pricing" className="no-underline hover:text-blue-400 transition-colors">Pricing</a></li>
           <li> <a href="https://sosavvy.so/#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
-          <li className="text-gray-400">Roadmap <em>(soon)</em></li>
+          <li> <a href="https://sosavvy.so/linkedin-for-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
+          <li> <a href="https://sosavvy.so/linkedin/linkedin-for-coaches" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Coaches</a></li>
+          <li> <a href="https://sosavvy.so/linkedin/linkedin-for-recruiters" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Tech Recruiters</a></li>
         </ul>
       </div>
 

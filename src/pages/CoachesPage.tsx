@@ -1960,6 +1960,7 @@ const handleLoginClick = () => {
           <li> <a href="#testimonial" className="no-underline hover:text-blue-400 transition-colors">Testimonials</a></li>
           <li> <a href="https://sosavvy.so/linkedin/linkedin-for-accountants" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Accountants</a></li>
           <li> <a href="https://sosavvy.so/linkedin/linkedin-for-coaches" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Coaches</a></li>
+          <li> <a href="https://sosavvy.so/linkedin/linkedin-for-recruiters" className="no-underline hover:text-blue-400 transition-colors">LinkedIn for Tech Recruiters</a></li>
         </ul>
       </div>
 

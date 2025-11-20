@@ -11,6 +11,7 @@ import { BlogListPage } from './components/BlogListPage';
 import { BlogPostPage } from './components/BlogPostPage';
 import AccountantPage from './pages/AccountantPage';
 import CoachesPage from './pages/CoachesPage';
+import RecruitersPage from './pages/RecruitersPage';
 
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
@@ -50,6 +51,7 @@ function AppRoutes() {
       <Route path="/linkedin" element={<AccountantPage />} />
       <Route path="linkedin/linkedin-for-accountants" element={<AccountantPage />} />
       <Route path="linkedin/linkedin-for-coaches" element={<CoachesPage />} />
+      <Route path="linkedin/linkedin-for-recruiters" element={<RecruitersPage />} />
       <Route
         path="/dashboard/*"
         element={
