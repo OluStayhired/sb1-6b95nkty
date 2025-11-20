@@ -108,7 +108,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
         onClick={() => onSelectCategory(null)}
         className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
           selectedCategory === null
-            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
+            ? 'bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md'
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
       >
@@ -120,7 +120,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({
           onClick={() => onSelectCategory(category.id)}
           className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
             selectedCategory === category.id
-              ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md'
+              ? 'bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
           }`}
         >
@@ -457,8 +457,13 @@ export function BlogListPage() {
         {/* Modern Title for the Blog List Page */}
         <div className="text-center mb-16">
         <h1 className="mt-24 text-5xl font-bold text-gray-900 mb-4">
-            Learn How to Build
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Unstoppable Brands</span> </span> 
+            {/*Learn How to Build*/}
+            Learn How to Write
+            {/*<span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"> <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent"> Unstoppable Brands</span> </span> */}
+            <span>
+             <span className="bg-gradient-to-r from-blue-700 to-blue-400  bg-clip-text text-transparent"> Banger Posts </span> 
+              on Repeat 🔥
+              </span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Grow faster on <b>LinkedIn</b> and <b>Twitter(X)</b> with the latest tools, tips & insights.👇
@@ -504,7 +509,7 @@ export function BlogListPage() {
           <div className="text-center mt-12">
             <button
               onClick={handleLoadMore}
-              className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 disabled:opacity-50"
+              className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-700 to-blue-400 text-white font-medium shadow-lg hover:shadow-xl transform transition-all duration-300 hover:scale-105 disabled:opacity-50"
               disabled={loading}
             >
               {loading ? 'Loading More...' : 'Load More'}
