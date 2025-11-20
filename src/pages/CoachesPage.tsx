@@ -1385,7 +1385,7 @@ const handleLoginClick = () => {
     <span>What Our Customers Say</span>
   </div>
   <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-    Hear From Founders & Consultants Like You
+  Hear from founders & creators like you
   </h2>
   <p className="text-xl sm:text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
     SoSavvy is helping entrepreneurs transform their social media presence into a pipeline building machine.
