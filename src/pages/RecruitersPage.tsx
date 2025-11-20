@@ -317,7 +317,7 @@ const handleLoginClick = () => {
            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl leading-tight font-bold mb-2 sm:mb-3"> 
             <p>
               <span className="inline-block bg-gradient-to-l from-blue-400 via-blue-600 to-blue-800 text-transparent bg-clip-text mt-6">
-              LinkedIn for <br className="sm:hidden" /> Coaches <br className="sm:hidden" /> {/* This is the key change! */}
+              LinkedIn for <br className="sm:hidden" /> Recruiters <br className="sm:hidden" /> {/* This is the key change! */}
        <p className="block font-semibold text-xl sm:font-normal text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-500 leading-tight mt-1 sm:mt-3">
          {/* with unstoppable <br className="sm:hidden" /> online presence */}
          {/*Let SoSavvy write <br className="sm:hidden block" /> and schedule posts <br className="sm:hidden block" /> for you!*/}
@@ -749,7 +749,8 @@ const handleLoginClick = () => {
 
         {/* Paragraph (P) - Centered by parent text-center */}
         <p className="text-xl sm:text-3xl font-light opacity-90 max-w-2xl mx-auto">
-         SoSavvy crafts compelling posts about leadership insights & career development goals that resonate with your clients.  
+         {/*SoSavvy crafts compelling posts about leadership insights & career development goals that resonate with your clients.*/}  
+         SoSavvy crafts compelling posts to build trust, help candidates & support startups and businesses hiring the top talent.
          {/*SoSavvy crafts compelling LinkedIn content about saving money, avoiding penalties and achieving financial freedom.*/}
         </p>
 
