@@ -699,8 +699,8 @@ const handleLoginClick = () => {
 
         {/* Headline (H2) - Now stands alone, centered by parent text-center */}
         <h2 className="text-2xl sm:text-4xl font-bold mb-6"> {/* Added mb-6 for spacing below the headline */}
-            {/*Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊 */}
-            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> posts that uncovers your clients' deepest pain 😊  
+            {/*Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊*/}
+            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> posts that <br/> uncovers your clients' deepest pain 🥰  
         </h2>
 
         {/* Button Call to Action for Customers */}
