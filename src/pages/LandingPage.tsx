@@ -699,7 +699,8 @@ const handleLoginClick = () => {
 
         {/* Headline (H2) - Now stands alone, centered by parent text-center */}
         <h2 className="text-2xl sm:text-4xl font-bold mb-6"> {/* Added mb-6 for spacing below the headline */}
-            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊  
+            {/*Create <span className="text-blue-400 justify-center items-center">human-sounding</span> content that <br/>connects with your customers' pain 😊 */}
+            Create <span className="text-blue-400 justify-center items-center">human-sounding</span> posts that uncovers your clients' deepest pain 😊  
         </h2>
 
         {/* Button Call to Action for Customers */}
@@ -1354,7 +1355,7 @@ const handleLoginClick = () => {
     <span>What Our Customers Say</span>
   </div>
   <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-    Hear From Founders & Consultants Like You
+    Hear from founders & creators like you
   </h2>
   <p className="text-xl sm:text-3xl text-gray-700 mb-12 max-w-3xl mx-auto">
     SoSavvy is helping entrepreneurs transform their social media presence into a pipeline building machine.
