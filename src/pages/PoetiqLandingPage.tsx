@@ -284,7 +284,7 @@ const handleLoginClick = () => {
 
           {/*<div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">*/}
           
-        <span className="text-xs sm:text-lg p-3 font-semibold bg-red-100 rounded-full text-red-500 border-8 border-red-50">The Private Community Rebuilding ElderCare</span>
+        <span className="text-xs sm:text-lg p-3 font-semibold bg-red-100 rounded-full text-red-500 border-8 border-red-50">A Community Fixing ElderCare</span>
           
            {/*start alternative header */}
     
