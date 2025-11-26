@@ -12,7 +12,7 @@ import { BlogPostPage } from './components/BlogPostPage';
 import AccountantPage from './pages/AccountantPage';
 import CoachesPage from './pages/CoachesPage';
 import RecruitersPage from './pages/RecruitersPage';
-
+import { PoetiqPage } from './pages/PoetiqLandingPage';
 
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   //const { isAuthenticated } = useAuth();
@@ -49,9 +49,11 @@ function AppRoutes() {
       <Route path="/blog" element={<BlogListPage />} />
       <Route path="blog/:slug" element={<BlogPostPage />} /> 
       <Route path="/linkedin" element={<AccountantPage />} />
+      <Route path="/poetiq" element={<AccountantPage />} />
       <Route path="linkedin/linkedin-for-accountants" element={<AccountantPage />} />
       <Route path="linkedin/linkedin-for-coaches" element={<CoachesPage />} />
       <Route path="linkedin/linkedin-for-recruiters" element={<RecruitersPage />} />
+      <Route path="poetiq/home" element={<PoetiqPage />} />
       <Route
         path="/dashboard/*"
         element={
