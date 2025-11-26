@@ -858,7 +858,7 @@ const handleLoginClick = () => {
     </div>
   </summary>
   <div className="px-5 pb-5 text-gray-700">
-    <p>We are acutely aware that your time is your most valuable resource. The community is structured for asynchronous, high-signal engagement. There are no mandatory meetings. Your contribution is prioritized through structured prompts (e.g., sharing a $\text{10}$-minute breakdown of your biggest logistical failure this week). The primary value is in accessing the combined intelligence of others, allowing you to instantly reclaim the hours you would have spent navigating the crisis alone.</p>
+    <p>We are acutely aware that your time is your most valuable resource. The community is structured for asynchronous, high-signal engagement. There are no mandatory meetings. Your contribution is prioritized through structured prompts (e.g., sharing a 10-minute breakdown of your biggest logistical failure this week). The primary value is in accessing the combined intelligence of others, allowing you to instantly reclaim the hours you would have spent navigating the crisis alone.</p>
   </div>
 </details>
 
