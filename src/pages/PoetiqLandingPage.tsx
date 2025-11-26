@@ -475,7 +475,7 @@ const handleLoginClick = () => {
             >
             
             <Sparkles className="w-4 h-4" />
-                <span>The poetiq Community</span>
+                <span>The Poetiq Community</span>
           </div>
   </section> 
 
@@ -537,9 +537,9 @@ const handleLoginClick = () => {
                 Why join our <br className="sm:hidden"/> Community
             </h2> 
             <p className="text-xl sm:text-2xl text-gray-700 mb-12 max-w-3xl mx-auto">
-                The poetiq Community is where career professionals go to restore strategic focus and reclaim the hours required to execute their parental duty without compromising parental dignity. <br/><br/>
+                The Poetiq Community is where career professionals go to restore strategic focus and reclaim the hours required to execute their parental duty without compromising parental dignity. <br/><br/>
                 It’s a private, high-integrity network where you'll get direct access to experienced peers who share unfiltered insights on the crisis. They help each other dismantle a system designed for the 19th Century. <br/><br/>
-                The poetiq Community is where to find clarity, control, and the professional blueprint for dignified parental care
+                The Poetiq Community is where to find clarity, control, and the professional blueprint for dignified parental care
             </p>
 
             <button
@@ -782,7 +782,7 @@ const handleLoginClick = () => {
     Have Questions? 🤔
   </h2>
   <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto hover:text-red-500">
-   Find out how poetiq community supports you with eldercare. 
+   Find out how The Poetiq community supports you with eldercare. 
   </p>
 
   <div className="max-w-3xl mx-auto space-y-4 text-left">
@@ -821,7 +821,7 @@ const handleLoginClick = () => {
     </div>
   </summary>
   <div className="px-5 pb-5 text-gray-700">
-    <p>The link is direct: Administrative chaos is the primary source of compromised care. When you are stressed, isolated, and forced to make rapid decisions due to lack of time, you compromise on quality. By joining poetiq, you are building the professional logistics layer that eliminates that chaos, giving you the time and clarity to make informed decisions that uphold your parent's dignity and honor your duty, without sacrificing your professional standing.</p>
+    <p>The link is direct: Administrative chaos is the primary source of compromised care. When you are stressed, isolated, and forced to make rapid decisions due to lack of time, you compromise on quality. By joining Poetiq, you are building the professional logistics layer that eliminates that chaos, giving you the time and clarity to make informed decisions that uphold your parent's dignity and honor your duty, without sacrificing your professional standing.</p>
   </div>
 </details>
 
@@ -894,7 +894,7 @@ const handleLoginClick = () => {
     </div>
   </summary>
   <div className="px-5 pb-5 text-gray-700">
-    <p>Confidentiality is paramount. The poetiq Community operates under explicit rules regarding privacy and disclosure. While you are encouraged to share the administrative failure (e.g., "I spent 4 hours on an caregiver asessment form"), you are never required to share specific personal or financial identifiers. Our system is designed to extract actionable unfiltered intelligence (the failure point) while preserving the anonymity and sensitive details of your personal life.</p>
+    <p>Confidentiality is paramount. The Poetiq Community operates under explicit rules regarding privacy and disclosure. While you are encouraged to share the administrative failure (e.g., "I spent 4 hours on a caregiver asessment form"), you are never required to share specific personal or financial identifiers. Our system is designed to extract actionable unfiltered intelligence (the failure point) while preserving the anonymity and sensitive details of your personal life.</p>
   </div>
 </details>
 
