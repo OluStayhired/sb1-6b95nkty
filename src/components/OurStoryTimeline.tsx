@@ -34,7 +34,7 @@ const storyPoints: StoryPoint[] = [
   {
     id: 4,
     title: "The Shared Challenge",
-    description: "We realized that our bond was only understood by other career professionals experiencing the same challenge. And that shared challenge was the true foundation of poetiq. A private community where everyone understood your struggle.",
+    description: "We realized that our bond was only understood by other career professionals experiencing the same challenge. And that shared challenge was the true foundation of Poetiq. A private community where everyone understood your struggle.",
     icon: Heart,
   },
   {

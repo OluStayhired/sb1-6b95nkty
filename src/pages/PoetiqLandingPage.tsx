@@ -14,6 +14,7 @@ import XLogo from '../images/x-logo.svg';
 import googleLogo from '../images/google-logo-48.svg';
 import { TooltipExtended } from '/src/utils/TooltipExtended';
 import { WaitlistModal } from '../components/WaitlistModal.tsx';
+import { NewsletterModal } from '../components/NewsletterModal.tsx';
 import { Link } from 'react-router-dom';
 //import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 import { OurStoryTimeline } from '../components/OurStoryTimeline';
@@ -27,6 +28,9 @@ function PoetiqPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isWaitlistModalOpen, setIsWaitlistModalOpen] = useState(false);
   const [isWaitlistSuccessModalOpen, setIsWaitlistSuccessModalOpen] = useState(false);
+  const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
+  const [isNewsletterSuccessModalOpen, setIsNewsletterSuccessModalOpen] = useState(false);
+  
 
    // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
@@ -209,7 +213,7 @@ const handleLoginClick = () => {
 
           <button
             onClick={() => {
-              window.location.href = '#community';
+              window.location.href = '#Community';
               setIsMobileMenuOpen(false);           
               }}
               className="w-11/12 max-w-sm px-4 py-3 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition-colors"
@@ -281,13 +285,10 @@ const handleLoginClick = () => {
       <main className="max-w-7xl mx-auto px-6 pt-10 pb-32">
         
         <div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-2 sm:py-6 md:py-20 lg:py-24 rounded-lg">
-
-          {/*<div className="text-center px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 lg:py-24 rounded-lg">*/}
           
-        {/*<span className="text-xs sm:text-lg p-3 font-semibold bg-red-100 rounded-full text-red-500 border-8 border-red-50">A Community Fixing ElderCare</span>*/}
         <span className="sm:hidden text-xs sm:text-lg p-3 font-semibold bg-red-100 rounded-full text-red-500 border-8 border-red-50">A Community Fixing ElderCare</span>
 
-<span className="hidden sm:inline text-xs sm:text-lg p-3 font-semibold bg-red-100 rounded-full text-red-500 border-8 border-red-50">A Private Community Rebuilding ElderCare Together</span>
+          <span className="hidden sm:inline text-xs sm:text-lg p-3 font-semibold bg-red-100 rounded-full text-red-500 border-8 border-red-50">A Private Community Rebuilding ElderCare Together</span>
           
            {/*start alternative header */}
     
@@ -297,12 +298,12 @@ const handleLoginClick = () => {
             <p>
               <span className="inline-block bg-gradient-to-l from-red-300 via-red-400 to-red-500 text-transparent bg-clip-text mt-12">
               
-              Striving for Better <br className="sm:hidden" />  Care in Later Life <br className="sm:hidden" /> 
+              Strive for Better <br className="sm:hidden" />  Care in Later Life <br className="sm:hidden" /> 
                 {/* This is the key change! */}
                 
        <p className="block text-sm font-normal sm:text-2xl sm:font-normal text-gray-600 leading-tight mt-1 sm:mt-3">
-         <span className="font-normal">We're a community of career executives <br className="sm:hidden"/> fixing the eldercare crisis together</span> 
-         {/*<span className="hidden sm:inline"> without compromising our parents' dignity </span>*/}
+         <span className="sm:hidden font-normal">We're a community of career professionals fixing the eldercare crisis together</span> 
+         <span className="hidden sm:inline font-normal">We're a community of career professionals fixing the eldercare crisis today</span> 
          </p>
               </span>
             </p>
@@ -311,24 +312,29 @@ const handleLoginClick = () => {
 
 
       <p className="mt-16 mb-1 text-sm sm:text-sm md:text-lg text-red-400 font-normal">
-            <span className="font-normal">Join Our Newsletter 🔥</span>
-            <span className="hidden sm:inline"> Get the latest Parental Care Guide</span>
+        {/*<span className="font-normal">Join Our Newsletter 🔥</span>*/}
+            <span> Get the latest Parental Care Guide</span>
         </p>
 
   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center mx-auto w-fit"> 
     {/* Adjusted button layout for mobile */}
 
 <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-  <input
+  {/*<input
     type="email"
     placeholder="Enter your email address"
     className="w-full sm:w-80 px-5 py-3 border border-red-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 text-gray-900"
-  />
+  />*/}
   <button
+    onClick={openNewsletterModal}
     type="submit"
-    className="w-full sm:w-auto bg-gradient-to-r from-red-500 to-red-400 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+    className="flex items-center space-x-2 w-full sm:w-auto bg-gradient-to-r from-red-500 to-red-400 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
   >
-    Subscribe
+    
+    <span className="hidden sm:inline"> Join Our Newsletter </span>
+    <span className="sm:hidden"> Join Newsletter </span>
+    <span> <MailCheck className="w-4 h-4 sm:w-5 h-5"/> </span>
+    
   </button>
     </div>
   </div>
