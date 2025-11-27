@@ -52,7 +52,7 @@ const storyPoints: StoryPoint[] = [
   {
     id: 7,
     title: "Our Promise to You",
-    description: <>We’re building a community of exceptional professionals who care deeply about the current state of eldercare and strive to fix it. Not just for their parents but for generations to come. We're building this community because we need it. <br/><br/> Let's build it together! ❤️🧡💛</>,
+    description: "We’re building a community of exceptional professionals who care deeply about the current state of eldercare and strive to fix it. Not just for their parents but for generations to come. We're building this community because we need it. <br/><br/> Let's build it together! ❤️🧡💛",
     icon: Users,
   },
 ];
