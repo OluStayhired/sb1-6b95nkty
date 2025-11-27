@@ -15,6 +15,7 @@ import googleLogo from '../images/google-logo-48.svg';
 import { TooltipExtended } from '/src/utils/TooltipExtended';
 import { WaitlistModal } from '../components/WaitlistModal.tsx';
 import { NewsletterModal } from '../components/NewsletterModal.tsx';
+import { CommunityModal } from '../components/CommunityModal.tsx';
 import { Link } from 'react-router-dom';
 //import { Helmet } from 'react-helmet-async'; // CRITICAL: For dynamic meta tags
 import { OurStoryTimeline } from '../components/OurStoryTimeline';
@@ -30,6 +31,8 @@ function PoetiqPage() {
   const [isWaitlistSuccessModalOpen, setIsWaitlistSuccessModalOpen] = useState(false);
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
   const [isNewsletterSuccessModalOpen, setIsNewsletterSuccessModalOpen] = useState(false);
+  const [isCommunityModalOpen, setIsCommunityModalOpen] = useState(false);
+  const [isCommunitySuccessModalOpen, setIsCommunitySuccessModalOpen] = useState(false);
 
    // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
@@ -62,6 +65,14 @@ const handleLoginClick = () => {
 
     const closeNewsletterModal = () => {
     setIsNewsletterModalOpen(false);
+  };
+
+    const openCommunityModal = () => {
+    setIsCommunityModalOpen(true);
+  };
+
+    const closeCommunityModal = () => {
+    setIsCommunityModalOpen(false);
   };
   
   const handleGoogleLogin = async () => {
@@ -186,7 +197,7 @@ const handleLoginClick = () => {
           
           <button
             //onClick={handleLoginClick}
-            
+            onClick={openCommunityModal}
             className="flex items-center justify-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-500 transition-colors              
             shadow-lg shadow-red-500/60       
              hover:shadow-xl hover:shadow-red-500/80 group"
@@ -278,6 +289,7 @@ const handleLoginClick = () => {
           
           <button
             //onClick={handleLoginClick}
+            onClick={openCommunityModal}
             className="group flex items-center justify-center space-x-2 w-1/2 sm:w-auto p-4 bg-red-500 text-white text-base font-semibold rounded-lg hover:bg-red-600 transition-colors shadow-lg shadow-red-500/60 hover:shadow-xl hover:shadow-red-500/80 sm:px-8 sm:py-4 sm:text-lg">
            
            <span>Join Community</span>
@@ -557,6 +569,7 @@ const handleLoginClick = () => {
 
             <button
                 //onClick={handleLoginClick}
+                onClick={openCommunityModal}
                 className="group flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-red-500 text-white text-base font-semibold rounded-lg hover:bg-red-600 transition-colors shadow-lg shadow-red-500/60 hover:shadow-xl hover:shadow-red-500/80 sm:px-8 sm:py-4 sm:text-lg mx-auto">
                 <span>Join Community</span>
                 {/* Placeholder for ArrowRight icon or similar */}
@@ -678,6 +691,7 @@ const handleLoginClick = () => {
      <OurStoryTimeline />
     <button
       //onClick={handleLoginClick}
+      onClick={openCommunityModal}
       className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 border border-red-500 bg-white text-red-500 text-base font-semibold rounded-lg hover:bg-red-500 hover:text-white transition-colors shadow-lg shadow-red-500/60 hover:shadow-xl hover:shadow-red-500/80 sm:px-8 sm:py-4 sm:text-lg group mx-auto"
         >
       
@@ -986,8 +1000,9 @@ const handleLoginClick = () => {
         {/* Buttons */}
       <div className="flex flex-col sm:mr-10  sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16"> 
           <button
-            onClick={handleLoginClick}
+            //onClick={handleLoginClick}
             //onClick={openWaitlistModal}
+            onClick={openCommunityModal}
             className="flex items-center justify-center space-x-2 w-full sm:w-auto px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors text-base font-semibold sm:px-4 sm:py-3 sm:text-base
                          shadow-lg shadow-red-500/60       
              hover:shadow-xl hover:shadow-red-500/80 group" // Adjusted mobile button size/text for consistency
@@ -1114,6 +1129,11 @@ const handleLoginClick = () => {
     <NewsletterModal
         isOpen={isNewsletterModalOpen}
         onClose={closeNewsletterModal}
+      />
+
+    <CommunityModal
+        isOpen={isCommunityModalOpen}
+        onClose={closeCommunityModal}
       />
         
 {isWaitlistSuccessModalOpen ? (
