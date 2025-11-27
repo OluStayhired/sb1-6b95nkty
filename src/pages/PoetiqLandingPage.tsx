@@ -380,111 +380,111 @@ const handleLoginClick = () => {
           
 <div className="hidden sm:block w-full p-4 mt-8">
 
-      {/* Main grid container with 5 columns */}
-      <div className="grid grid-cols-5 gap-4 h-[650px] grid-rows-2">
+        {/* Main grid container with 5 columns */}
+        <div className="grid grid-cols-5 gap-4 h-[650px] grid-rows-2">
           
-        {/* Column 1: Two stacked images */}
-        <div className="col-span-1 flex flex-col gap-4 h-[650px]">
-          <div className="relative h-full overflow-hidden rounded-xl">
-            <img
-              //keeping for future use
-            />
-          </div>
-          <div className="relative h-full overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            <img
-              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_son.png"
-              alt="Person working"
-              className="w-full h-full object-cover aspect-square" // Square aspect ratio for stacked images
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
-                <h3 class="text-xl font-bold drop-shadow-lg">Financial Planning</h3>
+          {/* Column 1: Two stacked images */}
+          <div className="col-span-1 flex flex-col gap-4 h-[650px]">
+            <div className="relative h-full overflow-hidden rounded-xl">
+              <img
+                //keeping for future use
+              />
             </div>
-          </div>
-        </div>
-        
-        {/* Column 2: One image, spanning two rows */}
-        <div className="col-span-1 row-span-2"> {/* 'row-span-2' makes this grid item span two rows */}
-          <div className="relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl h-full group">
-            <img
-              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/daughter_father.png"
-              alt="Meeting in progress"
-              className="w-full h-full object-cover object-[40%_70%]" // 'h-full' ensures the image fills the row-span-2 container
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
-                <h3 class="text-xl font-bold drop-shadow-lg">Respite Care</h3>
-            </div>
-          </div>
-           
-        </div>
-
-        {/* Column 3: Two stacked images */}
-        <div className="col-span-1 flex flex-col gap-4 h-[650px]">
-          <div className="relative h-full overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            
-            <img
-              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_daughter.png"
-              alt="Creative workspace"
-              className="w-full h-full object-cover aspect-square"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
-                <h3 class="text-xl font-bold drop-shadow-lg">Parental Stress</h3>
-            </div>
-          </div>
-          <div className="relative h-full overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            <img
-              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_daughter_blue.png"
-              alt="Brainstorming session"
-              className="w-full h-full object-cover aspect-square"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+            <div className="relative h-full overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border hover:p-2 hover:border-red-500 group">
+              <img
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_son.png"
+                alt="Person working"
+                className="w-full h-full rounded-xl object-cover aspect-square" // Square aspect ratio for stacked images
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
               <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
-                <h3 class="text-xl font-bold drop-shadow-lg">Dementia Assessment</h3>
-            </div>
-          </div>
-        </div>
-
-        {/* Column 4: One image, spanning two rows */}
-        <div className="col-span-1 row-span-2">
-          <div className="relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl h-full group">
-            <img
-              //src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_patient.png"
-              alt="Laptop on desk"
-              className="w-full h-full object-cover object-[30%_50%]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
-                <h3 class="text-xl font-bold drop-shadow-lg">Caregivers</h3>
-            </div>
-          </div>
-        </div>
-
-        {/* Column 5: Two stacked images */}
-        <div className="col-span-1 flex flex-col gap-4 h-[650px]">
-          <div className="relative h-full overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            <img
-              //src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/black_mother_daughter.png"
-              alt="People discussing"
-              className="w-full h-full object-cover aspect-square"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
-                <h3 class="text-xl font-bold drop-shadow-lg">Living Well</h3>
+                  <h3 class="text-xl font-bold drop-shadow-lg">Financial Planning</h3>
+              </div>
             </div>
           </div>
           
-          <div className="relative h-full overflow-hidden rounded-xl">
-            <img
-              //saving for later
-            />
+          {/* Column 2: One image, spanning two rows */}
+          <div className="col-span-1 row-span-2"> {/* 'row-span-2' makes this grid item span two rows */}
+            <div className="relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl h-full border hover:p-2 hover:border-red-500 group">
+              <img
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/daughter_father.png"
+                alt="Meeting in progress"
+                className="w-full h-full rounded-xl object-cover object-[40%_70%]" // 'h-full' ensures the image fills the row-span-2 container
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
+                  <h3 class="text-xl font-bold drop-shadow-lg">Respite Care</h3>
+              </div>
+            </div>
+             
+          </div>
+  
+          {/* Column 3: Two stacked images */}
+          <div className="col-span-1 flex flex-col gap-4 h-[650px]">
+            <div className="relative h-full border hover:p-2 hover:border-red-500 overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+              
+              <img
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_daughter.png"
+                alt="Creative workspace"
+                className="w-full h-full rounded-xl object-cover aspect-square"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
+                  <h3 class="text-xl font-bold drop-shadow-lg">Parental Stress</h3>
+              </div>
+            </div>
+            <div className="relative h-full border hover:p-2 hover:border-red-500 overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+              <img
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_daughter_blue.png"
+                alt="Brainstorming session"
+                className="w-full h-full rounded-xl object-cover aspect-square"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
+                  <h3 class="text-xl font-bold drop-shadow-lg">Dementia Assessment</h3>
+              </div>
+            </div>
+          </div>
+  
+          {/* Column 4: One image, spanning two rows */}
+          <div className="col-span-1 row-span-2">
+            <div className="relative border hover:p-2 hover:border-red-500 overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl h-full group">
+              <img
+                //src="https://images.pexels.com/photos/3184192/pexels-photo-3184192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/mother_patient.png"
+                alt="Laptop on desk"
+                className="w-full h-full rounded-xl object-cover object-[30%_50%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
+                  <h3 class="text-xl font-bold drop-shadow-lg">Caregivers</h3>
+              </div>
+            </div>
+          </div>
+  
+          {/* Column 5: Two stacked images */}
+          <div className="col-span-1 flex flex-col gap-4 h-[650px]">
+            <div className="relative h-full border hover:p-2 hover:border-red-500 overflow-hidden rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl group">
+              <img
+                //src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://selrznkggmoxbpflzwjz.supabase.co/storage/v1/object/public/poetiq_homepage/black_mother_daughter.png"
+                alt="People discussing"
+                className="w-full h-full rounded-xl object-cover aspect-square"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-4 text-white text-center transition-opacity duration-300 opacity-20 group-hover:opacity-100">
+                  <h3 class="text-xl font-bold drop-shadow-lg">Living Well</h3>
+              </div>
+            </div>
+            
+            <div className="relative h-full overflow-hidden rounded-xl">
+              <img
+                //saving for later
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </div>  
+      </div>  
 
           
 </div>
