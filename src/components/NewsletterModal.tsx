@@ -142,7 +142,8 @@ const handleJoinNewsletter = async (e: React.FormEvent) => {
           </h2>
           <p className="text-gray-600 text-sm text-red-500">
             {/*Get weekly tips and real stories about eldercare*/}
-            Get real stories and parental care help weekly
+            {/*Get real stories and parental care help weekly*/}
+            Get real stories & parental care tips weekly!
           </p>
         </div>    
 
