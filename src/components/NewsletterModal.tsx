@@ -137,11 +137,12 @@ const handleJoinNewsletter = async (e: React.FormEvent) => {
           <div className="mx-auto w-12 h-12 bg-red-50 rounded-full flex items-center justify-center mb-4">
             <MailCheck className="w-8 h-8 text-red-500" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl font-bold text-gray-700 mb-2">
             Join Our Newsletter🔥
           </h2>
           <p className="text-gray-600 text-sm text-red-500">
-            Get weekly tips and real stories about eldercare
+            {/*Get weekly tips and real stories about eldercare*/}
+            Get real stories and parental care help weekly
           </p>
         </div>    
 
