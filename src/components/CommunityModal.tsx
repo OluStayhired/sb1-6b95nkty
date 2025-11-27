@@ -3,6 +3,7 @@ import { X, CheckCircle, Info, MailCheck, Users, UserPlus } from 'lucide-react';
 import { z } from 'zod';
 import { supabase } from '../lib/supabase';
 import { TooltipExtended } from '/src/utils/TooltipExtended';
+import LinkedInSolidLogo from '../images/linkedin-solid-logo.svg';
 
 interface CommunityModalProps {
   isOpen: boolean;
@@ -14,6 +15,12 @@ interface CommunityModalProps {
 const communitySchema = z.object({
   email: z.string().email('Invalid email address'),
   firstName: z.string().min(2, 'Name must be at least 2 characters'),
+  linkedinProfile: z.string()
+    .url('LinkedIn URL must be a valid URL') // Ensures the input is a syntactically valid URL
+    .refine(
+      (val) => val.includes('linkedin.com/in/'), // Checks if the URL contains 'linkedin.com/in/'
+      'LinkedIn URL must be a profile link (e.g., https://www.linkedin.com/in/yourprofile)' // Custom error message
+    ),
   //discount: z.enum(['10% off', '20% off', '30% off'], {
     //errorMap: () => ({ message: 'Please select a discount option' }),
   //}),
@@ -24,6 +31,8 @@ export function CommunityModal({ isOpen, onClose, onSuccess }: NewsletterModalPr
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [emailSent, setEmailSent] = useState(false);
+  const [linkedinProfile, setLinkedinProfile] = useState('');
+  
   //const [discount, setDiscount] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false); 
@@ -38,6 +47,7 @@ export function CommunityModal({ isOpen, onClose, onSuccess }: NewsletterModalPr
     setEmail('');
     setFirstName('');
     setEmailSent(false);
+    setLinkedinProfile('');
     setError('');
     setLoading(false);
     setShowSuccessScreen(false); // Reset success screen state
@@ -52,7 +62,7 @@ const handleJoinCommunity = async (e: React.FormEvent) => {
 
     try {
       // Validate input using Zod
-      communitySchema.parse({ email, firstName });
+      communitySchema.parse({ email, firstName, linkedinProfile });
 
       // Insert data into Supabase
       const { error: supabaseError } = await supabase.from('community_list').insert({
@@ -61,6 +71,7 @@ const handleJoinCommunity = async (e: React.FormEvent) => {
         first_name: firstName,
         project_name: 'poetiq community',
         email_sent: emailSent,
+        linkedin_profile: linkedinProfile
         //discount: discount,
       });
 
@@ -144,7 +155,7 @@ const handleJoinCommunity = async (e: React.FormEvent) => {
             Join Our Community👋
           </h2>
           <p className="text-gray-600 text-sm text-red-500">
-          Get insights from other career professionals!
+            Get insights from other career professionals!
           </p>
         </div>    
 
@@ -160,9 +171,9 @@ const handleJoinCommunity = async (e: React.FormEvent) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={loading}
-              placeholder="Type Email Address"
+              placeholder="type email address"
               className="text-left text-sm px-2 mt-1 py-2 block w-full rounded-md border border-red-100 placeholder-text-sm outline-none focus:border-red-500 focus:ring-0 focus:ring-red-500"
-              required
+              //required
             />
           </div>
 
@@ -171,12 +182,28 @@ const handleJoinCommunity = async (e: React.FormEvent) => {
               First Name
             </label>
             <input
-              type="name"
+              type="text"
               id="firstName"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
               disabled={loading}
-              placeholder="Type Your Name"
+              placeholder="type your name"
+              className="text-left text-sm px-2 mt-1 py-2 block w-full rounded-md border border-red-100 placeholder-text-sm outline-none focus:border-red-500 focus:ring-0 focus:ring-red-500"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="url" className="block text-left px-1 text-sm font-medium text-gray-700">
+              LinkedIn <img src={LinkedInSolidLogo} alt="LinkedIn" className="inline-block rounded-sm w-3 h-3 align-middle" />
+            </label>
+            <input
+              type="url"
+              id="linkedinProfile"
+              value={linkedinProfile}
+              onChange={(e) => setLinkedinProfile(e.target.value)}
+              disabled={loading}
+              placeholder="type LinkedIn URL"
               className="text-left text-sm px-2 mt-1 py-2 block w-full rounded-md border border-red-100 placeholder-text-sm outline-none focus:border-red-500 focus:ring-0 focus:ring-red-500"
               required
             />
