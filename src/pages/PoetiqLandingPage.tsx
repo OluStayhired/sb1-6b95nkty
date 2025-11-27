@@ -280,7 +280,7 @@ const handleLoginClick = () => {
           */}
           {/* Close button within the overlay */}
           <button
-            //onClick={() => setIsMobileMenuOpen(false)}
+            onClick={() => setIsMobileMenuOpen(false)}
             className="absolute top-4 right-4 p-2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-md"
             aria-label="Close navigation"
           >
