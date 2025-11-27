@@ -144,7 +144,7 @@ const handleJoinCommunity = async (e: React.FormEvent) => {
             Join Our Community👋
           </h2>
           <p className="text-gray-600 text-sm text-red-500">
-            Get Support from Professionals Navigating Eldercare
+          Get insights from other career professionals!
           </p>
         </div>    
 
