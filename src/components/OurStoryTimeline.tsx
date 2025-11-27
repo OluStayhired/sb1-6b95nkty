@@ -22,7 +22,7 @@ const storyPoints: StoryPoint[] = [
   {
     id: 2,
     title: "The Turning Point",
-    description: "My father-in-law's vascular dementia was the turning point. I watched my wife, a banking executive, wrestle with hospital appointments, frustrating calls to health officials, and endless financial applications. Just to provide a dignified life for her father. For me, this was the very definition of administrative chaos.",
+    description: "My father-in-law's vascular dementia was the turning point. I watched my wife, a banking executive, wrestle with hospital appointments, frustrating calls to health officials, and endless financial applications just to provide a dignified life for her father. For us, this was the very definition of the administrative chaos most career professionals have to endure.",
     icon: HeartPulse,
   },
   {
@@ -33,14 +33,14 @@ const storyPoints: StoryPoint[] = [
   },
   {
     id: 4,
-    title: "The Shared Agony",
-    description: "We realized that our bond was only understood by others fighting the same impossible fight. And that shared agony was the true foundation of poetiq. A private community where everyone understood your struggle",
+    title: "The Shared Challenge",
+    description: "We realized that our bond was only understood by other career professionals experiencing the same challenge. And that shared challenge was the true foundation of poetiq. A private community where everyone understood your struggle.",
     icon: Heart,
   },
   {
     id: 5,
-    title: "An Executive Strategy",
-    description: "Enough was enough, we are competent career professionals with 30+ years in corporate spaces as directors, founders, vice presidents. So we decided to stop trying just to simply survive, and started applying three decades of executive strategy to our personal chaos.",
+    title: "Our Strategic Approach",
+    description: "Enough was enough, we are competent career professionals with 30+ years in corporate spaces as Lawyers, directors, founders, vice presidents. So we decided to stop trying to simply survive. We started applying three decades of building solutions to our personal chaos.",
     icon: Lightbulb,
   },
   {
