@@ -320,7 +320,7 @@ const handleLoginClick = () => {
 
       <p className="mt-16 mb-1 text-sm sm:text-sm md:text-lg text-red-400 font-normal">
         {/*<span className="font-normal">Join Our Newsletter 🔥</span>*/}
-            <span> Get the latest Parental Care Guide</span>
+            <span> Get the latest Parental Care Guide 💌</span>
         </p>
 
   <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 items-center mx-auto w-fit"> 
