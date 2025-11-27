@@ -30,7 +30,6 @@ function PoetiqPage() {
   const [isWaitlistSuccessModalOpen, setIsWaitlistSuccessModalOpen] = useState(false);
   const [isNewsletterModalOpen, setIsNewsletterModalOpen] = useState(false);
   const [isNewsletterSuccessModalOpen, setIsNewsletterSuccessModalOpen] = useState(false);
-  
 
    // CRITICAL FIX: Define safe meta variables here, at the top of the component,
   // so they are available immediately for the initial Helmet render.
@@ -55,6 +54,14 @@ const handleLoginClick = () => {
 
   const closeWaitlistModal = () => {
     setIsWaitlistModalOpen(false);
+  };
+
+  const openNewsletterModal = () => {
+    setIsNewsletterModalOpen(true);
+  };
+
+    const closeNewsletterModal = () => {
+    setIsNewsletterModalOpen(false);
   };
   
   const handleGoogleLogin = async () => {
@@ -1103,6 +1110,12 @@ const handleLoginClick = () => {
         isOpen={isWaitlistModalOpen}
         onClose={closeWaitlistModal}
       />
+
+    <NewsletterModal
+        isOpen={isNewsletterModalOpen}
+        onClose={closeNewsletterModal}
+      />
+        
 {isWaitlistSuccessModalOpen ? (
   <div className="fixed top-4 right-4 bg-white rounded-lg shadow-lg border border-green-100 p-4 flex items-center space-x-3 animate-fade-in z-[9999]">
     <div className="bg-green-100 rounded-full p-2">
@@ -1115,7 +1128,22 @@ const handleLoginClick = () => {
       </p>
     </div>
   </div>
-) : null}          
+) : null} 
+
+{isNewsletterSuccessModalOpen ? (
+  <div className="fixed top-4 right-4 bg-white rounded-lg shadow-lg border border-green-100 p-4 flex items-center space-x-3 animate-fade-in z-[9999]">
+    <div className="bg-green-100 rounded-full p-2">
+      <Check className="w-5 h-5 text-green-500" />
+    </div>
+    <div>
+      <p className="font-medium text-gray-900">Congratulations! 🎉 </p>
+      <p className="text-sm text-gray-500">
+        You've joined our Newsletter. Expect an email Soon!
+      </p>
+    </div>
+  </div>
+) : null}         
+        
     </div>
   
   </>
